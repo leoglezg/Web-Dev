@@ -4,161 +4,386 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Erika Salón y Microblading | Estética en Parques de Tesistán, Zapopan</title>
-<meta name="description" content="Erika Salón y Microblading en Parques de Tesistán, Zapopan. Microblading, Servicios de salón.">
-<meta name="theme-color" content="#fbf7f2">
+<title>Erika Salón y Microblading | Microblading y salón en Parques de Tesistán, Zapopan</title>
+<meta name="description" content="Erika Salón y Microblading en Parques de Tesistán, Zapopan. Microblading de cejas pelo a pelo y servicios de salón. Agenda por WhatsApp.">
+<meta name="theme-color" content="#f7f1ea">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf7f2;--surface:#f3ece4;--raise:#ece2d7;--text:#2b211d;--muted:#665850;--line:#e2d6ca;--accent:#a3445a;--on-accent:#ffffff;--head:"Fraunces",Georgia,serif;--body:"DM Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--r:999px}
+:root{--bg:#f7f1ea;--paper:#fffaf5;--sand:#efe4d8;--ink:#2a1f1c;--muted:#66554d;--line:#e2d3c4;--rose:#9a3b52;--rose-ink:#7e2d42;--on-rose:#ffffff;--cocoa:#2e1f1b;--cocoa-2:#3a2924;--cream:#f3e7dc;--taupe:#c9a58c;--cocoa-muted:#c2ac9c;--head:"Fraunces",Georgia,serif;--body:"DM Sans",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img,svg,iframe{display:block;max-width:100%}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--accent);color:var(--on-accent);padding:8px 12px;z-index:20}
-header.bar{position:sticky;top:0;z-index:10;background:rgba(251,247,242,.94);border-bottom:1px solid var(--line)}
-header.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
-.brand{font-family:var(--head);font-weight:700;font-size:22px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.nav{display:none;gap:28px;font-size:15px;color:var(--muted)}
-.nav a{text-decoration:none}.nav a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:var(--r);font-weight:600;font-size:16px;text-decoration:none;background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);transition:filter .15s ease}
-.btn:hover{filter:brightness(.9)}
-.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
-.btn.ghost:hover{filter:none;border-color:var(--muted)}
-.btn.sm{min-height:44px;padding:8px 16px;font-size:15px;flex-shrink:0}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.hero{padding:56px 0 52px}
-.hero .grid{display:grid;gap:40px;align-items:center}
-.kicker{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-h1{font-family:var(--head);font-weight:700;font-size:clamp(46px,9vw,96px);line-height:.95;letter-spacing:-.01em;overflow-wrap:anywhere;}
-h1 span{display:block;color:var(--muted);font-weight:500;font-size:.4em;letter-spacing:0;margin-top:14px;line-height:1.15;text-transform:none}
-.lede{color:var(--muted);font-size:clamp(18px,2.1vw,20px);max-width:42ch;margin:24px 0 30px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}img,svg,iframe{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--rose);color:var(--on-rose);padding:8px 12px;z-index:50}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.progress{position:fixed;inset:0 0 auto 0;height:3px;background:var(--rose);transform-origin:0 50%;transform:scaleX(0);z-index:40}
+/* header */
+header.bar{position:fixed;inset:0 0 auto 0;z-index:30;transition:background-color .3s var(--ease),box-shadow .3s var(--ease)}
+header.bar.solid{background:rgba(247,241,234,.98);box-shadow:0 1px 0 var(--line)}
+header.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:var(--head);font-weight:500;font-size:26px;letter-spacing:-.01em}
+.brand small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.nav{display:none;gap:30px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;background:var(--rose);color:var(--on-rose);border:1px solid var(--rose);transition:background-color .2s var(--ease)}
+.btn:hover{background:var(--rose-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.btn.sm{min-height:44px;padding:8px 18px;font-size:15px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+/* hero */
+.hero{padding:120px 0 64px;position:relative}
+.hero .grid{display:grid;gap:44px;align-items:center}
+h1{font-family:var(--head);font-weight:400;font-size:clamp(50px,10.5vw,124px);line-height:.95;letter-spacing:-.025em;margin:22px 0 0}
+h1 em{font-style:italic;color:var(--rose)}
+.hero .brow-hero{width:min(320px,70%);margin:18px 0 0 -6px}
+.lede{color:var(--muted);font-size:clamp(18px,2vw,20px);max-width:38ch;margin:20px 0 30px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
-.photo{border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:4/5;max-height:560px;background:var(--surface)}.photo img{width:100%;height:100%;object-fit:cover}
-.band img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
-.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts ul{list-style:none;display:grid;grid-template-columns:1fr}
-.facts li{padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--muted)}
-.facts li:last-child{border-bottom:0}
-.facts b{display:block;font-family:var(--head);font-size:24px;font-weight:600;color:var(--text);line-height:1.2;}
-section.block{padding:76px 0}
-.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px;flex-wrap:wrap}
-h2{font-family:var(--head);font-weight:700;font-size:clamp(34px,5.2vw,54px);line-height:1.02;}
-.sub{color:var(--muted);max-width:42ch}
-.svc{list-style:none;border-top:1px solid var(--line)}
-.svc li{display:grid;grid-template-columns:1fr;gap:4px;padding:22px 0;border-bottom:1px solid var(--line)}
-.svc h3{font-family:var(--head);font-size:26px;font-weight:600;line-height:1.15;}
-.svc p{color:var(--muted)}
-.svc .note{color:var(--accent);font-size:14px;font-weight:600}
-.steps{display:grid;gap:16px;counter-reset:s;list-style:none}
-.steps li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;counter-increment:s}
-.steps li::before{content:counter(s);display:block;font-family:var(--head);font-size:42px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:10px}
-.steps h3{font-size:18px;margin-bottom:6px}
-.steps p{color:var(--muted);font-size:16px}
-.notice{border:1px dashed var(--muted);border-radius:6px;padding:10px 14px;color:var(--muted);font-size:14px;margin-bottom:20px}
-.reviews{display:grid;gap:16px}
-.review{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px}
-.stars{color:var(--accent);letter-spacing:3px}
-.review blockquote{font-family:var(--head);font-size:22px;line-height:1.3}
+.collage{position:relative;min-height:440px}
+.collage .main{position:relative;width:78%;margin-left:auto;aspect-ratio:4/5;border-radius:220px 220px 16px 16px;overflow:hidden;background:var(--sand)}
+.collage .main img{width:100%;height:115%;object-fit:cover}
+.collage .small{position:absolute;left:0;bottom:-24px;width:46%;aspect-ratio:1;border-radius:16px;overflow:hidden;border:8px solid var(--bg);background:var(--sand)}
+.collage .small img{width:100%;height:100%;object-fit:cover}
+.collage .badge{position:absolute;right:-6px;top:22px;width:118px;height:118px}
+.badge text{font-family:var(--body);font-size:9.6px;letter-spacing:.24em;text-transform:uppercase;fill:var(--ink)}
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--paper)}
+.marquee .track{display:flex;width:max-content;gap:0}
+.marquee span{font-family:var(--head);font-size:clamp(26px,4vw,44px);font-style:italic;white-space:nowrap;padding-right:40px}
+.marquee span i{font-style:normal;color:var(--rose);padding-left:40px}
+/* microblading */
+.mb{background:var(--cocoa);color:var(--cream);position:relative}
+.mb .wrap{display:grid;gap:40px;padding-top:96px;padding-bottom:96px}
+.mb h2,.salon h2,.agenda h2,.voces h2,.visita h2,.galeria h2{font-family:var(--head);font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.02em}
+.mb h2 em{font-style:italic;color:var(--taupe)}
+.mb .kicker{color:var(--taupe)}
+.mb .intro{color:var(--cocoa-muted);max-width:44ch;margin-top:18px;font-size:18px}
+.steps-mb{list-style:none;display:grid;gap:4px;margin-top:34px}
+.steps-mb li{padding:18px 0 18px 64px;border-top:1px solid rgba(243,231,220,.16);position:relative;transition:opacity .4s var(--ease)}
+.steps-mb li:last-child{border-bottom:1px solid rgba(243,231,220,.16)}
+.steps-mb .n{position:absolute;left:0;top:16px;font-family:var(--head);font-size:30px;color:var(--taupe);line-height:1}
+.steps-mb h3{font-family:var(--head);font-weight:500;font-size:24px}
+.steps-mb p{color:var(--cocoa-muted);font-size:16px;margin-top:4px;max-width:40ch}
+.motion .steps-mb li{opacity:.38}.motion .steps-mb li.on{opacity:1}
+.stage{position:relative;border-radius:20px;background:var(--cocoa-2);padding:28px;display:grid;place-items:center;min-height:300px;overflow:hidden}
+.stage .brow-big{width:100%;max-width:560px}
+.brow-big .guide{stroke:var(--taupe);stroke-width:1.4;stroke-dasharray:.012 .012;opacity:.7}
+.brow-big .hair{stroke:var(--cream);stroke-width:1.5;stroke-linecap:round}
+.brow-big .hair.b{stroke:var(--taupe);stroke-width:1.2}
+.brow-hero .guide{display:none}
+.brow-hero .hair{stroke:var(--rose);stroke-width:2;stroke-linecap:round}
+.brow-hero .hair.b{stroke:var(--ink);stroke-width:1.5;opacity:.75}
+.stage .caption{position:absolute;left:24px;bottom:18px;font-size:13px;color:var(--cocoa-muted)}
+.stage .count{position:absolute;right:24px;top:18px;font-family:var(--head);font-size:15px;color:var(--taupe);font-variant-numeric:tabular-nums}
+.mb .cta-mb{margin-top:30px}
+.mb .btn{background:var(--cream);color:var(--cocoa);border-color:var(--cream)}.mb .btn:hover{background:#fff}
+/* salón */
+section.block{padding:96px 0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:40px}
+.head p{color:var(--muted);max-width:40ch}
+.cards{display:grid;gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}
+.card .tx{padding:22px 22px 26px}
+.card h3{font-family:var(--head);font-weight:500;font-size:28px;line-height:1.1}
+.card p{color:var(--muted);margin-top:8px}
+.card .note{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--rose)}
+/* galería */
+.galeria{background:var(--paper);border-block:1px solid var(--line);overflow:hidden}
+.galeria .wrap.top{padding-top:90px}
+.gal-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:34px 0 90px}
+.gal-track{display:flex;gap:18px;padding:0 20px;width:max-content}
+.gal-track figure{scroll-snap-align:start;width:min(78vw,520px);flex:none}
+.gal-track figure .f{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--sand)}
+.gal-track figure:nth-child(even) .f{aspect-ratio:1;margin-top:60px}
+.gal-track img{width:100%;height:100%;object-fit:cover}
+.gal-track figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.gal-note{font-size:14px;color:var(--muted);margin-top:12px}
+/* agenda */
+.agenda .list{list-style:none;display:grid;gap:18px;counter-reset:a;position:relative}
+.agenda li{counter-increment:a;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+.agenda li::before{content:"0" counter(a);display:block;font-family:var(--head);font-size:56px;line-height:1;color:var(--rose);margin-bottom:12px}
+.agenda h3{font-size:20px}.agenda p{color:var(--muted);margin-top:6px}
+/* reseñas */
+.notice{border:1px dashed var(--muted);border-radius:10px;padding:10px 14px;color:var(--muted);font-size:14px;margin-bottom:24px}
+.revs{display:grid;gap:18px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.stars{color:var(--rose);letter-spacing:3px}
+.rev blockquote{font-family:var(--head);font-size:23px;line-height:1.3}
 .who{color:var(--muted);font-size:14px;margin-top:auto}
+/* visita */
 .loc{display:grid;gap:28px}
-.map{border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:var(--surface)}
+.map{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:var(--sand);border:1px solid var(--line)}
 .map iframe{width:100%;height:100%;border:0}
 dl{display:grid;gap:22px}
-dt{color:var(--muted);font-size:14px;margin-bottom:2px}
-dd{font-size:19px}
-.link{color:var(--accent);font-weight:600;text-underline-offset:3px}
-.final{background:var(--accent);color:var(--on-accent);border-radius:8px;padding:44px 24px}
-.final h2{color:var(--on-accent)}
-.final p{margin:14px 0 26px;max-width:40ch;font-size:18px}
-.final .btn{background:var(--on-accent);color:#a3445a;border-color:var(--on-accent)}
-footer{padding:44px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:80px}
+dt{color:var(--muted);font-size:14px}
+dd{font-size:19px;overflow-wrap:anywhere}
+.link{color:var(--rose-ink);font-weight:600;text-underline-offset:3px}
+/* final */
+.final{background:var(--rose);color:var(--on-rose);border-radius:28px;padding:64px 24px;text-align:center;overflow:hidden;position:relative}
+.final h2{font-family:var(--head);font-weight:400;font-size:clamp(54px,12vw,150px);line-height:.9;letter-spacing:-.03em}
+.final h2 em{font-style:italic}
+.final p{margin:18px auto 30px;max-width:36ch;font-size:18px}
+.final .btn{background:var(--paper);color:var(--rose-ink);border-color:var(--paper)}
+.final .btn:hover{background:#fff}
+footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:96px}
 footer nav{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:14px}
 footer p+p{margin-top:6px}
-.legal h1{font-size:clamp(38px,6vw,54px);line-height:1.05;margin-bottom:12px}.legal h2{font-size:26px;margin:32px 0 8px}.legal p,.legal li{margin-bottom:10px}.legal ul{padding-left:22px}.draft{background:var(--surface);border-left:4px solid var(--accent);padding:12px 16px;margin:20px 0 8px;font-size:15px}
-@media (min-width:760px){.nav{display:flex}.hero{padding:92px 0 80px}.hero .grid{grid-template-columns:1.15fr .85fr}.facts ul{grid-template-columns:repeat(3,1fr)}.facts li{border-bottom:0;border-right:1px solid var(--line);padding:22px 24px}.facts li:first-child{padding-left:0}.facts li:last-child{border-right:0}section.block{padding:108px 0}.svc li{grid-template-columns:1fr 1.3fr auto;align-items:baseline;gap:24px}.steps{grid-template-columns:repeat(3,1fr)}.reviews{grid-template-columns:repeat(3,1fr)}.loc{grid-template-columns:1.2fr .8fr;align-items:start}.final{padding:64px}}
+/* estados iniciales solo con animación activa (sin JS todo se ve) */
+.motion [data-reveal]{opacity:0}
+.motion .brow-big .hair,.motion .brow-big .guide{stroke-dasharray:1;stroke-dashoffset:1}
+.motion .brow-big .guide{stroke-dasharray:1}
+.motion .brow-hero .hair{stroke-dasharray:1;stroke-dashoffset:1}
+@media (min-width:900px){
+ .nav{display:flex}
+ .hero{padding:150px 0 90px}
+ .hero .grid{grid-template-columns:1.1fr .9fr}
+ .collage{min-height:600px}
+ .mb .wrap{grid-template-columns:.9fr 1.1fr;align-items:center;min-height:100vh}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .agenda .list{grid-template-columns:repeat(3,1fr)}
+ .revs{grid-template-columns:repeat(3,1fr)}
+ .loc{grid-template-columns:1.2fr .8fr;align-items:start}
+ .final{padding:110px 40px}
+ .gal-viewport{overflow:visible;padding-bottom:110px}
+ .gal-track{padding-left:max(20px,calc((100vw - 1160px)/2))}
+ .gal-track figure{width:440px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Saltar al contenido</a>
-<header class="bar"><div class="wrap"><a class="brand" href="./">Erika Salón</a><nav class="nav" aria-label="Secciones"><a href="./#servicios">Servicios</a><a href="./#resenas">Reseñas</a><a href="./#ubicacion">Ubicación</a></nav><a class="btn sm" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Erika%20Sal%C3%B3n%20y%20Microblading.">WhatsApp</a></div></header>
+<header class="bar"><div class="wrap"><a class="brand" href="./"><b>Erika</b><small>Salón &amp; Microblading</small></a>
+<nav class="nav" aria-label="Secciones"><a href="./#microblading">Microblading</a><a href="./#salon">Salón</a><a href="./#agenda">Agenda</a><a href="./#visita">Ubicación</a></nav>
+<a class="btn sm" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Erika%20Sal%C3%B3n.">WhatsApp</a></div></header>
 <main id="main">
 <section class="hero"><div class="wrap grid">
 <div>
-<p class="kicker">Estética en Parques de Tesistán, Zapopan</p>
-<h1>Erika Salón<span>Tu cita, sin vueltas</span></h1>
-<p class="lede">Estética en Parques de Tesistán. Nos escribes, eliges el servicio y te apartamos el lugar.</p>
-<div class="actions"><a class="btn" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Erika%20Sal%C3%B3n%20y%20Microblading."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Escríbenos por WhatsApp</a><a class="btn ghost" href="#ubicacion">Cómo llegar</a></div>
+<p class="kicker">Parques de Tesistán · Zapopan</p>
+<h1>Cejas trazadas <em>pelo a pelo</em></h1>
+<svg class="brow-hero" viewBox="0 0 520 200" fill="none" aria-hidden="true" focusable="false"><g class="hairs"><path class="hair a" pathLength="1" d="M42.7 153.5 Q45.9 128.3 34.5 109.1"/><path class="hair a" pathLength="1" d="M45.6 149.7 Q49.7 127.1 37.8 111.1"/><path class="hair b" pathLength="1" d="M58.6 153.1 Q63.9 131.8 56.8 115.6"/><path class="hair a" pathLength="1" d="M62.8 152.1 Q68.1 131.4 60.7 116.1"/><path class="hair b" pathLength="1" d="M68.8 153.9 Q78.2 130.2 73.3 112.4"/><path class="hair b" pathLength="1" d="M73.4 141.3 Q80.6 115.6 74.7 95.3"/><path class="hair a" pathLength="1" d="M78.4 133.5 Q90.3 112.4 87.2 97.4"/><path class="hair a" pathLength="1" d="M85.8 138.7 Q95.8 117.6 95.5 100.6"/><path class="hair b" pathLength="1" d="M92.9 139.6 Q106.4 113.3 102.3 94.0"/><path class="hair a" pathLength="1" d="M100.9 140.2 Q119.0 115.2 119.1 97.4"/><path class="hair a" pathLength="1" d="M107.1 137.0 Q121.2 116.9 125.2 100.6"/><path class="hair a" pathLength="1" d="M109.0 120.5 Q123.5 98.4 126.0 80.7"/><path class="hair a" pathLength="1" d="M117.2 133.8 Q130.0 117.2 132.1 104.6"/><path class="hair b" pathLength="1" d="M126.1 130.4 Q146.4 110.1 153.2 94.7"/><path class="hair a" pathLength="1" d="M128.0 123.9 Q142.4 110.7 149.4 100.3"/><path class="hair b" pathLength="1" d="M132.9 111.0 Q153.8 94.6 163.7 82.0"/><path class="hair a" pathLength="1" d="M143.8 115.4 Q163.4 100.4 170.6 89.6"/><path class="hair b" pathLength="1" d="M150.8 122.3 Q168.9 107.3 176.5 96.0"/><path class="hair a" pathLength="1" d="M155.4 121.4 Q174.7 107.2 182.6 96.9"/><path class="hair a" pathLength="1" d="M157.7 102.4 Q177.4 87.5 184.7 76.6"/><path class="hair b" pathLength="1" d="M169.2 111.0 Q187.6 98.2 194.2 88.9"/><path class="hair a" pathLength="1" d="M171.7 110.1 Q193.0 96.4 204.2 85.6"/><path class="hair a" pathLength="1" d="M180.5 101.8 Q197.6 90.7 205.8 82.0"/><path class="hair b" pathLength="1" d="M187.1 107.2 Q202.9 97.2 209.4 89.7"/><path class="hair a" pathLength="1" d="M193.8 105.8 Q209.8 96.0 218.6 88.2"/><path class="hair a" pathLength="1" d="M201.1 95.6 Q220.1 85.8 227.1 78.9"/><path class="hair a" pathLength="1" d="M208.9 94.0 Q230.1 83.4 237.6 76.0"/><path class="hair b" pathLength="1" d="M212.1 96.4 Q229.8 87.8 236.5 81.6"/><path class="hair a" pathLength="1" d="M219.4 99.2 Q239.8 89.3 247.6 81.9"/><path class="hair a" pathLength="1" d="M225.6 97.6 Q241.9 89.6 250.2 83.1"/><path class="hair b" pathLength="1" d="M234.5 97.7 Q248.7 90.5 257.6 84.3"/><path class="hair a" pathLength="1" d="M243.2 88.7 Q264.5 78.0 271.5 69.5"/><path class="hair a" pathLength="1" d="M249.5 91.1 Q265.9 82.9 274.5 75.7"/><path class="hair a" pathLength="1" d="M252.6 89.6 Q270.1 83.6 277.2 79.0"/><path class="hair a" pathLength="1" d="M264.5 92.7 Q285.2 84.7 292.8 78.0"/><path class="hair a" pathLength="1" d="M264.2 82.1 Q280.3 75.6 287.2 70.0"/><path class="hair b" pathLength="1" d="M274.3 87.2 Q289.0 81.0 297.0 75.2"/><path class="hair b" pathLength="1" d="M281.4 83.1 Q296.1 77.9 303.0 73.1"/><path class="hair a" pathLength="1" d="M286.6 90.3 Q305.5 84.1 313.0 78.5"/><path class="hair a" pathLength="1" d="M296.2 78.6 Q310.0 74.0 317.7 69.5"/><path class="hair a" pathLength="1" d="M301.9 87.5 Q313.9 84.4 321.5 81.2"/><path class="hair a" pathLength="1" d="M306.4 89.8 Q322.9 87.3 333.3 84.6"/><path class="hair a" pathLength="1" d="M314.7 83.1 Q331.3 82.5 339.5 80.6"/><path class="hair a" pathLength="1" d="M321.3 81.5 Q337.4 81.8 344.9 80.2"/><path class="hair a" pathLength="1" d="M326.9 85.7 Q343.1 86.8 350.4 85.8"/><path class="hair b" pathLength="1" d="M338.9 89.3 Q352.3 90.0 359.5 89.0"/><path class="hair b" pathLength="1" d="M343.1 90.8 Q355.8 91.6 362.4 90.6"/><path class="hair a" pathLength="1" d="M347.8 91.7 Q364.3 93.9 371.3 93.0"/><path class="hair b" pathLength="1" d="M361.3 94.3 Q373.0 95.3 380.5 95.0"/><path class="hair a" pathLength="1" d="M365.0 100.9 Q378.6 102.5 385.1 101.6"/><path class="hair a" pathLength="1" d="M370.6 95.0 Q381.7 96.9 386.9 96.6"/><path class="hair b" pathLength="1" d="M374.9 105.1 Q384.2 107.3 390.5 108.3"/><path class="hair a" pathLength="1" d="M382.9 106.0 Q396.3 108.4 402.1 107.8"/><path class="hair a" pathLength="1" d="M394.6 111.2 Q405.1 114.5 410.1 115.4"/><path class="hair b" pathLength="1" d="M403.6 108.9 Q412.9 110.8 417.8 110.7"/><path class="hair a" pathLength="1" d="M406.6 111.8 Q416.7 115.0 421.5 115.8"/><path class="hair a" pathLength="1" d="M414.4 116.0 Q422.3 118.2 427.5 119.3"/><path class="hair b" pathLength="1" d="M424.9 123.4 Q432.0 125.7 435.5 126.4"/><path class="hair a" pathLength="1" d="M430.7 124.2 Q439.0 126.9 442.7 127.5"/><path class="hair b" pathLength="1" d="M432.7 127.8 Q439.9 129.9 443.9 130.5"/><path class="hair a" pathLength="1" d="M442.3 128.0 Q448.7 130.3 452.4 131.4"/><path class="hair b" pathLength="1" d="M453.0 133.8 Q458.8 135.5 462.0 135.9"/><path class="hair a" pathLength="1" d="M459.7 136.8 Q465.1 139.0 468.1 140.0"/><path class="hair b" pathLength="1" d="M463.8 139.3 Q468.9 141.3 472.2 142.4"/></g></svg>
+<p class="lede">Microblading y servicios de salón en Av. San Mateo. Escríbenos, platicamos la forma que quieres y te damos fecha.</p>
+<div class="actions"><a class="btn" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20microblading." data-magnet><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Pregunta por microblading</a><a class="btn ghost" href="#microblading">Cómo funciona <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </div>
-<figure class="photo"><img src="img/2693077.webp" width="1280" height="850" alt="Sillón de lavado de cabello en un salón de tonos cálidos" fetchpriority="high"></figure>
+<div class="collage">
+<div class="main"><img class="" src="img/brow-1280.webp" srcset="img/brow-720.webp 720w, img/brow-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="820" height="853" alt="Kit para cejas con polvo y brochitas sobre una mesa de madera" fetchpriority="high"></div>
+<div class="small"><img class="" src="img/1853957-1280.webp" srcset="img/1853957-720.webp 720w, img/1853957-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="851" alt="Trenza vista desde atrás" loading="lazy" decoding="async"></div>
+<svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle cx="60" cy="60" r="58" fill="#fffaf5" stroke="#e2d3c4"/><text><textPath href="#c">Pelo a pelo · Parques de Tesistán ·</textPath></text><circle cx="60" cy="60" r="5" fill="#9a3b52"/></svg>
+</div>
 </div></section>
-<div class="facts"><div class="wrap"><ul>
-<li><b>Parques de Tesistán</b>Av. San Mateo 712, Zapopan</li>
-<li><b>Con cita</b>Se aparta por WhatsApp o teléfono</li>
-<li><b>2 servicios</b>Microblading, Servicios de salón</li>
-</ul></div></div>
-<section class="block" id="servicios"><div class="wrap">
-<div class="head"><h2>Servicios</h2><p class="sub">Lo que hacemos. Si buscas algo distinto, pregúntanos.</p></div>
-<ul class="svc"><li><h3>Microblading</h3><p>Diseño de cejas pelo a pelo. Te explicamos el proceso y los cuidados antes de empezar.</p><span class="note">Precio por WhatsApp</span></li><li><h3>Servicios de salón</h3><p>Corte, color y peinado. Pregúntanos por lo que buscas.</p><span class="note">Precio por WhatsApp</span></li></ul>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Microblading <i>✦</i></span><span>Corte <i>✦</i></span><span>Color <i>✦</i></span><span>Peinado <i>✦</i></span><span>Parques de Tesistán <i>✦</i></span></div></div>
+<section class="mb" id="microblading"><div class="wrap">
+<div>
+<p class="kicker">Microblading</p>
+<h2 data-lines>Una ceja, <em>trazo por trazo</em></h2>
+<p class="intro">Diseño de cejas pelo a pelo. Antes de empezar te explicamos el proceso y los cuidados, sin prisa.</p>
+<ol class="steps-mb">
+<li><span class="n">01</span><h3>Diseño</h3><p>Platicamos la forma que quieres y la marcamos juntas antes de empezar.</p></li>
+<li><span class="n">02</span><h3>Trazo pelo a pelo</h3><p>Se dibujan trazos finos que siguen la dirección natural de tu ceja.</p></li>
+<li><span class="n">03</span><h3>Cuidados</h3><p>Te decimos cómo cuidarlas en los días siguientes.</p></li>
+</ol>
+<div class="cta-mb"><a class="btn" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20microblading."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Agendar valoración</a></div>
+</div>
+<div class="stage"><svg class="brow-big" viewBox="0 0 520 200" fill="none" aria-hidden="true" focusable="false"><path class="guide" pathLength="1" d="M40.0 131.0 L50.8 126.9 L61.5 122.8 L72.2 118.7 L83.0 114.7 L93.8 110.7 L104.5 106.9 L115.2 103.1 L126.0 99.5 L136.8 96.0 L147.5 92.7 L158.2 89.5 L169.0 86.5 L179.8 83.7 L190.5 81.2 L201.2 78.8 L212.0 76.7 L222.8 74.8 L233.5 73.2 L244.2 71.8 L255.0 70.7 L265.8 69.9 L276.5 69.4 L287.2 69.1 L298.0 69.1 L308.8 69.6 L319.5 71.6 L330.2 74.4 L341.0 77.7 L351.8 81.4 L362.5 85.4 L373.2 89.7 L384.0 94.3 L394.8 99.1 L405.5 104.2 L416.2 109.5 L427.0 115.0 L437.8 120.8 L448.5 126.8 L459.2 133.1 L470.0 140.0 L470.0 144.0 L459.2 139.7 L448.5 135.0 L437.8 130.3 L427.0 125.8 L416.2 121.4 L405.5 117.2 L394.8 113.1 L384.0 109.3 L373.2 105.7 L362.5 102.3 L351.8 99.1 L341.0 96.3 L330.2 93.9 L319.5 91.9 L308.8 90.7 L298.0 91.0 L287.2 91.8 L276.5 92.8 L265.8 94.1 L255.0 95.7 L244.2 97.5 L233.5 99.6 L222.8 101.9 L212.0 104.5 L201.2 107.3 L190.5 110.3 L179.8 113.6 L169.0 117.0 L158.2 120.7 L147.5 124.5 L136.8 128.4 L126.0 132.6 L115.2 136.8 L104.5 141.2 L93.8 145.7 L83.0 150.2 L72.2 154.9 L61.5 159.6 L50.8 164.3 L40.0 169.0 Z"/><g class="hairs"><path class="hair a" pathLength="1" d="M44.7 159.3 Q48.2 138.5 40.4 122.4"/><path class="hair a" pathLength="1" d="M41.5 146.2 Q42.3 123.4 34.7 104.2"/><path class="hair b" pathLength="1" d="M45.9 146.4 Q48.7 124.5 38.8 107.9"/><path class="hair a" pathLength="1" d="M56.3 162.0 Q61.6 141.1 53.4 125.8"/><path class="hair a" pathLength="1" d="M52.4 148.0 Q57.4 121.9 51.7 100.3"/><path class="hair a" pathLength="1" d="M58.9 150.9 Q62.1 131.3 58.1 114.7"/><path class="hair a" pathLength="1" d="M60.1 144.9 Q66.3 120.5 60.0 101.2"/><path class="hair b" pathLength="1" d="M63.0 142.1 Q69.2 117.8 62.2 98.8"/><path class="hair b" pathLength="1" d="M71.8 155.3 Q78.3 135.0 74.7 118.9"/><path class="hair a" pathLength="1" d="M65.6 136.4 Q74.8 111.0 68.2 92.1"/><path class="hair a" pathLength="1" d="M76.2 146.9 Q86.0 122.9 82.3 104.3"/><path class="hair b" pathLength="1" d="M77.6 141.3 Q83.3 117.7 80.2 97.6"/><path class="hair b" pathLength="1" d="M82.8 146.9 Q89.5 125.8 85.8 108.9"/><path class="hair b" pathLength="1" d="M79.0 133.9 Q85.8 114.9 85.5 98.8"/><path class="hair a" pathLength="1" d="M84.3 136.7 Q94.8 112.5 95.9 92.0"/><path class="hair a" pathLength="1" d="M92.1 142.9 Q102.1 118.2 100.8 98.0"/><path class="hair a" pathLength="1" d="M95.8 144.4 Q103.6 125.5 103.4 109.7"/><path class="hair a" pathLength="1" d="M95.9 136.3 Q105.1 117.4 107.4 101.2"/><path class="hair a" pathLength="1" d="M102.3 141.6 Q115.9 119.0 116.5 101.4"/><path class="hair b" pathLength="1" d="M106.2 138.8 Q124.5 116.2 126.1 100.1"/><path class="hair a" pathLength="1" d="M102.9 123.2 Q115.9 102.8 120.6 85.7"/><path class="hair a" pathLength="1" d="M107.3 126.5 Q118.6 110.8 123.6 97.4"/><path class="hair a" pathLength="1" d="M108.1 119.5 Q126.1 97.5 129.7 80.8"/><path class="hair b" pathLength="1" d="M114.4 124.3 Q129.6 107.5 132.1 95.5"/><path class="hair a" pathLength="1" d="M116.6 117.7 Q130.1 102.0 134.7 89.7"/><path class="hair a" pathLength="1" d="M120.9 114.8 Q141.6 95.1 148.8 80.4"/><path class="hair b" pathLength="1" d="M126.6 123.0 Q150.0 103.4 156.4 89.9"/><path class="hair b" pathLength="1" d="M126.7 115.6 Q146.6 97.4 153.6 83.9"/><path class="hair b" pathLength="1" d="M134.5 125.8 Q158.2 106.9 165.1 94.1"/><path class="hair a" pathLength="1" d="M135.9 113.6 Q153.5 97.8 160.9 85.5"/><path class="hair a" pathLength="1" d="M136.8 113.9 Q159.3 97.3 165.7 86.4"/><path class="hair a" pathLength="1" d="M147.6 123.7 Q163.1 108.9 170.2 96.9"/><path class="hair a" pathLength="1" d="M146.5 117.6 Q170.1 100.9 177.7 89.6"/><path class="hair b" pathLength="1" d="M148.4 106.6 Q169.1 89.9 174.6 78.3"/><path class="hair b" pathLength="1" d="M152.8 106.9 Q172.6 91.5 181.7 79.5"/><path class="hair a" pathLength="1" d="M158.3 109.4 Q181.1 93.1 189.1 81.6"/><path class="hair b" pathLength="1" d="M161.6 117.8 Q181.3 103.7 192.2 92.5"/><path class="hair a" pathLength="1" d="M165.0 106.2 Q182.0 92.6 191.1 81.4"/><path class="hair b" pathLength="1" d="M169.4 108.1 Q190.1 92.5 198.9 80.5"/><path class="hair a" pathLength="1" d="M171.0 102.6 Q187.8 91.3 196.5 82.5"/><path class="hair a" pathLength="1" d="M172.0 100.1 Q192.6 85.7 202.4 74.4"/><path class="hair a" pathLength="1" d="M178.1 103.6 Q198.3 88.0 206.3 75.9"/><path class="hair b" pathLength="1" d="M181.5 102.9 Q196.9 93.4 206.4 85.4"/><path class="hair a" pathLength="1" d="M185.0 106.9 Q203.2 94.7 212.0 85.0"/><path class="hair a" pathLength="1" d="M187.2 95.4 Q204.4 82.9 213.0 72.6"/><path class="hair a" pathLength="1" d="M193.5 101.7 Q215.2 88.5 222.2 79.2"/><path class="hair a" pathLength="1" d="M196.2 100.1 Q215.6 87.9 224.3 78.5"/><path class="hair a" pathLength="1" d="M200.0 102.3 Q221.7 88.0 228.0 77.6"/><path class="hair a" pathLength="1" d="M204.4 103.5 Q218.4 93.4 226.0 84.8"/><path class="hair b" pathLength="1" d="M203.3 90.9 Q224.2 79.8 232.1 71.9"/><path class="hair b" pathLength="1" d="M209.3 99.2 Q226.2 89.3 231.7 82.0"/><path class="hair b" pathLength="1" d="M212.2 94.2 Q231.3 82.6 236.9 74.0"/><path class="hair a" pathLength="1" d="M216.0 95.3 Q232.1 86.2 241.0 78.7"/><path class="hair a" pathLength="1" d="M221.7 94.6 Q238.2 86.7 248.6 80.0"/><path class="hair b" pathLength="1" d="M223.5 86.5 Q245.7 75.3 254.0 66.8"/><path class="hair a" pathLength="1" d="M225.2 85.8 Q244.3 76.5 254.5 68.8"/><path class="hair b" pathLength="1" d="M232.1 96.7 Q246.7 87.9 254.8 80.3"/><path class="hair a" pathLength="1" d="M234.3 85.0 Q249.7 77.2 255.8 71.1"/><path class="hair b" pathLength="1" d="M237.5 92.8 Q254.8 82.6 264.8 73.7"/><path class="hair b" pathLength="1" d="M240.6 89.4 Q257.0 81.0 264.1 73.9"/><path class="hair a" pathLength="1" d="M245.1 89.8 Q260.3 83.6 269.4 78.3"/><path class="hair a" pathLength="1" d="M247.5 86.2 Q265.0 79.6 272.2 74.5"/><path class="hair a" pathLength="1" d="M252.9 86.0 Q266.9 80.7 274.8 76.1"/><path class="hair a" pathLength="1" d="M257.1 83.2 Q275.7 76.0 282.3 70.3"/><path class="hair a" pathLength="1" d="M261.6 87.0 Q280.4 79.8 290.1 73.6"/><path class="hair a" pathLength="1" d="M264.5 84.5 Q283.8 76.1 291.5 68.9"/><path class="hair b" pathLength="1" d="M266.8 80.3 Q280.5 75.2 289.0 70.7"/><path class="hair b" pathLength="1" d="M270.0 80.4 Q290.6 74.4 298.7 69.5"/><path class="hair a" pathLength="1" d="M274.0 82.9 Q289.7 77.9 299.0 73.4"/><path class="hair b" pathLength="1" d="M278.3 91.7 Q293.9 85.2 302.5 79.2"/><path class="hair a" pathLength="1" d="M281.3 78.5 Q297.2 73.8 305.1 69.5"/><path class="hair a" pathLength="1" d="M284.6 78.4 Q298.5 73.8 307.0 69.5"/><path class="hair a" pathLength="1" d="M287.9 82.1 Q303.3 78.7 310.6 75.6"/><path class="hair a" pathLength="1" d="M294.4 87.1 Q312.1 81.8 321.3 76.7"/><path class="hair b" pathLength="1" d="M298.9 87.0 Q314.4 83.5 324.4 80.1"/><path class="hair a" pathLength="1" d="M302.2 87.0 Q318.4 82.4 328.2 77.9"/><path class="hair b" pathLength="1" d="M304.5 87.8 Q322.0 82.9 330.1 78.0"/><path class="hair a" pathLength="1" d="M308.8 80.8 Q321.0 78.6 328.5 76.0"/><path class="hair b" pathLength="1" d="M309.9 84.9 Q326.5 82.5 334.4 79.0"/><path class="hair a" pathLength="1" d="M314.4 88.4 Q331.3 88.5 340.1 87.4"/><path class="hair a" pathLength="1" d="M318.7 88.3 Q331.7 88.6 340.0 87.9"/><path class="hair a" pathLength="1" d="M322.6 89.0 Q340.2 89.7 349.4 88.6"/><path class="hair a" pathLength="1" d="M325.3 89.9 Q341.2 89.8 348.9 87.9"/><path class="hair a" pathLength="1" d="M327.8 90.1 Q341.7 91.0 348.8 90.2"/><path class="hair a" pathLength="1" d="M331.4 90.1 Q347.4 91.4 355.1 90.5"/><path class="hair a" pathLength="1" d="M337.4 89.3 Q350.6 90.4 356.2 89.4"/><path class="hair b" pathLength="1" d="M344.2 86.2 Q358.6 86.8 365.1 85.1"/><path class="hair a" pathLength="1" d="M345.4 88.7 Q360.4 90.4 369.6 90.4"/><path class="hair a" pathLength="1" d="M345.8 96.8 Q358.3 98.2 363.9 97.5"/><path class="hair a" pathLength="1" d="M354.6 91.8 Q369.5 93.2 377.5 92.4"/><path class="hair a" pathLength="1" d="M354.3 94.0 Q365.7 95.3 373.0 95.2"/><path class="hair a" pathLength="1" d="M360.7 91.4 Q375.4 93.0 382.0 91.9"/><path class="hair a" pathLength="1" d="M363.9 101.7 Q375.1 103.1 381.6 102.8"/><path class="hair a" pathLength="1" d="M369.7 98.2 Q381.0 99.9 387.8 100.0"/><path class="hair a" pathLength="1" d="M370.3 97.7 Q383.7 99.3 391.7 98.9"/><path class="hair b" pathLength="1" d="M375.4 100.4 Q389.8 103.8 396.0 104.2"/><path class="hair a" pathLength="1" d="M377.9 106.7 Q389.9 108.5 395.8 107.9"/><path class="hair a" pathLength="1" d="M382.7 106.6 Q393.9 109.0 400.5 109.5"/><path class="hair b" pathLength="1" d="M388.1 106.1 Q397.8 108.7 403.5 109.7"/><path class="hair a" pathLength="1" d="M391.6 109.1 Q401.3 111.7 406.4 112.4"/><path class="hair a" pathLength="1" d="M393.7 106.0 Q405.4 109.3 411.7 110.3"/><path class="hair a" pathLength="1" d="M399.6 110.5 Q407.9 111.9 413.1 112.0"/><path class="hair b" pathLength="1" d="M401.9 109.7 Q410.8 112.5 415.4 113.4"/><path class="hair a" pathLength="1" d="M406.8 113.2 Q416.0 115.7 421.2 116.5"/><path class="hair a" pathLength="1" d="M406.3 117.4 Q414.3 119.8 418.6 120.6"/><path class="hair a" pathLength="1" d="M415.3 115.8 Q423.0 118.3 427.4 119.3"/><path class="hair b" pathLength="1" d="M417.8 121.3 Q424.3 122.8 428.7 123.3"/><path class="hair b" pathLength="1" d="M422.2 121.1 Q428.8 123.1 432.5 123.8"/><path class="hair a" pathLength="1" d="M424.8 124.9 Q431.5 126.5 435.9 127.1"/><path class="hair b" pathLength="1" d="M427.6 125.8 Q436.0 128.3 440.3 128.8"/><path class="hair b" pathLength="1" d="M433.5 122.7 Q441.1 125.0 445.8 126.0"/><path class="hair b" pathLength="1" d="M437.9 125.4 Q444.2 127.7 447.4 128.5"/><path class="hair a" pathLength="1" d="M438.7 128.1 Q445.3 130.8 449.1 132.0"/><path class="hair a" pathLength="1" d="M445.0 129.8 Q451.4 132.6 454.1 133.5"/><path class="hair b" pathLength="1" d="M450.1 132.0 Q456.1 134.3 458.7 134.8"/><path class="hair a" pathLength="1" d="M451.2 133.9 Q456.8 136.3 459.9 137.5"/><path class="hair a" pathLength="1" d="M457.0 135.5 Q462.5 137.1 465.7 137.7"/><path class="hair a" pathLength="1" d="M460.0 139.3 Q465.5 141.6 468.4 142.7"/><path class="hair b" pathLength="1" d="M465.1 141.6 Q470.3 143.8 473.5 144.9"/><path class="hair a" pathLength="1" d="M466.8 141.4 Q472.2 143.1 475.5 143.7"/></g></svg><span class="count" aria-hidden="true"></span><span class="caption">Ilustración del trazo pelo a pelo</span></div>
 </div></section>
-<div class="wrap band"><img src="img/3277314.webp" width="1280" height="854" alt="Salón de belleza con estación de lavado y estantes de productos" loading="lazy"></div>
-<section class="block"><div class="wrap">
-<div class="head"><h2>Cómo agendar</h2></div>
-<ol class="steps"><li><h3>Escríbenos</h3><p>Dinos qué servicio te interesa y qué día te acomoda.</p></li><li><h3>Te confirmamos</h3><p>Te damos horario y lo que necesitas saber antes de llegar.</p></li><li><h3>Llegas a tu cita</h3><p>Si se te complica, avísanos y la movemos.</p></li></ol>
+<section class="block salon" id="salon"><div class="wrap">
+<div class="head"><div><p class="kicker">Salón</p><h2 data-lines>También en el salón</h2></div><p>Además del microblading, atendemos corte, color y peinado. Pregúntanos por lo que buscas.</p></div>
+<div class="cards">
+<article class="card"><div class="ph"><img class="" src="img/1516352-1280.webp" srcset="img/1516352-720.webp 720w, img/1516352-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Estilista cortando cabello con peine y tijera" loading="lazy" decoding="async"></div><div class="tx"><h3>Corte</h3><p>Dinos cómo lo traes y cómo lo quieres; lo platicamos antes de cortar.</p><span class="note">Precio por WhatsApp</span></div></article>
+<article class="card"><div class="ph"><img class="" src="img/5965371-1280.webp" srcset="img/5965371-720.webp 720w, img/5965371-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Tazón con tinte y brocha para aplicar color" loading="lazy" decoding="async"></div><div class="tx"><h3>Color</h3><p>Tinte y mechas. Te decimos qué tono te conviene según tu cabello.</p><span class="note">Precio por WhatsApp</span></div></article>
+<article class="card"><div class="ph"><img class="" src="img/1853957-1280.webp" srcset="img/1853957-720.webp 720w, img/1853957-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="851" alt="Trenza vista desde atrás" loading="lazy" decoding="async"></div><div class="tx"><h3>Peinado</h3><p>Para eventos o para el día a día. Agenda con anticipación si es fecha especial.</p><span class="note">Precio por WhatsApp</span></div></article>
+</div>
 </div></section>
-<section class="block" id="resenas" style="padding-top:0"><div class="wrap">
-<div class="head"><h2>Lo que dicen en Google</h2></div>
+<section class="galeria" aria-labelledby="g-t">
+<div class="wrap top"><p class="kicker">El espacio</p><h2 id="g-t" data-lines>Así se vive una cita</h2><p class="gal-note">Fotos ilustrativas. En la página final van fotos del salón.</p></div>
+<div class="gal-viewport"><div class="gal-track"><figure><div class="f"><img class="" src="img/5441655-1280.webp" srcset="img/5441655-720.webp 720w, img/5441655-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="852" alt="Salón amplio con ventanales, espejo grande y sillas de corte" loading="lazy" decoding="async"></div><figcaption>Salón amplio con ventanales, espejo grande y sillas de corte</figcaption></figure><figure><div class="f"><img class="" src="img/2693077-1280.webp" srcset="img/2693077-720.webp 720w, img/2693077-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="850" alt="Sillón de lavado de cabello en un salón de tonos cálidos" loading="lazy" decoding="async"></div><figcaption>Sillón de lavado de cabello en un salón de tonos cálidos</figcaption></figure><figure><div class="f"><img class="" src="img/4057094-1280.webp" srcset="img/4057094-720.webp 720w, img/4057094-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="809" alt="Estilista aplicando mechas con papel aluminio" loading="lazy" decoding="async"></div><figcaption>Estilista aplicando mechas con papel aluminio</figcaption></figure><figure><div class="f"><img class="" src="img/5441659-1280.webp" srcset="img/5441659-720.webp 720w, img/5441659-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Repisas iluminadas con productos para el cabello" loading="lazy" decoding="async"></div><figcaption>Repisas iluminadas con productos para el cabello</figcaption></figure><figure><div class="f"><img class="" src="img/3173438-1280.webp" srcset="img/3173438-720.webp 720w, img/3173438-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="801" alt="Corte con tijera visto desde atrás" loading="lazy" decoding="async"></div><figcaption>Corte con tijera visto desde atrás</figcaption></figure></div></div>
+</section>
+<section class="block agenda" id="agenda"><div class="wrap">
+<div class="head"><div><p class="kicker">Agenda</p><h2 data-lines>Tu cita en tres pasos</h2></div></div>
+<ol class="list">
+<li><h3>Escríbenos</h3><p>Dinos qué servicio te interesa y qué día te acomoda.</p></li>
+<li><h3>Te confirmamos</h3><p>Te damos horario y lo que necesitas saber antes de llegar.</p></li>
+<li><h3>Llegas a tu cita</h3><p>Si se te complica, avísanos y la movemos.</p></li>
+</ol>
+</div></section>
+<section class="block voces" style="padding-top:0"><div class="wrap">
+<div class="head"><div><p class="kicker">Reseñas</p><h2 data-lines>Lo que dicen en Google</h2></div></div>
 <p class="notice">Reseñas de ejemplo para esta demostración. En la página final se muestran sus reseñas reales de Google.</p>
-<div class="reviews"><figure class="review"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Me explicaron todo antes de empezar y quedé contenta.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="review"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Agendar por WhatsApp fue rápido.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="review"><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><blockquote>Lugar limpio y tranquilo. Volvería.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure></div>
+<div class="revs"><figure class="rev"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Me explicó todo el proceso antes de empezar y quedé contenta con la forma.</blockquote><figcaption class="who">Clienta de ejemplo</figcaption></figure><figure class="rev"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Agendar por WhatsApp fue rápido y me atendieron a mi hora.</blockquote><figcaption class="who">Clienta de ejemplo</figcaption></figure><figure class="rev"><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><blockquote>Lugar limpio y tranquilo. Volvería para el corte.</blockquote><figcaption class="who">Clienta de ejemplo</figcaption></figure></div>
 </div></section>
-<section class="block" id="ubicacion" style="padding-top:0"><div class="wrap">
-<div class="head"><h2>Dónde estamos</h2></div>
+<section class="block visita" id="visita" style="padding-top:0"><div class="wrap">
+<div class="head"><div><p class="kicker">Ubicación</p><h2 data-lines>Visítanos</h2></div></div>
 <div class="loc">
-<div class="map"><iframe src="https://www.google.com/maps?q=Erika%20Sal%C3%B3n%20y%20Microblading%2C%20Av.%20San%20Mateo%20712%2C%20Parques%20de%20Tesist%C3%A1n%2C%2045200%20Zapopan%2C%20Jal.&output=embed" title="Mapa de Erika Salón y Microblading" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-<dl>
+<div class="map" data-reveal><iframe src="https://www.google.com/maps?q=Erika%20Sal%C3%B3n%20y%20Microblading%2C%20Av.%20San%20Mateo%20712%2C%20Parques%20de%20Tesist%C3%A1n%2C%2045200%20Zapopan%2C%20Jal.&output=embed" title="Mapa de Erika Salón y Microblading" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<dl data-reveal>
 <div><dt>Dirección</dt><dd>Av. San Mateo 712, Parques de Tesistán, 45200 Zapopan, Jal.</dd></div>
 <div><dt>Horario</dt><dd>Pregúntanos por WhatsApp</dd></div>
-<div><dt>Teléfono</dt><dd><a class="link" href="tel:+523314170577">33 1417 0577</a></dd></div>
+<div><dt>Teléfono y WhatsApp</dt><dd><a class="link" href="tel:+523314170577">33 1417 0577</a></dd></div>
+<div><dt>Correo</dt><dd><a class="link" href="mailto:erikasalon.provi@gmail.com">erikasalon.provi@gmail.com</a></dd></div>
 <div><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Erika%20Sal%C3%B3n%20y%20Microblading%2C%20Av.%20San%20Mateo%20712%2C%20Parques%20de%20Tesist%C3%A1n%2C%2045200%20Zapopan%2C%20Jal.">Abrir en Google Maps</a></div>
 </dl>
 </div>
 </div></section>
 <section class="wrap"><div class="final">
-<h2>¿Tienes un evento cerca?</h2>
-<p>Escríbenos con la fecha y te confirmamos disponibilidad.</p>
-<a class="btn" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Erika%20Sal%C3%B3n%20y%20Microblading."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Mandar mensaje</a>
+<h2>¿<em>Agendamos</em>?</h2>
+<p>Mándanos un mensaje con el servicio que te interesa y te damos los horarios libres.</p>
+<a class="btn" href="https://wa.me/523314170577?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Erika%20Sal%C3%B3n." data-magnet><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Escribir por WhatsApp</a>
 </div></section>
 </main>
 <footer><div class="wrap">
 <nav><a href="./">Inicio</a><a href="terminos/">Términos y condiciones</a><a href="privacidad/">Aviso de privacidad</a></nav>
 <p>Erika Salón y Microblading, Av. San Mateo 712, Parques de Tesistán, 45200 Zapopan, Jal. Tel. 33 1417 0577.</p>
-<p>Página de muestra preparada para Erika Salón y Microblading. Los datos vienen de su información pública y se pueden ajustar.</p>
+<p>Página de muestra preparada para Erika Salón y Microblading. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
 </div></footer>
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script>
 (function(){
+  var root = document.documentElement;
+  var bar = document.querySelector('header.bar');
+  function solid(){ bar.classList.toggle('solid', window.scrollY > 20); }
+  window.addEventListener('scroll', solid, {passive:true}); solid();
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !window.gsap) return;
-  gsap.registerPlugin(ScrollTrigger);
+  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
+  root.classList.add('motion');
+
+  // Scroll suave + enlaces internos
+  var lenis = null;
   if (window.Lenis) {
-    var lenis = new Lenis({ duration: 1.1 });
+    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
     gsap.ticker.lagSmoothing(0);
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      a.addEventListener('click', function(e){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (el){ e.preventDefault(); lenis.scrollTo(el, { offset: -72 }); } });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href'); if (id.length < 2) return;
+      var el = document.querySelector(id); if (!el) return;
+      ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -70 }) : el.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  // Barra de progreso
+  gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: .3 } });
+
+  // Revelados genéricos
+  gsap.utils.toArray('[data-reveal]').forEach(function(el){
+    gsap.fromTo(el, { autoAlpha: 0, y: 28 }, { autoAlpha: 1, y: 0, duration: .9, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+  });
+
+  // Títulos por líneas
+  function lines(sel, opts){
+    if (!window.SplitText) return;
+    gsap.utils.toArray(sel).forEach(function(el){
+      SplitText.create(el, { type: 'lines', mask: 'lines', autoSplit: true, onSplit: function(self){
+        return gsap.from(self.lines, Object.assign({ yPercent: 110, duration: 1, ease: 'expo.out', stagger: .09 }, opts ? opts(el) : {}));
+      }});
     });
   }
-  gsap.from('.hero .kicker, .hero h1, .hero .lede, .hero .actions', { y: 18, opacity: 0, duration: .7, ease: 'power2.out', stagger: .08 });
-  gsap.from('.hero .photo', { opacity: 0, duration: .9, delay: .25, ease: 'power1.out' });
-  document.querySelectorAll('section.block h2').forEach(function(h){
-    gsap.from(h, { y: 16, opacity: 0, duration: .6, ease: 'power2.out', scrollTrigger: { trigger: h, start: 'top 85%', once: true } });
+  lines('.hero h1');
+  lines('[data-lines]', function(el){ return { scrollTrigger: { trigger: el, start: 'top 85%', once: true } }; });
+
+  // Hero: ceja que se dibuja, collage con máscara y parallax
+  var hero = gsap.timeline({ delay: .15 });
+  hero.from('.hero .kicker, .hero .lede, .hero .actions', { autoAlpha: 0, y: 20, duration: .8, ease: 'power3.out', stagger: .1 }, .25)
+      .to('.brow-hero .hair', { strokeDashoffset: 0, duration: .5, ease: 'power1.out', stagger: { each: .018 } }, .45)
+      .from('.collage .main', { clipPath: 'inset(100% 0% 0% 0% round 220px 220px 16px 16px)', duration: 1.3, ease: 'expo.inOut' }, 0)
+      .from('.collage .main img', { scale: 1.25, duration: 1.6, ease: 'expo.out' }, .2)
+      .from('.collage .small', { autoAlpha: 0, y: 40, duration: 1, ease: 'power3.out' }, .7)
+      .from('.collage .badge', { autoAlpha: 0, scale: .6, duration: .8, ease: 'back.out(1.6)' }, 1);
+  gsap.to('.collage .badge', { rotate: 360, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.collage .main img', { yPercent: -10, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.collage .small', { yPercent: -28, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  // Cinta que acelera y cambia de dirección con el scroll
+  var track = document.querySelector('.marquee .track');
+  if (track) {
+    track.innerHTML += track.innerHTML;
+    var loop = gsap.to(track, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
+    ScrollTrigger.create({ onUpdate: function(self){
+      var v = gsap.utils.clamp(-6, 6, self.getVelocity() / 300);
+      gsap.to(loop, { timeScale: (self.direction === -1 ? -1 : 1) * (1 + Math.abs(v)), duration: .3, overwrite: true });
+    }});
+  }
+
+  // Microblading: la ceja se traza pelo a pelo con el scroll
+  var hairs = gsap.utils.toArray('.brow-big .hair');
+  var steps = gsap.utils.toArray('.steps-mb li');
+  var count = document.querySelector('.stage .count');
+  var mm = gsap.matchMedia();
+  function browTL(st){
+    st.onUpdate = function(self){
+      var p = self.progress, i = p < .3 ? 0 : (p < .88 ? 1 : 2);
+      steps.forEach(function(li, k){ li.classList.toggle('on', k === i); });
+      if (count) count.textContent = Math.round(gsap.utils.clamp(0, 1, (p - .3) / .58) * hairs.length) + ' / ' + hairs.length + ' trazos';
+    };
+    var tl = gsap.timeline({ scrollTrigger: st });
+    tl.to('.brow-big .guide', { strokeDashoffset: 0, duration: .28, ease: 'none' })
+      .to(hairs, { strokeDashoffset: 0, duration: .02, ease: 'none', stagger: { each: .55 / hairs.length } }, .3)
+      .to('.brow-big .guide', { opacity: 0, duration: .12 }, .9)
+      .to({}, { duration: .1 });
+    return tl;
+  }
+  steps[0] && steps[0].classList.add('on');
+  mm.add('(min-width: 900px)', function(){
+    browTL({ trigger: '.mb', start: 'top top', end: '+=180%', pin: true, scrub: .6 });
   });
+  mm.add('(max-width: 899px)', function(){
+    browTL({ trigger: '.stage', start: 'top 75%', end: 'bottom 25%', scrub: .6 });
+  });
+
+  // Tarjetas del salón: la foto se descubre y se asienta
+  gsap.utils.toArray('.card').forEach(function(c, i){
+    var tl = gsap.timeline({ scrollTrigger: { trigger: c, start: 'top 85%', once: true } });
+    tl.from(c, { y: 50, autoAlpha: 0, duration: .9, ease: 'power3.out', delay: (i % 3) * .08 })
+      .from(c.querySelector('.ph'), { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'expo.inOut' }, '<.1')
+      .from(c.querySelector('img'), { scale: 1.3, duration: 1.4, ease: 'expo.out' }, '<');
+  });
+
+  // Galería horizontal fija en escritorio
+  mm.add('(min-width: 900px)', function(){
+    var t = document.querySelector('.gal-track');
+    var dist = function(){ return t.scrollWidth - window.innerWidth + 40; };
+    gsap.to(t, { x: function(){ return -dist(); }, ease: 'none',
+      scrollTrigger: { trigger: '.galeria', start: 'top top', end: function(){ return '+=' + dist(); }, pin: true, scrub: .6, invalidateOnRefresh: true } });
+    gsap.utils.toArray('.gal-track img').forEach(function(im){
+      gsap.fromTo(im, { scale: 1.18 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.galeria', start: 'top top', end: function(){ return '+=' + dist(); }, scrub: true } });
+    });
+  });
+
+  // Pasos para agendar y reseñas en cascada
+  ['.agenda li', '.rev'].forEach(function(sel){
+    gsap.from(sel, { y: 40, autoAlpha: 0, duration: .8, ease: 'power3.out', stagger: .12,
+      scrollTrigger: { trigger: sel, start: 'top 85%', once: true } });
+  });
+
+  // Cierre: letras que suben y botón magnético
+  if (window.SplitText) {
+    SplitText.create('.final h2', { type: 'chars', autoSplit: true, onSplit: function(self){
+      return gsap.from(self.chars, { yPercent: 100, autoAlpha: 0, rotate: 6, duration: .9, ease: 'back.out(1.7)', stagger: .03,
+        scrollTrigger: { trigger: '.final', start: 'top 75%', once: true } });
+    }});
+  }
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('[data-magnet]').forEach(function(b){
+      var xTo = gsap.quickTo(b, 'x', { duration: .4, ease: 'power3' }), yTo = gsap.quickTo(b, 'y', { duration: .4, ease: 'power3' });
+      b.addEventListener('pointermove', function(ev){ var r = b.getBoundingClientRect(); xTo((ev.clientX - r.left - r.width / 2) * .3); yTo((ev.clientY - r.top - r.height / 2) * .4); });
+      b.addEventListener('pointerleave', function(){ xTo(0); yTo(0); });
+    });
+  }
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 })();
 </script>
 </body>
