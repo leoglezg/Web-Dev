@@ -141,7 +141,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 .m3d .s3d-pin{height:100vh;min-height:560px;display:block;padding:0}
 .m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
 .m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
-.m3d .s3d-canvas canvas{display:block}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{display:none}
+.m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
 .m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
 .m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
 .m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
@@ -276,94 +276,44 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 })();
 </script>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <script type="module">
-import * as THREE from 'three';
-import { MarchingCubes } from 'three/addons/objects/MarchingCubes.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 const gsap = window.gsap, ST = window.ScrollTrigger;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const canvas = document.querySelector('.s3d-canvas canvas');
-let gl = null; try { gl = canvas.getContext('webgl2') || canvas.getContext('webgl'); } catch (e) {}
-if (gsap && ST && gl && !reduce) start();
+let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+if (gsap && ST && hasGL && !reduce) setup();
 
-function sdTooth(x, y, z) {
-  const smin = (a, b, k) => { const h = Math.max(k - Math.abs(a - b), 0) / k; return Math.min(a, b) - h * h * k * .25; };
-  const smax = (a, b, k) => -smin(-a, -b, k);
-  const len = (a, b, c) => Math.sqrt(a * a + b * b + c * c);
-  // corona abombada: más ancha a media altura, angosta en el cuello
-  const t = Math.max(0, Math.min(1, (y - .02) / .72));
-  const w = .8 + .3 * Math.sin(t * Math.PI * .9);
-  const cx0 = x / w, cz0 = z / w;
-  const qx = Math.abs(cx0) - .36, qy = Math.abs(y - .4) - .2, qz = Math.abs(cz0) - .3;
-  let d = (len(Math.max(qx, 0), Math.max(qy, 0), Math.max(qz, 0)) + Math.min(Math.max(qx, Math.max(qy, qz)), 0) - .2) * Math.min(w, 1);
-  // cuatro cúspides redondeadas
-  for (const cx of [-.25, .25]) for (const cz of [-.21, .21]) d = smin(d, len(x - cx, (y - .66) * 1.25, z - cz) - .21, .16);
-  // surcos entre cúspides
-  const g1 = len(x * .25, (y - .86) * 1.4, z) - .06, g2 = len(x, (y - .86) * 1.4, z * .25) - .06;
-  d = smax(d, -Math.min(g1, g2), .06);
-  // dos raíces que se abren y se afinan
-  for (const s of [-1, 1]) {
-    const ax = .22 * s, ay = .12, bx = .36 * s, by = -1.0;
-    const px = x - ax, py = y - ay, vx = bx - ax, vy = by - ay;
-    const h = Math.max(0, Math.min(1, (px * vx + py * vy) / (vx * vx + vy * vy)));
-    const bend = .06 * Math.sin(h * Math.PI) * s;
-    const r = .22 * Math.pow(1 - h, .8) + .045;
-    d = smin(d, len(px - vx * h + bend, py - vy * h, z * 1.15) - r, .2);
-  }
-  return d;
-}
-
-function start() {
-  document.documentElement.classList.add('m3d');
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
-  const scene = new THREE.Scene();
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  scene.environment = pmrem.fromScene(new RoomEnvironment(), .04).texture;
-  const camera = new THREE.PerspectiveCamera(28, 1, .1, 50); camera.position.set(0, .15, 6.2);
-  const key = new THREE.DirectionalLight(0xfff8ee, 2.6); key.position.set(3.5, 5, 4); scene.add(key);
-  const rim = new THREE.DirectionalLight(0x7fd1d9, 2.2); rim.position.set(-4, 2, -3); scene.add(rim);
-  const mat = new THREE.MeshPhysicalMaterial({ color: 0xf2ece0, roughness: .28, clearcoat: .9, clearcoatRoughness: .18, sheen: .5, sheenColor: new THREE.Color(0xfff6e8), sheenRoughness: .6 });
-  scene.environmentIntensity = .55;
-  const fill = new THREE.DirectionalLight(0xffffff, .35); fill.position.set(-3, -1, 4); scene.add(fill);
-  const R = innerWidth < 760 ? 56 : 72;
-  const mc = new MarchingCubes(R, mat, false, false, 160000);
-  const half = R / 2;
-  for (let k = 0; k < R; k++) for (let j = 0; j < R; j++) for (let i = 0; i < R; i++) {
-    const d = sdTooth((i - half) / half * 1.08, (j - half) / half * 1.08, (k - half) / half * 1.08);
-    mc.field[i + j * R + k * R * R] = 80 - d * 260;
-  }
-  mc.update();
-  const tooth = new THREE.Group(); tooth.add(mc); scene.add(tooth);
-  mc.scale.setScalar(1.2);
+function setup() {
+  const root = document.documentElement; root.classList.add('m3d');
+  const canvas = document.querySelector('.s3d-canvas canvas');
+  const poster = document.querySelector('.s3d-canvas .poster');
   const shadow = document.querySelector('.s3d-canvas .shadow');
-  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix(); draw(); }
   const st = { y: -3.2, ry: -.6, rx: .18, s: .7, x: 0 };
+  let three = null;   // se llena cuando el 3D está listo
+  // 1 unidad de la escena ≈ 32% del alto del lienzo (cámara de 28° a 6.2 de distancia)
   function draw() {
-    tooth.position.set(st.x, st.y, 0); tooth.rotation.set(st.rx, st.ry, 0); tooth.scale.setScalar(st.s);
-    renderer.render(scene, camera);
+    if (three) {
+      const { renderer, scene, camera, tooth } = three;
+      tooth.position.set(st.x, st.y, 0); tooth.rotation.set(st.rx, st.ry, 0); tooth.scale.setScalar(st.s);
+      renderer.render(scene, camera);
+    } else {
+      poster.style.transform = 'translate(' + (st.x * 32) + '%,' + (-(st.y - .05) * 32) + '%) scale(' + (st.s / 1.05) + ')';
+    }
     const lift = Math.max(0, Math.min(1, 1 - Math.abs(st.y + .1) / 2.6));
     shadow.style.opacity = lift.toFixed(3); shadow.style.transform = 'translateX(' + (st.x * 18) + '%) scaleX(' + (.6 + .4 * st.s) + ')';
   }
-  addEventListener('resize', size); size();
 
   const chs = gsap.utils.toArray('.ch'), bars = gsap.utils.toArray('.s3d-progress span');
   const tl = gsap.timeline({ defaults: { ease: 'none' }, onUpdate: draw,
     scrollTrigger: { trigger: '.s3d', start: 'top top', end: '+=420%', pin: '.s3d-pin', scrub: .8, anticipatePin: 1, refreshPriority: 1,
       onUpdate(self) { const p = self.progress; bars.forEach((b, i) => b.style.setProperty('--p', Math.max(0, Math.min(1, (p - .3 - i * .233) / .233)))); } } });
-  // 1) el diente sube y se acomoda debajo de la palabra; la estrella se vuelve "a"
   tl.to(st, { y: -.12, ry: .25, duration: .14, ease: 'power2.out' }, 0)
     .to('.swap .spark-l', { opacity: 0, scale: .2, rotate: 90, duration: .03 }, .1)
     .fromTo('.swap .real', { opacity: 0, yPercent: 40 }, { opacity: 1, yPercent: 0, duration: .04, ease: 'back.out(3)' }, .11)
     .to('.fly', { opacity: 0, scale: 2.2, duration: .04 }, .11)
-  // 2) la palabra se va, el diente pasa al centro y crece
     .to('.s3d-intro', { yPercent: -60, opacity: 0, filter: 'blur(10px)', duration: .1 }, .2)
     .to('.s3d-cta', { opacity: 0, y: 30, duration: .06 }, .2)
     .to(st, { y: .05, s: 1.05, rx: .32, duration: .12, ease: 'power1.inOut' }, .2)
     .to('.s3d-specs', { autoAlpha: 1, duration: .05 }, .3);
-  // 3) capítulos: entran con desenfoque mientras el diente gira 360°
   chs.forEach((c, i) => {
     const t0 = .3 + i * .233;
     tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
@@ -373,15 +323,44 @@ function start() {
     .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
     .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
 
-  // destellos flotando y la estrella-letra latiendo antes de cambiar
-  gsap.set('.swap .real', { opacity: 0 });
-  gsap.set('.swap .spark-l', { opacity: 1 });
+  gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
   gsap.to('.swap .spark-l', { rotate: 45, scale: 1.12, duration: 1.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
   gsap.utils.toArray('.fly').forEach((f, i) => gsap.fromTo(f, { opacity: 0, y: 10 }, { opacity: 1, y: -10, rotate: 90, duration: 1.6 + i * .3, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: i * .25 }));
-  // entrada inicial al cargar
   gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
   gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
-  ST.sort(); ST.refresh();
+  draw(); ST.sort(); ST.refresh();
+
+  // El 3D se carga después de que la página ya se ve y responde
+  const go = () => load3d().catch(() => {});
+  const idle = () => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300));
+  document.readyState === 'complete' ? idle() : addEventListener('load', idle, { once: true });
+
+  async function load3d() {
+    const [T, bin] = await Promise.all([import('./three-lite.js'), fetch('./diente.bin').then(r => r.arrayBuffer())]);
+    const head = new Float32Array(bin, 0, 4), m = head[0], nv = head[1], ni = head[2];
+    const q = new Int16Array(bin, 16, nv * 3), pos = new Float32Array(nv * 3);
+    for (let i = 0; i < pos.length; i++) pos[i] = q[i] / 32767 * m;
+    const idx = new Uint16Array(bin, 16 + nv * 6, ni);
+    const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(pos, 3)); geo.setIndex(new T.BufferAttribute(idx, 1)); geo.computeVertexNormals();
+    const renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 760 ? 1.5 : 2));
+    renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+    const scene = new T.Scene();
+    const pmrem = new T.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(new T.RoomEnvironment(), .04).texture; scene.environmentIntensity = .55; pmrem.dispose();
+    const camera = new T.PerspectiveCamera(28, 1, .1, 50); camera.position.set(0, .15, 6.2);
+    const key = new T.DirectionalLight(0xfff8ee, 2.6); key.position.set(3.5, 5, 4); scene.add(key);
+    const rim = new T.DirectionalLight(0x7fd1d9, 2.2); rim.position.set(-4, 2, -3); scene.add(rim);
+    const fill = new T.DirectionalLight(0xffffff, .35); fill.position.set(-3, -1, 4); scene.add(fill);
+    const mat = new T.MeshPhysicalMaterial({ color: 0xf2ece0, roughness: .28, clearcoat: .9, clearcoatRoughness: .18, sheen: .5, sheenColor: new T.Color(0xfff6e8), sheenRoughness: .6 });
+    const mesh = new T.Mesh(geo, mat); mesh.scale.setScalar(1.2);
+    const tooth = new T.Group(); tooth.add(mesh); scene.add(tooth);
+    const size = () => { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix(); if (three) draw(); };
+    three = { renderer, scene, camera, tooth };
+    size(); addEventListener('resize', size);
+    renderer.compile(scene, camera); draw();
+    requestAnimationFrame(() => root.classList.add('ready3d'));
+  }
 }
 </script>
 </body>
