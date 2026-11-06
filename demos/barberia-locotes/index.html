@@ -168,7 +168,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
     <span class="fly f1" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f2" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span>
   </div>
   <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
-    <img class="poster" src="img/navaja-3d.webp" width="900" height="900" alt="Ilustración 3D: navaja de barbero" fetchpriority="high"></div>
+    <img class="poster" src="img/maquina-3d.webp" width="900" height="900" alt="Ilustración 3D: máquina para cortar pelo" fetchpriority="high"></div>
   <div class="s3d-chapters"><article class="ch" data-i="0"><p class="num">.01</p><h2>Platicamos el corte</h2><p>Nos dices cómo lo traes y cómo lo quieres antes de empezar.</p></article><article class="ch" data-i="1"><p class="num">.02</p><h2>Máquina y tijera</h2><p>Trabajamos por capas para que el cambio de largo no se note.</p></article><article class="ch" data-i="2"><p class="num">.03</p><h2>Detalle con navaja</h2><p>Marcamos contorno y nuca para dejar líneas limpias.</p></article></div>
   <dl class="s3d-specs"><div><dt>Ubicación</dt><dd>La Granja</dd></div><div><dt>Citas</dt><dd>WhatsApp</dd></div><div><dt>Servicios</dt><dd>Rasurado y barba</dd></div></dl>
   <div class="s3d-cta"><a class="btn" href="https://wa.me/523343469479?text=Hola%2C%20quiero%20apartar%20un%20lugar%20en%20Barber%C3%ADa%20Locotes." data-magnet>Apartar mi hora</a><span class="hint">Desliza para ver cómo trabajamos</span></div>
@@ -270,7 +270,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 })();
 </script>
 <script type="module">
-const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "navaja-hoja.bin", "color": "#e8ecef", "metal": 1, "rough": 0.12}, {"bin": "navaja-mango.bin", "color": "#1c1916", "rough": 0.3, "clear": 1}], "scale": 1.35, "base": [0, 0, -0.15], "rim": "#d9a066", "env": 1.0};
+const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "maquina-cuerpo.bin", "color": "#1c1916", "rough": 0.32, "clear": 1}, {"bin": "maquina-anillo.bin", "color": "#2d6a4f", "metal": 0.6, "rough": 0.3}, {"bin": "maquina-cuchillas.bin", "color": "#e3e6e9", "metal": 1, "rough": 0.18}], "scale": 1.2, "base": [0, 0, -0.12], "rim": "#d9a066", "env": 0.8};
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
 if (gsap && ST && hasGL && !reduce) setup();

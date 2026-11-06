@@ -168,7 +168,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
     <span class="fly f1" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f2" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span>
   </div>
   <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
-    <img class="poster" src="img/freno-3d.webp" width="900" height="900" alt="Ilustración 3D: disco de freno con caliper" fetchpriority="high"></div>
+    <img class="poster" src="img/auto-3d.webp" width="900" height="900" alt="Ilustración 3D: auto" fetchpriority="high"></div>
   <div class="s3d-chapters"><article class="ch" data-i="0"><p class="num">.01</p><h2>Nos cuentas</h2><p>Qué ruido hace, desde cuándo y cuándo aparece.</p></article><article class="ch" data-i="1"><p class="num">.02</p><h2>Lo revisamos</h2><p>Revisamos el auto para encontrar la causa.</p></article><article class="ch" data-i="2"><p class="num">.03</p><h2>Te explicamos y cotizamos</h2><p>Te decimos qué necesita y cuánto cuesta antes de hacer el trabajo.</p></article></div>
   <dl class="s3d-specs"><div><dt>Ubicación</dt><dd>Las Bóvedas</dd></div><div><dt>Citas</dt><dd>WhatsApp</dd></div><div><dt>Servicios</dt><dd>Verificación e inyectores</dd></div></dl>
   <div class="s3d-cta"><a class="btn" href="https://wa.me/523315617608?text=Hola%2C%20quiero%20que%20revisen%20mi%20auto%20en%20JMV%20Mec%C3%A1nica%20Automotriz." data-magnet>Pedir revisión</a><span class="hint">Desliza para ver cómo trabajamos</span></div>
@@ -270,7 +270,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 })();
 </script>
 <script type="module">
-const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "freno-disco.bin", "color": "#c4c7ca", "metal": 1, "rough": 0.35}, {"bin": "freno-caliper.bin", "color": "#ff7a1a", "rough": 0.35, "clear": 1}], "scale": 1.1, "base": [0, -0.5, 0], "rim": "#ff7a1a", "env": 0.65};
+const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "auto-carroceria.bin", "color": "#ff7a1a", "rough": 0.3, "clear": 1, "metal": 0.1}, {"bin": "auto-cristales.bin", "color": "#1b2530", "rough": 0.08, "clear": 1}, {"bin": "auto-llantas.bin", "color": "#17191b", "rough": 0.7}, {"bin": "auto-rines.bin", "color": "#d4d7da", "metal": 1, "rough": 0.25}], "scale": 1.05, "base": [0, 0, 0], "rim": "#ff7a1a", "env": 0.6};
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
 if (gsap && ST && hasGL && !reduce) setup();
