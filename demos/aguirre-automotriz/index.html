@@ -6,110 +6,78 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Aguirre Automotriz | Taller mecánico en Agua Fría, Zapopan</title>
 <meta name="description" content="Aguirre Automotriz, taller mecánico en Agua Fría, Zapopan. Afinación, Frenos, Suspensión, Diagnóstico.">
-<meta name="theme-color" content="#eceae4">
+<meta name="theme-color" content="#fdf3d7">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,600&family=Barlow:wght@400;500;600&family=Inter:wght@800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eceae4;--paper:#f7f6f2;--sand:#dcd9d0;--ink:#121417;--muted:#4d5259;--line:#cfcbc1;--acc:#f2b705;--acc-text:#7a5200;--on-acc:#121417;--acc-hover:#ffc933;--feat:#121417;--feat2:#1d2126;--feat-text:#f4f4f2;--feat-acc:#f2b705;--feat-muted:#a9adb3;--head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--body:"Barlow",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--pill:4px;--ease:cubic-bezier(.2,.7,.1,1)}
+:root{--ink:#0b0d0e;--paper:#f6f6f3;--sky:#a9d9f1;--pink:#f4b6e6;--mint:#8fe0c6;--grey:#bcbfbf;--yellow:#f2ee3c;--teal:#0f6e78;--line:rgba(11,13,14,.18);
+ --bg:var(--sky);--muted:#33393c;--acc:#0b0d0e;--feat-acc:#0f6e78;--head:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--body:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--hdr:var(--sky);--hdr-ink:var(--ink)}
 *{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
 a{color:inherit}img,svg,iframe{display:block;max-width:100%}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--acc);color:var(--on-acc);padding:8px 12px;z-index:50}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--acc-text);outline-offset:3px}
-.progress{position:fixed;inset:0 0 auto 0;height:3px;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:40}
-header.bar{position:fixed;inset:0 0 auto 0;z-index:30;transition:background-color .3s var(--ease),box-shadow .3s var(--ease)}
-header.bar.solid{background:rgba(236,234,228,.98);box-shadow:0 1px 0 var(--line)}
-header.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
-.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1;min-width:0}
-.brand b{font-family:var(--head);font-weight:700;font-size:26px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase;letter-spacing:.005em;}
-.brand small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nav{display:none;gap:30px;font-size:15px}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:var(--pill);font-weight:600;font-size:16px;text-decoration:none;background:var(--acc);color:var(--on-acc);border:1px solid var(--acc);transition:background-color .2s var(--ease),color .2s var(--ease)}
-.btn:hover{background:var(--acc-hover);border-color:var(--acc-hover)}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--bg)}
-.btn.sm{min-height:44px;padding:8px 18px;font-size:15px;flex-shrink:0}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-text)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--ink);color:#fff;padding:8px 12px;z-index:60}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header.bar{position:fixed;inset:0 0 auto 0;z-index:40;background:var(--hdr);color:var(--hdr-ink);transition:background-color .35s ease,color .35s ease}
+header.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:16px}
+.logo{font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:17px;white-space:nowrap}
+.logo i{display:inline-block;font-style:normal;transform:rotate(14deg) translateY(-1px)}.logo i.b{transform:rotate(-12deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;background:var(--ink);color:#fff;border:0;transition:transform .2s ease}
+.btn:hover{transform:translateY(-1px)}.btn.sm{min-height:44px;padding:8px 18px;font-size:15px}
+header .btn{background:var(--hdr-ink);color:var(--hdr)}
+.progress{position:fixed;inset:0 0 auto 0;height:3px;background:var(--ink);transform-origin:0 50%;transform:scaleX(0);z-index:50}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .kicker::before{content:"";width:28px;height:1px;background:currentColor}
-.hero{padding:120px 0 64px}.hero .grid{display:grid;gap:44px;align-items:center}
-h1{font-family:var(--head);font-weight:700;font-size:clamp(40px,5.2vw,74px);overflow-wrap:break-word;line-height:.96;letter-spacing:-.02em;margin:22px 0 0;text-transform:uppercase;letter-spacing:.005em;}
-h1 em,h2 em{font-style:normal;color:var(--acc-text)}
-.lede{color:var(--muted);font-size:clamp(18px,2vw,20px);max-width:40ch;margin:24px 0 30px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.collage{position:relative;min-height:440px}
-.collage .main{position:relative;width:78%;margin-left:auto;aspect-ratio:4/5;border-radius:6px 6px 6px 6px;overflow:hidden;background:var(--sand)}
-.collage .main img{width:100%;height:115%;object-fit:cover}
-.collage .small{position:absolute;left:0;bottom:-24px;width:46%;aspect-ratio:1;border-radius:16px;overflow:hidden;border:8px solid var(--bg);background:var(--sand)}
-.collage .small img{width:100%;height:100%;object-fit:cover}
-.collage .badge{position:absolute;right:-6px;top:22px;width:118px;height:118px}
-.badge circle.o{fill:var(--paper);stroke:var(--line)}.badge circle.d{fill:var(--acc)}
-.badge text{font-family:var(--body);font-size:9.4px;letter-spacing:.22em;text-transform:uppercase;fill:var(--ink)}
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--paper)}
-.marquee .track{display:flex;width:max-content}
-.marquee span{font-family:var(--head);font-weight:700;font-size:clamp(26px,4vw,44px);font-style:normal;white-space:nowrap;padding-right:40px;text-transform:uppercase;letter-spacing:.005em;}
-.marquee span i{font-style:normal;color:var(--acc-text);padding-left:40px}
-.feat{background:var(--feat);color:var(--feat-text)}
-.feat .wrap{display:grid;gap:40px;padding-top:96px;padding-bottom:96px}
-h2{font-family:var(--head);font-weight:700;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.015em;text-transform:uppercase;letter-spacing:.005em;}
-.feat h2 em{color:var(--feat-acc)}.feat .kicker{color:var(--feat-acc)}
-.feat .intro{color:var(--feat-muted);max-width:44ch;margin-top:18px;font-size:18px}
-.steps-f{list-style:none;display:grid;gap:4px;margin-top:34px}
-.steps-f li{padding:18px 0 18px 64px;border-top:1px solid rgba(255,255,255,.14);position:relative;transition:opacity .4s var(--ease)}
-.steps-f li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
-.steps-f .n{position:absolute;left:0;top:16px;font-family:var(--head);font-size:30px;color:var(--feat-acc);line-height:1}
-.steps-f h3{font-family:var(--head);font-weight:700;font-size:25px;text-transform:uppercase;letter-spacing:.005em;}
-.steps-f p{color:var(--feat-muted);font-size:16px;margin-top:4px;max-width:42ch}
-.motion .steps-f li{opacity:.38}.motion .steps-f li.on{opacity:1}
-.feat .cta-f{margin-top:30px}
-.feat .btn{background:var(--feat-text);color:var(--feat);border-color:var(--feat-text)}.feat .btn:hover{background:#fff;border-color:#fff}
-.stage{position:relative;border-radius:20px;background:var(--feat2);padding:32px 24px 44px;display:grid;place-items:center;min-height:300px;overflow:hidden}
-.stage .ill{width:100%;max-width:560px}
-.stage .caption{position:absolute;left:24px;bottom:16px;font-size:13px;color:var(--feat-muted)}
-.stage .count{position:absolute;right:24px;top:16px;font-family:var(--head);font-size:16px;color:var(--feat-acc);font-variant-numeric:tabular-nums}
-.ill .guide{stroke:var(--feat-acc);stroke-width:1.6;opacity:.75}
-.ill .st{stroke:var(--feat-text);stroke-width:1.6;stroke-linecap:round}.ill .st.b{stroke:var(--feat-acc);stroke-width:1.3}
-.ill-barber .pop line{stroke:var(--feat-muted);stroke-dasharray:3 3}.ill-barber .pop text{fill:var(--feat-muted);font:600 15px var(--body)}
-.ill-taller .guide{stroke-width:3;opacity:1;stroke:var(--feat-muted)}.ill-taller .st{stroke-width:4}.ill-taller .st.b{stroke:var(--feat-muted);stroke-width:2.2}.ill-taller .st.red{stroke:#ff6a4d}
-.ill-taller text{fill:var(--feat-text);font:700 22px var(--head)}.ill-taller text.cap{font:600 13px var(--body);letter-spacing:.24em;fill:var(--feat-muted)}
-.ill-taller .needle path{stroke:var(--feat-acc)}.ill-taller .hub{fill:var(--feat-acc)}
-.ill-dental .guide{stroke:var(--feat-text);stroke-width:4;opacity:1}.ill-dental .st{stroke:var(--feat-acc);stroke-width:4}.ill-dental .st.b{stroke-width:2.5;opacity:.8}.ill-dental .spark{stroke:var(--feat-text);stroke-width:2.5}
-.ill-makeup .guide{stroke:var(--feat-muted);stroke-width:2;opacity:1}.ill-makeup .st{stroke-width:2.6}
-section.block{padding:96px 0}
-.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:40px}.head p{color:var(--muted);max-width:40ch}
-.cards{display:grid;gap:22px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}.card .ph img{width:100%;height:100%;object-fit:cover}
-.card .tx{padding:22px 22px 26px}.card h3{font-family:var(--head);font-weight:700;font-size:28px;line-height:1.1;text-transform:uppercase;letter-spacing:.005em;}
-.card p{color:var(--muted);margin-top:8px}.card .note{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--acc-text)}
-.galeria{background:var(--paper);border-block:1px solid var(--line);overflow:hidden}.galeria .wrap.top{padding-top:90px}
-.gal-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:34px 0 90px}
-.gal-track{display:flex;gap:18px;padding:0 20px;width:max-content}
-.gal-track figure{scroll-snap-align:start;width:min(78vw,520px);flex:none}
-.gal-track figure .f{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--sand)}
-.gal-track figure:nth-child(even) .f{aspect-ratio:1;margin-top:60px}
-.gal-track img{width:100%;height:100%;object-fit:cover}.gal-track figcaption{font-size:14px;color:var(--muted);margin-top:10px}
-.gal-note{font-size:14px;color:var(--muted);margin-top:12px}
-.agenda .list{list-style:none;display:grid;gap:18px;counter-reset:a}
-.agenda li{counter-increment:a;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
-.agenda li::before{content:"0" counter(a);display:block;font-family:var(--head);font-weight:700;font-size:56px;line-height:1;color:var(--acc-text);margin-bottom:12px}
-.agenda h3{font-size:20px}.agenda p{color:var(--muted);margin-top:6px}
-.notice{border:1px dashed var(--muted);border-radius:10px;padding:10px 14px;color:var(--muted);font-size:14px;margin-bottom:24px}
-.revs{display:grid;gap:18px}.rev{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:14px}
-.stars{color:var(--acc-text);letter-spacing:3px}.rev blockquote{font-family:var(--head);font-size:23px;line-height:1.3}.who{color:var(--muted);font-size:14px;margin-top:auto}
-.loc{display:grid;gap:28px}.map{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:var(--sand);border:1px solid var(--line)}.map iframe{width:100%;height:100%;border:0}
-dl{display:grid;gap:22px}dt{color:var(--muted);font-size:14px}dd{font-size:19px;overflow-wrap:anywhere}
-.link{color:var(--acc-text);font-weight:600;text-underline-offset:3px}
-.final{background:var(--acc);color:var(--on-acc);border-radius:28px;padding:64px 24px;text-align:center;overflow:hidden}
-.final h2{font-size:clamp(52px,11vw,140px);line-height:.92;letter-spacing:-.03em}.final h2 em{color:inherit}
-.final p{margin:18px auto 30px;max-width:36ch;font-size:18px}
-.final .btn{background:var(--on-acc);color:var(--acc);border-color:var(--on-acc)}.final .btn:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:96px}footer nav{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:14px}footer p+p{margin-top:6px}
-.motion [data-reveal]{opacity:0}
-.motion .ill .st,.motion .ill .guide{stroke-dasharray:1;stroke-dashoffset:1}
-@media (min-width:900px){.nav{display:flex}.hero{padding:150px 0 90px}.hero .grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.collage{min-height:600px}
-.feat .wrap{grid-template-columns:.9fr 1.1fr;align-items:center;min-height:100vh}.cards,.agenda .list,.revs{grid-template-columns:repeat(3,1fr)}
-.loc{grid-template-columns:1.2fr .8fr;align-items:start}.final{padding:110px 40px}.gal-viewport{overflow:visible;padding-bottom:110px}
-.gal-track{padding-left:max(20px,calc((100vw - 1160px)/2))}.gal-track figure{width:440px}}
+/* bloques */
+.blk{position:relative;padding:110px 0 120px}
+.blk .ttl{font-weight:800;letter-spacing:-.055em;line-height:.86;font-size:clamp(64px,15vw,210px);overflow:hidden;padding-bottom:.06em}
+.blk .sub{font-size:clamp(18px,2vw,22px);margin-top:16px;max-width:30ch}
+.blk.dark{background:var(--ink);color:#fff}.blk.pink{background:var(--pink)}.blk.grey{background:var(--grey)}.blk.white{background:var(--paper)}
+/* lista activa (servicios y cita) */
+.alist{list-style:none;margin-top:44px}
+.alist li{font-size:clamp(26px,3.6vw,46px);font-weight:500;letter-spacing:-.025em;line-height:1.08;padding:6px 0 6px 0;color:rgba(255,255,255,.38);transition:color .3s ease,padding .3s ease;position:relative}
+.white .alist li,.pink .alist li{color:rgba(11,13,14,.32)}
+.alist li.on{color:#fff;padding-left:34px}.white .alist li.on,.pink .alist li.on{color:var(--ink)}
+.alist li::before{content:"";position:absolute;left:0;top:.42em;width:.42em;height:.42em;border-radius:50%;background:currentColor;transform:scale(0);transition:transform .3s ease}
+.alist li.on::before{transform:scale(1)}
+.split{display:grid;gap:36px}
+.media{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#222}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .5s ease,transform .8s ease}
+.media img.on{opacity:1;transform:none}
+.desc{margin-top:16px;font-size:18px;color:rgba(255,255,255,.75);min-height:3em}
+.pink .desc{color:var(--muted)}
+.bignum{font-weight:800;letter-spacing:-.06em;line-height:1;font-size:clamp(130px,30vw,380px);height:1em;overflow:hidden;display:flex;align-items:flex-start}
+.bignum .col{display:flex;flex-direction:column}.bignum .col span{height:1em;display:block}
+.notice{border:1px dashed currentColor;border-radius:10px;padding:10px 14px;font-size:14px;margin-top:22px;max-width:640px;opacity:.85}
+.revs{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:30px;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.revs::-webkit-scrollbar{display:none}
+.rev{flex:none;width:min(84vw,460px);scroll-snap-align:start;background:var(--paper);border-radius:14px;padding:12px}
+.rev .q{background:var(--yellow);border-radius:10px;padding:34px 26px;font-size:clamp(22px,2.4vw,28px);font-weight:600;letter-spacing:-.02em;line-height:1.2;min-height:210px;display:flex;align-items:flex-end}
+.rev .who{font-size:14px;padding:12px 6px 4px;color:var(--muted)}.rev .stars{letter-spacing:3px;font-size:14px;padding:0 6px}
+.dots{display:flex;gap:18px;font-weight:600;margin-top:18px}.dots span{opacity:.35;transition:opacity .3s}.dots span.on{opacity:1}
+.dots span.on::before{content:"● "}
+.rows{margin-top:40px;border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:1fr;gap:4px;padding:18px 0;border-bottom:1px solid var(--line)}
+.rows dt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.rows dd{font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-.02em;overflow-wrap:anywhere}
+.rows a{text-underline-offset:4px}
+.map{margin-top:30px;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:#ddd}.map iframe{width:100%;height:100%;border:0;filter:grayscale(.2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
+.mega{display:flex;flex-wrap:wrap;font-weight:800;letter-spacing:-.05em;line-height:.85;font-size:clamp(64px,13.5vw,200px)}
+.mega span{display:inline-block;will-change:transform}.mega .sp{width:.28em}
+.tag{font-weight:800;letter-spacing:.02em;text-transform:uppercase;font-size:14px;margin-top:72px;position:relative;z-index:1}
+.flinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;margin-top:28px;font-size:15px}
+.flinks a{text-decoration:none;opacity:.85}.flinks a:hover{opacity:1;text-decoration:underline}
+.fnote{margin-top:34px;font-size:13px;opacity:.6;max-width:70ch}
+@media (min-width:900px){.split{grid-template-columns:1.05fr .95fr;align-items:center}.rows div{grid-template-columns:220px 1fr;align-items:baseline}.flinks{grid-template-columns:repeat(4,max-content)}}
+/* escena 3D: fondo que cambia de color */
+.s3d{background:var(--sky)!important;transition:background-color .6s ease}
+.s3d .word .pre{font-family:var(--body);font-style:normal;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.pre .rot{display:inline-block}
+.s3d .kicker,.ch .num{color:var(--ink)}
+.m3d .s3d-progress span::after{background:var(--ink)}.m3d .s3d-progress span{background:rgba(11,13,14,.18)}
+.s3d-canvas .shadow{background:radial-gradient(closest-side,rgba(11,13,14,.25),rgba(11,13,14,0))}
+.motion .reveal-ttl .ch-l{display:inline-block}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
@@ -117,7 +85,7 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 .s3d-intro{text-align:center;position:relative;z-index:3}
 .s3d .word{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;letter-spacing:-.06em;line-height:.86;margin:14px 0 0;text-transform:none}
 .s3d .word .pre{display:block;font-family:var(--head);font-weight:400;font-style:italic;letter-spacing:-.01em;font-size:clamp(22px,3.2vw,40px);color:var(--muted);margin-bottom:6px}
-.s3d .word .big{display:inline-block;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)));color:var(--ink)}
+.s3d .word .big{display:inline-block;font-size:clamp(84px,19vw,250px);color:var(--ink)}
 .swap{position:relative;display:inline-block}
 .swap .spark-l{position:absolute;left:50%;bottom:.08em;width:.62em;height:.62em;transform:translateX(-50%);color:var(--acc);opacity:0}
 .swap .spark-l svg{width:100%;height:100%;fill:currentColor}
@@ -151,20 +119,21 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 .m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
 .m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
 @media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
-.s3d .word .big{white-space:nowrap}.fly{color:var(--feat-acc)}.fly.f2{color:var(--acc)}.swap .spark-l{color:var(--acc)}
+
+.s3d .word .big{white-space:nowrap;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)))}
+:root{--sky:#fdf3d7;--pink:#fbe7aa;--mint:#f8db82;--grey:#ccc9c2;--yellow:#f2b705;--paper:#eceae4;--teal:#7a5200;--feat-acc:#f2b705;--acc:#0b0d0e}.blk.dark,footer{background:#121417}.fly,.swap .spark-l{color:#f2b705}.fly.f2{color:#f8db82}
 </style>
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Saltar al contenido</a>
-<header class="bar"><div class="wrap"><a class="brand" href="./"><b>Aguirre</b><small>Taller mecánico · Agua Fría</small></a>
-<nav class="nav" aria-label="Secciones"><a href="./#diagnostico">Diagnóstico</a><a href="./#servicios">Servicios</a><a href="./#agenda">Agenda</a><a href="./#visita">Ubicación</a></nav><a class="btn sm" href="tel:+523336335314">Llamar</a></div></header>
+<header class="bar"><div class="wrap"><a class="logo" href="./" aria-label="Aguirre, inicio">A<i class="">G</i>UIR<i class="b">R</i>E</a><a class="btn sm" href="tel:+523336335314">Llamar</a></div></header>
 <main id="main">
-<section class="s3d" id="diagnostico" aria-label="Aguirre Automotriz">
+<section class="s3d" id="diagnostico" data-hdr="#fdf3d7" aria-label="Aguirre Automotriz">
 <div class="s3d-pin">
   <div class="s3d-intro">
     <p class="kicker">Agua Fría · Zapopan</p>
-    <h1 class="word" aria-label="primero el diagnóstico"><span class="pre">primero el</span><span class="big" style="--len:11">diagnóstico</span></h1>
+    <h1 class="word" aria-label="primero el diagnóstico"><span class="pre"><span class="rot">primero el</span></span><span class="big" style="--len:11">diagnóstico</span></h1>
   </div>
   <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
     <img class="poster" src="img/auto-3d.webp" width="900" height="900" alt="Ilustración 3D: auto" fetchpriority="high"></div>
@@ -174,48 +143,51 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
   <div class="s3d-progress" aria-hidden="true"><span></span><span></span><span></span></div>
 </div>
 </section>
-<div class="marquee" aria-hidden="true"><div class="track"><span>Afinación <i>✦</i></span><span>Frenos <i>✦</i></span><span>Suspensión <i>✦</i></span><span>Diagnóstico <i>✦</i></span><span>Agua Fría <i>✦</i></span></div></div>
-<section class="block" id="servicios"><div class="wrap">
-<div class="head"><div><p class="kicker">Servicios</p><h2 data-lines>Lo que hacemos</h2></div><p>Si tu auto necesita algo que no está aquí, pregúntanos.</p></div>
-<div class="cards"><article class="card"><div class="ph"><img src="img/4522502-1280.webp" srcset="img/4522502-720.webp 720w, img/4522502-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Carburadores de un motor" loading="lazy" decoding="async"></div><div class="tx"><h3>Afinación y mantenimiento</h3><p>Afinación y mantenimiento preventivo de tu auto.</p><span class="note">Precio por teléfono</span></div></article><article class="card"><div class="ph"><img src="img/1954636-1280.webp" srcset="img/1954636-720.webp 720w, img/1954636-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="828" alt="Cambio de discos de freno en un auto sobre el elevador" loading="lazy" decoding="async"></div><div class="tx"><h3>Frenos y suspensión</h3><p>Revisión y cambio de balatas, discos y piezas de suspensión.</p><span class="note">Precio por teléfono</span></div></article><article class="card"><div class="ph"><img src="img/2138981-1280.webp" srcset="img/2138981-720.webp 720w, img/2138981-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="850" alt="Motor con múltiple de escape cromado" loading="lazy" decoding="async"></div><div class="tx"><h3>Diagnóstico y mecánica general</h3><p>Encontramos la falla y te explicamos antes de reparar.</p><span class="note">Precio por teléfono</span></div></article></div>
-</div></section>
-<section class="galeria" aria-labelledby="g-t">
-<div class="wrap top"><p class="kicker">El taller</p><h2 id="g-t" data-lines>Herramienta y <em>oficio</em></h2><p class="gal-note">Fotos ilustrativas. En la página final van fotos del negocio.</p></div>
-<div class="gal-viewport"><div class="gal-track"><figure><div class="f"><img src="img/1380134-1280.webp" srcset="img/1380134-720.webp 720w, img/1380134-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Pared con llaves y desarmadores ordenados" loading="lazy" decoding="async"></div><figcaption>Pared con llaves y desarmadores ordenados</figcaption></figure><figure><div class="f"><img src="img/7264912-1280.webp" srcset="img/7264912-720.webp 720w, img/7264912-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="854" height="1280" alt="Motor colgado de una grúa de taller" loading="lazy" decoding="async"></div><figcaption>Motor colgado de una grúa de taller</figcaption></figure><figure><div class="f"><img src="img/3116534-1280.webp" srcset="img/3116534-720.webp 720w, img/3116534-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Motor y llanta de un auto clásico" loading="lazy" decoding="async"></div><figcaption>Motor y llanta de un auto clásico</figcaption></figure><figure><div class="f"><img src="img/1749597-1280.webp" srcset="img/1749597-720.webp 720w, img/1749597-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Llanta montada en una balanceadora" loading="lazy" decoding="async"></div><figcaption>Llanta montada en una balanceadora</figcaption></figure><figure><div class="f"><img src="img/1583297-1280.webp" srcset="img/1583297-720.webp 720w, img/1583297-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="708" alt="Motor de un auto clásico con el cofre abierto" loading="lazy" decoding="async"></div><figcaption>Motor de un auto clásico con el cofre abierto</figcaption></figure></div></div>
-</section>
-<section class="block agenda" id="agenda"><div class="wrap">
-<div class="head"><div><p class="kicker">Agenda</p><h2 data-lines>Tu revisión en tres pasos</h2></div></div>
-<ol class="list"><li><h3>Llama o escribe</h3><p>Cuéntanos marca, modelo y qué le notas al auto.</p></li><li><h3>Te damos fecha</h3><p>Te decimos cuándo traerlo a revisión.</p></li><li><h3>Te explicamos</h3><p>Antes de reparar te decimos qué necesita y cuánto cuesta.</p></li></ol>
-</div></section>
-<section class="block" style="padding-top:0"><div class="wrap">
-<div class="head"><div><p class="kicker">Reseñas</p><h2 data-lines>Lo que dicen en Google</h2></div></div>
-<p class="notice">Reseñas de ejemplo para esta demostración. En la página final se muestran sus reseñas reales de Google.</p>
-<div class="revs"><figure class="rev"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Me explicaron qué tenía el carro antes de arreglarlo.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="rev"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Cumplieron con la fecha de entrega.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="rev"><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><blockquote>Buen diagnóstico; hubo que esperar un poco por la refacción.</blockquote><figcaption class="who">Cliente de ejemplo</figcaption></figure></div>
-</div></section>
-<section class="block" id="visita" style="padding-top:0"><div class="wrap">
-<div class="head"><div><p class="kicker">Ubicación</p><h2 data-lines>Visítanos</h2></div></div>
-<div class="loc">
-<div class="map" data-reveal><iframe src="https://www.google.com/maps?q=Aguirre%20Automotriz%2C%20Carretera%20a%20Saltillo%203629%2C%20Agua%20Fr%C3%ADa%2C%2045186%20Zapopan%2C%20Jal.&output=embed" title="Mapa de Aguirre Automotriz" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-<dl data-reveal>
-<div><dt>Dirección</dt><dd>Carretera a Saltillo 3629, Agua Fría, 45186 Zapopan, Jal.</dd></div>
-<div><dt>Horario</dt><dd>Lunes a viernes, 8:00 a 18:00 h</dd></div>
-<div><dt>Teléfono</dt><dd><a class="link" href="tel:+523336335314">33 3633 5314</a></dd></div>
-<div><dt>Otro teléfono</dt><dd><a class="link" href="tel:+523336335313">33 3633 5313</a></dd></div><div><dt>Correo</dt><dd><a class="link" href="mailto:aguirre.automotriz@hotmail.com">aguirre.automotriz@hotmail.com</a></dd></div>
-<div><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Aguirre%20Automotriz%2C%20Carretera%20a%20Saltillo%203629%2C%20Agua%20Fr%C3%ADa%2C%2045186%20Zapopan%2C%20Jal.">Abrir en Google Maps</a></div>
-</dl>
+<section class="blk dark" id="servicios" data-hdr="#121417" data-hdr-ink="#ffffff">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Servicios</h2>
+  <p class="sub">Lo que hacemos en el taller.</p>
+  <div class="split pinlist" data-count="3">
+    <div><ul class="alist"><li data-i="0" class=on>Afinación y mantenimiento</li><li data-i="1">Frenos y suspensión</li><li data-i="2">Diagnóstico y mecánica general</li></ul><p class="desc" aria-live="polite">Afinación y mantenimiento preventivo de tu auto.</p></div>
+    <div class="media"><img class="on" src="img/4522502-1280.webp" srcset="img/4522502-720.webp 720w, img/4522502-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="853" alt="Carburadores de un motor" loading="lazy" decoding="async"><img class="" src="img/1954636-1280.webp" srcset="img/1954636-720.webp 720w, img/1954636-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="828" alt="Cambio de discos de freno en un auto sobre el elevador" loading="lazy" decoding="async"><img class="" src="img/2138981-1280.webp" srcset="img/2138981-720.webp 720w, img/2138981-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="850" alt="Motor con múltiple de escape cromado" loading="lazy" decoding="async"></div>
+  </div>
 </div>
-</div></section>
-<section class="wrap"><div class="final">
-<h2>¿Ruido <em>raro</em>?</h2>
-<p>Cuéntanos qué le pasa a tu auto y te decimos cuándo traerlo a revisión.</p>
-<a class="btn" href="tel:+523336335314" data-magnet><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Llamar ahora</a>
-</div></section>
+</section>
+<section class="blk pink" id="agenda" data-hdr="#fbe7aa">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Tu revisión</h2>
+  <p class="sub">Tres pasos, sin vueltas.</p>
+  <div class="split pinlist" data-count="3">
+    <div><ul class="alist"><li data-i="0" class=on>Llama o escribe</li><li data-i="1">Te damos fecha</li><li data-i="2">Te explicamos</li></ul><p class="desc" aria-live="polite">Cuéntanos marca, modelo y qué le notas al auto.</p></div>
+    <div class="bignum" aria-hidden="true"><div class="col"><span>0</span></div><div class="col roll"><span>1</span><span>2</span><span>3</span></div></div>
+  </div>
+</div>
+</section>
+<section class="blk grey" id="resenas" data-hdr="#ccc9c2">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Reseñas</h2>
+  <p class="notice">Reseñas de ejemplo para esta demostración. En la página final se muestran sus reseñas reales de Google.</p>
+  <div class="revs"><figure class="rev"><blockquote class="q">Me explicaron qué tenía el carro antes de arreglarlo.</blockquote><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="rev"><blockquote class="q">Cumplieron con la fecha de entrega.</blockquote><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><figcaption class="who">Cliente de ejemplo</figcaption></figure><figure class="rev"><blockquote class="q">Buen diagnóstico; hubo que esperar un poco por la refacción.</blockquote><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><figcaption class="who">Cliente de ejemplo</figcaption></figure></div>
+  <div class="dots" aria-hidden="true"><span class="on">01</span><span>02</span><span>03</span></div>
+</div>
+</section>
+<section class="blk white" id="visita" data-hdr="#eceae4">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Visítanos</h2>
+  <dl class="rows"><div><dt>Dirección</dt><dd>Carretera a Saltillo 3629, Agua Fría, 45186 Zapopan, Jal.</dd></div><div><dt>Horario</dt><dd>Lunes a viernes, 8:00 a 18:00 h</dd></div><div><dt>Teléfono</dt><dd><a href="tel:+523336335314">33 3633 5314</a></dd></div><div><dt>Otro teléfono</dt><dd><a href="tel:+523336335313">33 3633 5313</a></dd></div><div><dt>Correo</dt><dd><a href="mailto:aguirre.automotriz@hotmail.com">aguirre.automotriz@hotmail.com</a></dd></div></dl>
+  <div class="map"><iframe src="https://www.google.com/maps?q=Aguirre%20Automotriz%2C%20Carretera%20a%20Saltillo%203629%2C%20Agua%20Fr%C3%ADa%2C%2045186%20Zapopan%2C%20Jal.&output=embed" title="Mapa de Aguirre Automotriz" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="cta-row"><a class="btn" href="tel:+523336335314" data-magnet>Llamar ahora</a><a class="btn" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)" href="https://www.google.com/maps/search/?api=1&amp;query=Aguirre%20Automotriz%2C%20Carretera%20a%20Saltillo%203629%2C%20Agua%20Fr%C3%ADa%2C%2045186%20Zapopan%2C%20Jal.">Abrir en Google Maps</a></div>
+</div>
+</section>
 </main>
-<footer><div class="wrap">
-<nav><a href="./">Inicio</a><a href="terminos/">Términos y condiciones</a><a href="privacidad/">Aviso de privacidad</a></nav>
-<p>Aguirre Automotriz, Carretera a Saltillo 3629, Agua Fría, 45186 Zapopan, Jal. Tel. 33 3633 5314.</p>
-<p>Página de muestra preparada para Aguirre Automotriz. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
-</div></footer>
+<footer data-hdr="#121417" data-hdr-ink="#ffffff">
+<div class="wrap">
+  <div class="mega" aria-label="Aguirre"><span>A</span><span>G</span><span>U</span><span>I</span><span>R</span><span>R</span><span>E</span></div>
+  <p class="tag">Primero el diagnóstico.</p>
+  <nav class="flinks" aria-label="Pie de página"><a href="#servicios">Servicios</a><a href="#agenda">Tu revisión</a><a href="#visita">Ubicación</a><a href="tel:+523336335314">Llamar</a><a href="terminos/">Términos y condiciones</a><a href="privacidad/">Aviso de privacidad</a></nav>
+  <p class="fnote">Aguirre Automotriz, Carretera a Saltillo 3629, Agua Fría, 45186 Zapopan, Jal. Tel. 33 3633 5314. Página de muestra preparada para Aguirre Automotriz. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
+</div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -223,44 +195,50 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script>
 (function(){
-  var root = document.documentElement, bar = document.querySelector('header.bar');
-  function solid(){ bar.classList.toggle('solid', window.scrollY > 20); }
-  window.addEventListener('scroll', solid, {passive:true}); solid();
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap || !window.ScrollTrigger) return;
+  var root = document.documentElement, hdr = document.querySelector('header.bar');
+  // encabezado del color de la sección visible (también sin animaciones)
+  var secs = [].slice.call(document.querySelectorAll('[data-hdr]'));
+  function paint(){ var y = 70, cur = secs[0];
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= y) cur = s; });
+    if (cur.classList.contains('s3d') && root.classList.contains('m3d')) return;
+    hdr.style.setProperty('--hdr', cur.getAttribute('data-hdr')); hdr.style.setProperty('--hdr-ink', cur.getAttribute('data-hdr-ink') || '#0b0d0e'); }
+  addEventListener('scroll', paint, {passive:true}); paint();
+  // carrusel de reseñas: 01 02 03
+  var revs = document.querySelector('.revs'), dots = [].slice.call(document.querySelectorAll('.dots span'));
+  revs && revs.addEventListener('scroll', function(){ var i = Math.round(revs.scrollLeft / (revs.firstElementChild.offsetWidth + 16));
+    dots.forEach(function(d, k){ d.classList.toggle('on', k === i); }); }, {passive:true});
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
   root.classList.add('motion');
   var lenis = null;
-  if (window.Lenis) { lenis = new Lenis({ duration: 1.15 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(ev){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (!el) return;
-      ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -70 }) : el.scrollIntoView({behavior:'smooth'}); });
-  });
+  if (window.Lenis) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(ev){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (!el) return;
+    ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -60 }) : el.scrollIntoView({behavior:'smooth'}); }); });
   gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: .3 } });
-  gsap.utils.toArray('[data-reveal]').forEach(function(el){
-    gsap.fromTo(el, { autoAlpha: 0, y: 28 }, { autoAlpha: 1, y: 0, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
-  });
-  function lines(sel, opts){ if (!window.SplitText) return;
-    gsap.utils.toArray(sel).forEach(function(el){ SplitText.create(el, { type: 'lines', mask: 'lines', autoSplit: true, onSplit: function(self){
-      return gsap.from(self.lines, Object.assign({ yPercent: 110, duration: 1, ease: 'expo.out', stagger: .09 }, opts ? opts(el) : {})); }}); }); }
-  lines('.hero h1');
-  lines('[data-lines]', function(el){ return { scrollTrigger: { trigger: el, start: 'top 85%', once: true } }; });
-  var track = document.querySelector('.marquee .track');
-  if (track) { track.innerHTML += track.innerHTML;
-    var loop = gsap.to(track, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
-    ScrollTrigger.create({ onUpdate: function(self){ var v = gsap.utils.clamp(-6, 6, self.getVelocity() / 300);
-      gsap.to(loop, { timeScale: (self.direction === -1 ? -1 : 1) * (1 + Math.abs(v)), duration: .3, overwrite: true }); } }); }
+  // títulos gigantes que suben por letra
+  if (window.SplitText) gsap.utils.toArray('[data-ttl]').forEach(function(t){
+    SplitText.create(t, { type: 'chars', mask: 'chars', autoSplit: true, onSplit: function(s){
+      return gsap.from(s.chars, { yPercent: 105, duration: .9, ease: 'expo.out', stagger: .035, scrollTrigger: { trigger: t, start: 'top 85%', once: true } }); } }); });
+  // listas activas con pin: servicios (imagen) y cita (número que sube)
   var mm = gsap.matchMedia();
-  gsap.utils.toArray('.card').forEach(function(c, i){
-    var tl = gsap.timeline({ scrollTrigger: { trigger: c, start: 'top 85%', once: true } });
-    tl.from(c, { y: 50, autoAlpha: 0, duration: .9, ease: 'power3.out', delay: (i % 3) * .08 })
-      .from(c.querySelector('.ph'), { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'expo.inOut' }, '<.1')
-      .from(c.querySelector('img'), { scale: 1.3, duration: 1.4, ease: 'expo.out' }, '<'); });
-  mm.add('(min-width: 900px)', function(){ var t = document.querySelector('.gal-track'); var dist = function(){ return t.scrollWidth - window.innerWidth + 40; };
-    gsap.to(t, { x: function(){ return -dist(); }, ease: 'none', scrollTrigger: { trigger: '.galeria', start: 'top top', end: function(){ return '+=' + dist(); }, pin: true, scrub: .6, invalidateOnRefresh: true } });
-    gsap.utils.toArray('.gal-track img').forEach(function(im){ gsap.fromTo(im, { scale: 1.18 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.galeria', start: 'top top', end: function(){ return '+=' + dist(); }, scrub: true } }); }); });
-  ['.agenda li', '.rev'].forEach(function(sel){ gsap.from(sel, { y: 40, autoAlpha: 0, duration: .8, ease: 'power3.out', stagger: .12, scrollTrigger: { trigger: sel, start: 'top 85%', once: true } }); });
-  if (window.SplitText) SplitText.create('.final h2', { type: 'chars', autoSplit: true, onSplit: function(self){
-    return gsap.from(self.chars, { yPercent: 100, autoAlpha: 0, rotate: 6, duration: .9, ease: 'back.out(1.7)', stagger: .03, scrollTrigger: { trigger: '.final', start: 'top 75%', once: true } }); } });
+  gsap.utils.toArray('.pinlist').forEach(function(box){
+    var items = [].slice.call(box.querySelectorAll('.alist li')), n = items.length, desc = box.querySelector('.desc');
+    var imgs = [].slice.call(box.querySelectorAll('.media img')), roll = box.querySelector('.roll');
+    var texts = box.closest('#servicios') ? ["Afinación y mantenimiento preventivo de tu auto.", "Revisión y cambio de balatas, discos y piezas de suspensión.", "Encontramos la falla y te explicamos antes de reparar."] : ["Cuéntanos marca, modelo y qué le notas al auto.", "Te decimos cuándo traerlo a revisión.", "Antes de reparar te decimos qué necesita y cuánto cuesta."], cur = 0;
+    function set(i){ if (i === cur) return; cur = i;
+      items.forEach(function(li, k){ li.classList.toggle('on', k === i); }); imgs.forEach(function(im, k){ im.classList.toggle('on', k === i); });
+      if (desc) gsap.fromTo(desc, { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: .35, onStart: function(){ desc.textContent = texts[i]; } });
+      if (roll) gsap.to(roll, { yPercent: -100 * i / n, duration: .45, ease: 'power3.out', overwrite: true }); }
+    ScrollTrigger.create({ trigger: box, start: 'center 58%', end: '+=' + (n * 55) + '%', pin: box.closest('.blk'), pinSpacing: true,
+      onUpdate: function(self){ set(Math.min(n - 1, Math.floor(self.progress * n))); } });
+  });
+  // cierre: letras gigantes que se dispersan
+  var L = gsap.utils.toArray('.mega span:not(.sp)');
+  var sm = innerWidth < 760 ? .45 : 1;
+  gsap.to(L, { y: function(){ return gsap.utils.random(10, 70) * sm; }, x: function(){ return gsap.utils.random(-18, 18) * sm; }, rotate: function(){ return gsap.utils.random(-32, 32); },
+    ease: 'none', stagger: { each: .02, from: 'random' }, scrollTrigger: { trigger: 'footer', start: 'top 70%', end: 'bottom bottom', scrub: .6 } });
+  // logotipo: letras giradas que se mueven un poco con el scroll
+  gsap.to('.logo i', { rotate: function(i){ return i ? 12 : -14; }, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: true } });
   if (window.matchMedia('(pointer: fine)').matches) document.querySelectorAll('[data-magnet]').forEach(function(b){
     var xTo = gsap.quickTo(b, 'x', { duration: .4, ease: 'power3' }), yTo = gsap.quickTo(b, 'y', { duration: .4, ease: 'power3' });
     b.addEventListener('pointermove', function(ev){ var r = b.getBoundingClientRect(); xTo((ev.clientX - r.left - r.width / 2) * .3); yTo((ev.clientY - r.top - r.height / 2) * .4); });
@@ -309,6 +287,14 @@ function setup() {
   }
   gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
   gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
+  const s3d = document.querySelector('.s3d'), COL = ["#fdf3d7", "#fbe7aa", "#f8db82"], hb = document.querySelector('header.bar');
+  const rot = document.querySelector('.pre .rot'), W = ["primero el", "frenos con", "afinación con"]; let rotI = 0;
+  const tick = setInterval(() => { if (scrollY > 30) return; rotI = (rotI + 1) % W.length;
+    gsap.to(rot, { yPercent: -60, autoAlpha: 0, duration: .25, ease: 'power2.in', onComplete: () => { rot.textContent = W[rotI];
+      gsap.fromTo(rot, { yPercent: 60, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: .35, ease: 'power2.out' }); } });
+    s3d.style.setProperty('background-color', COL[rotI], 'important'); hb.style.setProperty('--hdr', COL[rotI]); }, 2600);
+  ST.create({ trigger: '.s3d', start: 'top top', end: '+=420%', onUpdate(self) { const p = self.progress, i = p < .53 ? 0 : (p < .76 ? 1 : 2);
+    const c = p < .3 ? COL[rotI] : COL[i]; s3d.style.setProperty('background-color', c, 'important'); hb.style.setProperty('--hdr', c); } });
   draw(); ST.sort(); ST.refresh();
   // El 3D (motor compartido) se carga cuando la página ya se ve y responde
   const go = () => import('../lib3d/scene.js').then(m => m.mount(canvas, CFG)).then(a => {
