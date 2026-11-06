@@ -8,7 +8,7 @@
 <meta name="description" content="Barbería Locotes, barbería en La Granja, Zapopan. Corte, rasurado de cabeza y barba. Aparta por WhatsApp.">
 <meta name="theme-color" content="#f2ede4">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:wght@400;500;600&family=Inter:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f2ede4;--paper:#faf7f1;--sand:#e6ddcf;--ink:#171512;--muted:#5d554c;--line:#d9cfbf;--acc:#2d6a4f;--acc-text:#2d6a4f;--on-acc:#ffffff;--acc-hover:#225440;--feat:#141210;--feat2:#211d19;--feat-text:#f2ede4;--feat-acc:#d9a066;--feat-muted:#b9ad9f;--head:"DM Serif Display",Georgia,serif;--body:"Inter Tight",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--pill:6px;--ease:cubic-bezier(.2,.7,.1,1)}
 *{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
@@ -111,6 +111,47 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 .loc{grid-template-columns:1.2fr .8fr;align-items:start}.final{padding:110px 40px}.gal-viewport{overflow:visible;padding-bottom:110px}
 .gal-track{padding-left:max(20px,calc((100vw - 1160px)/2))}.gal-track figure{width:440px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
+.s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
+.s3d-intro{text-align:center;position:relative;z-index:3}
+.s3d .word{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;letter-spacing:-.06em;line-height:.86;margin:14px 0 0;text-transform:none}
+.s3d .word .pre{display:block;font-family:var(--head);font-weight:400;font-style:italic;letter-spacing:-.01em;font-size:clamp(22px,3.2vw,40px);color:var(--muted);margin-bottom:6px}
+.s3d .word .big{display:inline-block;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)));color:var(--ink)}
+.swap{position:relative;display:inline-block}
+.swap .spark-l{position:absolute;left:50%;bottom:.08em;width:.62em;height:.62em;transform:translateX(-50%);color:var(--acc);opacity:0}
+.swap .spark-l svg{width:100%;height:100%;fill:currentColor}
+.fly{position:absolute;width:26px;height:26px;color:#7fd1d9;opacity:0}.fly svg{width:100%;height:100%;fill:currentColor}
+.fly.f1{left:62%;top:18%}.fly.f2{left:70%;top:6%;width:18px;height:18px;color:#a99be8}.fly.f3{left:30%;top:24%;width:16px;height:16px}
+.s3d-canvas{position:relative;width:min(520px,86vw);aspect-ratio:1;margin:-10px auto 0;z-index:2}
+.s3d-canvas canvas{position:absolute;inset:0;width:100%;height:100%;display:none}
+.s3d-canvas .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.s3d-canvas .shadow{display:none;position:absolute;left:18%;right:18%;bottom:4%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(15,35,41,.28),rgba(15,35,41,0));filter:blur(4px)}
+.s3d-chapters{display:grid;gap:22px;max-width:520px;margin:24px auto 0;position:relative;z-index:3}
+.ch .num{font:600 15px var(--body);color:var(--acc);letter-spacing:.06em}
+.ch h2{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(30px,4.4vw,52px);line-height:.95;margin:4px 0 10px;color:var(--ink)}
+.ch p{color:var(--muted);max-width:34ch}
+.s3d-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin:26px auto 0;border-top:1px solid var(--line);padding-top:16px;position:relative;z-index:3}
+.s3d-specs dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.s3d-specs dd{font:600 16px var(--body);color:var(--ink);margin-top:2px}
+.s3d-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;position:relative;z-index:3}
+.s3d-cta .hint{font-size:13px;color:var(--muted)}
+.s3d-progress{display:none}
+/* con animación: todo se superpone en una sola escena fija */
+.m3d .s3d-pin{height:100vh;min-height:560px;display:block;padding:0}
+.m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
+.m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
+.m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
+.m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
+.m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs div{border-top:1px solid var(--line);padding-top:10px}
+.m3d .s3d-cta{position:absolute;left:0;right:0;bottom:58px;margin:0}
+.m3d .s3d-progress{display:flex;gap:6px;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:min(320px,70vw)}
+.m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
+@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
+.s3d .word .big{white-space:nowrap}.fly{color:var(--feat-acc)}.fly.f2{color:var(--acc)}.swap .spark-l{color:var(--acc)}
 </style>
 </head>
 <body>
@@ -119,30 +160,22 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 <header class="bar"><div class="wrap"><a class="brand" href="./"><b>Locotes</b><small>Barbería · La Granja</small></a>
 <nav class="nav" aria-label="Secciones"><a href="./#degradado">Degradado</a><a href="./#servicios">Servicios</a><a href="./#agenda">Agenda</a><a href="./#visita">Ubicación</a></nav><a class="btn sm" href="https://wa.me/523343469479?text=Hola%2C%20quiero%20apartar%20un%20lugar%20en%20Barber%C3%ADa%20Locotes.">WhatsApp</a></div></header>
 <main id="main">
-<section class="hero"><div class="wrap grid">
-<div>
-<p class="kicker">La Granja · Zapopan</p>
-<h1>Corte, barba y <em>navaja</em></h1>
-<p class="lede">Barbería de colonia en La Granja. Aparta tu hora por WhatsApp y llega directo a la silla.</p>
-<div class="actions"><a class="btn" href="https://wa.me/523343469479?text=Hola%2C%20quiero%20apartar%20un%20lugar%20en%20Barber%C3%ADa%20Locotes." data-magnet><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Apartar mi hora</a><a class="btn ghost" href="#degradado">Así trabajamos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<section class="s3d" id="degradado" aria-label="Barbería Locotes">
+<div class="s3d-pin">
+  <div class="s3d-intro">
+    <p class="kicker">La Granja · Zapopan</p>
+    <h1 class="word" aria-label="cabeza y barba al filo"><span class="pre">cabeza y barba al</span><span class="big" style="--len:4">fil<span class="swap"><span class="spark-l" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="real">o</span></span></span></h1>
+    <span class="fly f1" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f2" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span>
+  </div>
+  <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
+    <img class="poster" src="img/navaja-3d.webp" width="900" height="900" alt="Ilustración 3D: navaja de barbero" fetchpriority="high"></div>
+  <div class="s3d-chapters"><article class="ch" data-i="0"><p class="num">.01</p><h2>Platicamos el corte</h2><p>Nos dices cómo lo traes y cómo lo quieres antes de empezar.</p></article><article class="ch" data-i="1"><p class="num">.02</p><h2>Máquina y tijera</h2><p>Trabajamos por capas para que el cambio de largo no se note.</p></article><article class="ch" data-i="2"><p class="num">.03</p><h2>Detalle con navaja</h2><p>Marcamos contorno y nuca para dejar líneas limpias.</p></article></div>
+  <dl class="s3d-specs"><div><dt>Ubicación</dt><dd>La Granja</dd></div><div><dt>Citas</dt><dd>WhatsApp</dd></div><div><dt>Servicios</dt><dd>Rasurado y barba</dd></div></dl>
+  <div class="s3d-cta"><a class="btn" href="https://wa.me/523343469479?text=Hola%2C%20quiero%20apartar%20un%20lugar%20en%20Barber%C3%ADa%20Locotes." data-magnet>Apartar mi hora</a><span class="hint">Desliza para ver cómo trabajamos</span></div>
+  <div class="s3d-progress" aria-hidden="true"><span></span><span></span><span></span></div>
 </div>
-<div class="collage">
-<div class="main"><img src="img/2165745-1280.webp" srcset="img/2165745-720.webp 720w, img/2165745-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="848" alt="Barbería con sillones de época y espejos" fetchpriority="high"></div>
-<div class="small"><img src="img/7576856-1280.webp" srcset="img/7576856-720.webp 720w, img/7576856-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="850" alt="Tijeras de barbero colgadas en la estación" loading="lazy" decoding="async"></div>
-<svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle class="o" cx="60" cy="60" r="58"/><text><textPath href="#c">Barbería · La Granja · </textPath></text><circle class="d" cx="60" cy="60" r="5"/></svg>
-</div>
-</div></section>
+</section>
 <div class="marquee" aria-hidden="true"><div class="track"><span>Corte <i>✦</i></span><span>Degradado <i>✦</i></span><span>Barba <i>✦</i></span><span>Navaja <i>✦</i></span><span>La Granja <i>✦</i></span></div></div>
-<section class="feat" id="degradado"><div class="wrap">
-<div>
-<p class="kicker">El degradado</p>
-<h2 data-lines>De la piel al <em>largo</em>, sin escalones</h2>
-<p class="intro">Un buen degradado no deja ver dónde cambia el largo. Así lo trabajamos:</p>
-<ol class="steps-f"><li><span class="n">01</span><h3>Platicamos el corte</h3><p>Nos dices cómo lo traes y cómo lo quieres; elegimos juntos hasta dónde subir.</p></li><li><span class="n">02</span><h3>A máquina, por capas</h3><p>Bajamos de lo más corto a lo más largo, capa por capa, para que no se vea el salto.</p></li><li><span class="n">03</span><h3>Detalle con navaja</h3><p>Marcamos contorno y nuca para dejar las líneas limpias.</p></li></ol>
-<div class="cta-f"><a class="btn" href="https://wa.me/523343469479?text=Hola%2C%20quiero%20apartar%20un%20lugar%20en%20Barber%C3%ADa%20Locotes."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Apartar mi hora</a></div>
-</div>
-<div class="stage"><svg class="ill ill-barber" viewBox="0 0 520 300" fill="none" aria-hidden="true"><path class="guide" pathLength="1" d="M154 258 C144 170 158 40 260 32 C362 40 376 170 366 258"/><path class="guide" pathLength="1" d="M202 262 C208 280 210 292 208 300"/><path class="guide" pathLength="1" d="M318 262 C312 280 310 292 312 300"/><g><path class="st" pathLength="1" d="M189.7 228.3 l-3.1 -4.0"/><path class="st" pathLength="1" d="M203.1 225.3 l-3.8 -4.1"/><path class="st b" pathLength="1" d="M236.8 224.6 l-0.9 -4.4"/><path class="st" pathLength="1" d="M326.1 224.5 l6.3 -4.1"/><path class="st b" pathLength="1" d="M271.4 221.3 l3.5 -4.4"/><path class="st" pathLength="1" d="M326.1 217.0 l3.1 -4.9"/><path class="st" pathLength="1" d="M279.4 213.9 l2.4 -5.2"/><path class="st" pathLength="1" d="M189.1 213.2 l-3.5 -4.9"/><path class="st" pathLength="1" d="M179.3 212.4 l-3.0 -5.0"/><path class="st" pathLength="1" d="M262.7 211.7 l1.5 -5.5"/><path class="st" pathLength="1" d="M336.9 209.7 l1.2 -5.7"/><path class="st b" pathLength="1" d="M174.8 208.0 l-2.9 -5.9"/><path class="st" pathLength="1" d="M338.1 205.2 l5.1 -5.8"/><path class="st" pathLength="1" d="M194.7 205.2 l-2.0 -6.2"/><path class="st" pathLength="1" d="M180.5 199.5 l-1.4 -6.1"/><path class="st b" pathLength="1" d="M197.0 196.3 l-0.4 -6.8"/><path class="st" pathLength="1" d="M250.1 192.1 l2.4 -6.6"/><path class="st b" pathLength="1" d="M257.0 191.8 l0.1 -6.4"/><path class="st b" pathLength="1" d="M242.4 191.4 l1.7 -6.8"/><path class="st" pathLength="1" d="M307.0 190.0 l1.1 -7.3"/><path class="st" pathLength="1" d="M335.0 189.2 l4.8 -6.8"/><path class="st" pathLength="1" d="M179.5 189.2 l-4.1 -7.7"/><path class="st b" pathLength="1" d="M341.5 187.6 l4.6 -8.2"/><path class="st b" pathLength="1" d="M223.1 186.0 l-3.8 -7.2"/><path class="st" pathLength="1" d="M299.4 185.4 l1.6 -8.4"/><path class="st b" pathLength="1" d="M326.4 184.1 l4.5 -6.7"/><path class="st b" pathLength="1" d="M278.3 181.5 l-0.8 -9.0"/><path class="st" pathLength="1" d="M334.0 180.5 l6.6 -8.6"/><path class="st" pathLength="1" d="M244.4 179.6 l-3.1 -7.7"/><path class="st b" pathLength="1" d="M247.2 177.5 l-1.3 -8.1"/><path class="st" pathLength="1" d="M320.7 176.7 l1.8 -8.8"/><path class="st" pathLength="1" d="M266.7 174.3 l0.3 -8.7"/><path class="st" pathLength="1" d="M282.1 174.2 l2.7 -9.6"/><path class="st" pathLength="1" d="M317.9 173.9 l4.3 -9.6"/><path class="st" pathLength="1" d="M200.1 173.4 l-5.6 -10.0"/><path class="st b" pathLength="1" d="M359.6 172.4 l8.2 -9.9"/><path class="st" pathLength="1" d="M314.6 171.0 l5.3 -10.0"/><path class="st b" pathLength="1" d="M286.9 169.7 l0.5 -10.0"/><path class="st" pathLength="1" d="M276.6 169.6 l1.9 -8.3"/><path class="st" pathLength="1" d="M261.8 168.6 l-1.0 -10.5"/><path class="st" pathLength="1" d="M258.7 168.5 l0.4 -10.0"/><path class="st b" pathLength="1" d="M312.8 168.0 l1.5 -10.5"/><path class="st" pathLength="1" d="M309.5 167.4 l5.4 -8.3"/><path class="st" pathLength="1" d="M247.4 167.3 l-1.4 -10.7"/><path class="st" pathLength="1" d="M172.7 167.1 l-2.0 -9.7"/><path class="st" pathLength="1" d="M355.1 166.3 l4.1 -10.0"/><path class="st" pathLength="1" d="M208.3 164.8 l-1.6 -10.9"/><path class="st" pathLength="1" d="M331.3 163.7 l0.9 -10.3"/><path class="st" pathLength="1" d="M267.4 161.7 l-1.1 -8.8"/><path class="st" pathLength="1" d="M191.5 161.2 l-1.8 -11.6"/><path class="st" pathLength="1" d="M338.7 159.8 l3.9 -11.3"/><path class="st b" pathLength="1" d="M321.7 159.2 l2.5 -11.5"/><path class="st" pathLength="1" d="M212.4 157.4 l-2.2 -11.6"/><path class="st" pathLength="1" d="M176.7 156.0 l-3.9 -10.9"/><path class="st b" pathLength="1" d="M220.6 155.9 l-4.1 -9.8"/><path class="st" pathLength="1" d="M193.9 155.3 l-5.6 -11.5"/><path class="st" pathLength="1" d="M173.9 155.0 l-6.4 -11.7"/><path class="st" pathLength="1" d="M316.6 155.0 l1.6 -12.2"/><path class="st" pathLength="1" d="M351.5 154.8 l7.6 -10.5"/><path class="st b" pathLength="1" d="M334.2 153.1 l4.9 -10.8"/><path class="st b" pathLength="1" d="M204.1 152.9 l-4.1 -11.1"/><path class="st" pathLength="1" d="M348.5 152.7 l3.2 -9.8"/><path class="st" pathLength="1" d="M214.8 152.4 l-4.0 -11.2"/><path class="st" pathLength="1" d="M198.1 150.8 l-2.5 -9.6"/><path class="st" pathLength="1" d="M242.7 150.5 l-0.6 -10.0"/><path class="st" pathLength="1" d="M214.3 150.1 l-3.0 -12.1"/><path class="st b" pathLength="1" d="M156.8 148.2 l-7.1 -12.3"/><path class="st" pathLength="1" d="M258.1 147.2 l-1.8 -12.6"/><path class="st" pathLength="1" d="M216.2 146.9 l0.1 -10.6"/><path class="st" pathLength="1" d="M359.8 144.2 l3.9 -11.8"/><path class="st" pathLength="1" d="M340.5 144.1 l3.7 -10.8"/><path class="st b" pathLength="1" d="M206.0 143.9 l-4.3 -10.8"/><path class="st" pathLength="1" d="M166.8 143.4 l-3.5 -11.8"/><path class="st" pathLength="1" d="M293.1 143.3 l-0.2 -13.9"/><path class="st" pathLength="1" d="M320.8 142.5 l4.0 -11.6"/><path class="st" pathLength="1" d="M208.9 142.3 l-1.1 -12.0"/><path class="st" pathLength="1" d="M169.9 140.9 l-4.2 -12.6"/><path class="st b" pathLength="1" d="M162.2 140.6 l-4.0 -11.2"/><path class="st" pathLength="1" d="M201.0 139.0 l-2.4 -12.7"/><path class="st" pathLength="1" d="M348.4 138.6 l6.5 -11.3"/><path class="st b" pathLength="1" d="M255.7 138.6 l2.3 -13.5"/><path class="st b" pathLength="1" d="M216.4 138.2 l0.5 -12.5"/><path class="st" pathLength="1" d="M313.0 137.8 l1.5 -12.3"/><path class="st" pathLength="1" d="M217.9 136.9 l0.5 -15.1"/><path class="st b" pathLength="1" d="M171.0 136.6 l-3.4 -11.8"/><path class="st b" pathLength="1" d="M211.9 134.6 l-0.5 -12.3"/><path class="st" pathLength="1" d="M342.0 134.2 l6.3 -14.0"/><path class="st" pathLength="1" d="M301.2 131.6 l3.4 -12.6"/><path class="st" pathLength="1" d="M324.6 130.5 l4.5 -12.3"/><path class="st b" pathLength="1" d="M218.2 129.9 l-2.0 -13.2"/><path class="st" pathLength="1" d="M229.8 129.6 l1.4 -13.4"/><path class="st" pathLength="1" d="M336.2 128.8 l3.2 -16.1"/><path class="st b" pathLength="1" d="M187.9 128.7 l-4.7 -15.5"/><path class="st" pathLength="1" d="M244.6 128.5 l1.4 -12.4"/><path class="st b" pathLength="1" d="M160.0 127.6 l-7.4 -14.2"/><path class="st" pathLength="1" d="M295.0 127.3 l4.2 -15.4"/><path class="st" pathLength="1" d="M217.3 125.3 l-2.3 -13.5"/><path class="st b" pathLength="1" d="M285.7 124.7 l4.3 -16.8"/><path class="st" pathLength="1" d="M275.9 123.2 l2.6 -14.8"/><path class="st b" pathLength="1" d="M257.7 123.1 l-0.4 -14.9"/><path class="st" pathLength="1" d="M307.0 123.1 l3.8 -12.5"/><path class="st" pathLength="1" d="M192.1 122.9 l-1.0 -17.2"/><path class="st" pathLength="1" d="M341.8 122.3 l5.1 -15.8"/><path class="st b" pathLength="1" d="M313.5 122.3 l0.6 -14.4"/><path class="st" pathLength="1" d="M249.9 120.8 l1.3 -17.3"/><path class="st b" pathLength="1" d="M281.9 120.4 l1.1 -14.2"/><path class="st b" pathLength="1" d="M283.8 120.1 l2.8 -14.8"/><path class="st" pathLength="1" d="M231.8 119.9 l-4.2 -14.8"/><path class="st" pathLength="1" d="M199.2 119.3 l-2.7 -17.6"/><path class="st" pathLength="1" d="M352.4 119.0 l2.7 -17.0"/><path class="st b" pathLength="1" d="M219.3 118.5 l-4.7 -13.3"/><path class="st b" pathLength="1" d="M214.7 118.0 l-5.0 -17.4"/><path class="st" pathLength="1" d="M267.3 117.9 l1.6 -13.7"/><path class="st b" pathLength="1" d="M285.4 117.8 l2.2 -16.8"/><path class="st b" pathLength="1" d="M241.8 117.0 l-1.7 -14.5"/><path class="st b" pathLength="1" d="M357.7 116.4 l7.1 -16.3"/><path class="st" pathLength="1" d="M187.3 116.3 l-2.7 -15.3"/><path class="st" pathLength="1" d="M330.2 116.0 l6.1 -17.6"/><path class="st b" pathLength="1" d="M256.6 116.0 l2.0 -13.2"/><path class="st b" pathLength="1" d="M298.5 115.9 l0.1 -15.7"/><path class="st" pathLength="1" d="M185.4 115.5 l-6.8 -14.2"/><path class="st" pathLength="1" d="M173.8 114.7 l-4.3 -16.7"/><path class="st" pathLength="1" d="M291.7 114.4 l4.4 -14.6"/><path class="st" pathLength="1" d="M347.7 113.0 l5.8 -14.1"/><path class="st" pathLength="1" d="M247.3 112.2 l0.1 -17.3"/><path class="st" pathLength="1" d="M352.6 110.9 l2.2 -17.9"/><path class="st b" pathLength="1" d="M217.8 109.8 l-1.9 -14.5"/><path class="st" pathLength="1" d="M255.6 109.6 l1.9 -18.6"/><path class="st" pathLength="1" d="M179.7 109.2 l-6.9 -17.3"/><path class="st" pathLength="1" d="M245.5 108.7 l-1.3 -16.2"/><path class="st b" pathLength="1" d="M173.7 107.8 l-3.3 -14.8"/><path class="st b" pathLength="1" d="M319.1 106.8 l5.6 -14.4"/><path class="st b" pathLength="1" d="M196.9 106.3 l-2.1 -16.9"/><path class="st b" pathLength="1" d="M250.5 105.3 l-3.4 -19.6"/><path class="st" pathLength="1" d="M349.4 103.5 l3.1 -17.1"/><path class="st" pathLength="1" d="M187.1 103.2 l-5.8 -16.0"/><path class="st b" pathLength="1" d="M223.5 102.8 l-3.2 -17.4"/><path class="st" pathLength="1" d="M232.9 102.6 l-1.8 -17.3"/><path class="st" pathLength="1" d="M271.2 102.4 l0.8 -18.2"/><path class="st" pathLength="1" d="M194.2 102.4 l-6.2 -18.9"/><path class="st" pathLength="1" d="M296.8 101.9 l1.8 -20.3"/><path class="st" pathLength="1" d="M266.4 100.4 l-0.2 -18.3"/><path class="st" pathLength="1" d="M280.2 99.8 l2.2 -19.3"/><path class="st" pathLength="1" d="M338.0 99.8 l5.9 -18.0"/><path class="st b" pathLength="1" d="M323.3 99.0 l6.0 -18.3"/><path class="st" pathLength="1" d="M303.5 98.9 l1.4 -19.8"/><path class="st" pathLength="1" d="M212.9 98.6 l-5.1 -15.9"/><path class="st" pathLength="1" d="M337.4 97.9 l2.3 -19.3"/><path class="st" pathLength="1" d="M323.1 97.1 l1.6 -21.0"/><path class="st b" pathLength="1" d="M205.6 96.7 l-2.1 -19.2"/><path class="st b" pathLength="1" d="M264.9 96.4 l-0.1 -21.4"/><path class="st" pathLength="1" d="M253.4 96.4 l-1.3 -15.5"/><path class="st" pathLength="1" d="M256.6 95.9 l-0.9 -17.4"/><path class="st" pathLength="1" d="M219.9 95.8 l0.1 -18.0"/><path class="st b" pathLength="1" d="M279.4 91.2 l1.0 -16.3"/><path class="st" pathLength="1" d="M236.7 90.2 l0.2 -21.6"/><path class="st" pathLength="1" d="M342.5 89.7 l2.8 -20.4"/><path class="st" pathLength="1" d="M303.7 88.2 l3.0 -16.5"/><path class="st" pathLength="1" d="M268.5 87.5 l0.8 -19.7"/><path class="st" pathLength="1" d="M323.6 87.5 l2.9 -20.6"/><path class="st b" pathLength="1" d="M223.1 87.4 l-4.0 -18.4"/><path class="st" pathLength="1" d="M201.8 87.2 l-1.1 -18.2"/><path class="st" pathLength="1" d="M229.1 84.7 l-3.0 -21.8"/><path class="st b" pathLength="1" d="M182.0 84.1 l-5.9 -22.6"/><path class="st" pathLength="1" d="M279.3 84.0 l0.5 -19.7"/><path class="st b" pathLength="1" d="M223.0 83.9 l-0.4 -18.1"/><path class="st" pathLength="1" d="M307.5 82.9 l0.5 -17.4"/><path class="st" pathLength="1" d="M230.8 82.6 l-4.5 -19.4"/><path class="st" pathLength="1" d="M228.0 82.1 l-3.2 -21.9"/><path class="st" pathLength="1" d="M276.4 81.4 l3.0 -23.0"/><path class="st" pathLength="1" d="M226.0 80.7 l-1.2 -19.4"/><path class="st" pathLength="1" d="M335.3 80.5 l4.8 -18.3"/><path class="st b" pathLength="1" d="M318.4 80.5 l2.0 -23.8"/><path class="st" pathLength="1" d="M236.6 80.1 l-2.7 -19.0"/><path class="st" pathLength="1" d="M302.5 79.6 l0.6 -20.6"/><path class="st" pathLength="1" d="M224.4 79.5 l-2.6 -21.9"/><path class="st b" pathLength="1" d="M338.6 79.1 l5.3 -23.8"/><path class="st" pathLength="1" d="M331.1 77.6 l3.5 -24.3"/><path class="st" pathLength="1" d="M247.7 77.5 l-2.5 -20.8"/><path class="st b" pathLength="1" d="M217.1 76.5 l-2.6 -22.4"/><path class="st" pathLength="1" d="M202.9 75.5 l-2.1 -19.6"/><path class="st b" pathLength="1" d="M268.6 72.4 l-0.6 -19.3"/><path class="st" pathLength="1" d="M295.6 72.3 l0.5 -20.1"/><path class="st" pathLength="1" d="M196.2 71.5 l-3.8 -22.8"/><path class="st" pathLength="1" d="M248.0 70.3 l2.2 -19.2"/><path class="st b" pathLength="1" d="M193.6 70.2 l-6.2 -23.7"/><path class="st" pathLength="1" d="M254.4 67.0 l-1.0 -20.1"/><path class="st" pathLength="1" d="M310.1 65.3 l2.2 -24.9"/><path class="st b" pathLength="1" d="M249.8 64.9 l0.3 -19.1"/><path class="st" pathLength="1" d="M250.4 63.5 l0.7 -22.7"/><path class="st" pathLength="1" d="M255.5 63.4 l2.1 -25.0"/><path class="st" pathLength="1" d="M292.9 61.9 l3.0 -22.1"/><path class="st" pathLength="1" d="M239.3 58.9 l-3.3 -20.0"/><path class="st" pathLength="1" d="M304.0 57.8 l4.6 -20.7"/><path class="st" pathLength="1" d="M231.0 57.2 l-1.8 -24.1"/><path class="st" pathLength="1" d="M212.3 56.9 l-0.8 -22.6"/><path class="st" pathLength="1" d="M245.2 56.0 l1.1 -26.1"/><path class="st b" pathLength="1" d="M258.9 53.6 l-2.1 -26.0"/><path class="st b" pathLength="1" d="M263.4 53.2 l-1.5 -22.7"/><path class="st" pathLength="1" d="M221.7 53.0 l0.7 -21.2"/><path class="st b" pathLength="1" d="M242.7 51.5 l0.1 -20.6"/><path class="st b" pathLength="1" d="M248.1 51.2 l0.3 -28.4"/><path class="st b" pathLength="1" d="M250.4 50.9 l-2.0 -21.0"/><path class="st b" pathLength="1" d="M281.0 50.8 l1.6 -28.3"/><path class="st b" pathLength="1" d="M285.5 50.6 l1.9 -28.2"/></g><g class="pop"><line x1="400" y1="245" x2="430" y2="245"/><text x="440" y="250">#0</text></g><g class="pop"><line x1="400" y1="205" x2="430" y2="205"/><text x="440" y="210">#1</text></g><g class="pop"><line x1="400" y1="160" x2="430" y2="160"/><text x="440" y="165">#2</text></g><g class="pop"><line x1="400" y1="110" x2="430" y2="110"/><text x="440" y="115">#3</text></g></svg><span class="count" data-unit="trazos" aria-hidden="true"></span><span class="caption">Ilustración del degradado, de la nuca hacia arriba</span></div>
-</div></section>
 <section class="block" id="servicios"><div class="wrap">
 <div class="head"><div><p class="kicker">Servicios</p><h2 data-lines>En la silla</h2></div><p>Lo que hacemos. Si buscas algo distinto, pregúntanos.</p></div>
 <div class="cards"><article class="card"><div class="ph"><img src="img/6797912-1280.webp" srcset="img/6797912-720.webp 720w, img/6797912-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Corte a máquina visto desde atrás" loading="lazy" decoding="async"></div><div class="tx"><h3>Corte de cabello</h3><p>Dinos cómo lo traes y cómo lo quieres; lo platicamos antes de empezar.</p><span class="note">Precio por WhatsApp</span></div></article><article class="card"><div class="ph"><img src="img/4666064-1280.webp" srcset="img/4666064-720.webp 720w, img/4666064-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Estuche con tijeras sobre la estación de trabajo" loading="lazy" decoding="async"></div><div class="tx"><h3>Rasurado de cabeza</h3><p>A navaja, parejo y con cuidado de la piel.</p><span class="note">Precio por WhatsApp</span></div></article><article class="card"><div class="ph"><img src="img/10552936-1280.webp" srcset="img/10552936-720.webp 720w, img/10552936-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Barbero rebajando el cabello con máquina" loading="lazy" decoding="async"></div><div class="tx"><h3>Arreglo de barba</h3><p>Perfilado y rebaje para que la barba se vea cuidada.</p><span class="note">Precio por WhatsApp</span></div></article></div>
@@ -212,40 +245,12 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
       return gsap.from(self.lines, Object.assign({ yPercent: 110, duration: 1, ease: 'expo.out', stagger: .09 }, opts ? opts(el) : {})); }}); }); }
   lines('.hero h1');
   lines('[data-lines]', function(el){ return { scrollTrigger: { trigger: el, start: 'top 85%', once: true } }; });
-  var hero = gsap.timeline({ delay: .15 });
-  hero.from('.hero .kicker, .hero .lede, .hero .actions', { autoAlpha: 0, y: 20, duration: .8, ease: 'power3.out', stagger: .1 }, .25)
-      .from('.collage .main', { clipPath: 'inset(100% 0% 0% 0%)', duration: 1.3, ease: 'expo.inOut' }, 0)
-      .from('.collage .main img', { scale: 1.25, duration: 1.6, ease: 'expo.out' }, .2)
-      .from('.collage .small', { autoAlpha: 0, y: 40, duration: 1, ease: 'power3.out' }, .7)
-      .from('.collage .badge', { autoAlpha: 0, scale: .6, duration: .8, ease: 'back.out(1.6)' }, 1);
-  var hs = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
-  gsap.to('.collage .badge', { rotate: 360, ease: 'none', scrollTrigger: hs });
-  gsap.to('.collage .main img', { yPercent: -10, ease: 'none', scrollTrigger: Object.assign({}, hs) });
-  gsap.to('.collage .small', { yPercent: -28, ease: 'none', scrollTrigger: Object.assign({}, hs) });
   var track = document.querySelector('.marquee .track');
   if (track) { track.innerHTML += track.innerHTML;
     var loop = gsap.to(track, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
     ScrollTrigger.create({ onUpdate: function(self){ var v = gsap.utils.clamp(-6, 6, self.getVelocity() / 300);
       gsap.to(loop, { timeScale: (self.direction === -1 ? -1 : 1) * (1 + Math.abs(v)), duration: .3, overwrite: true }); } }); }
-  // Ilustración que se dibuja con el scroll
-  var sts = gsap.utils.toArray('.ill .st'), steps = gsap.utils.toArray('.steps-f li'), count = document.querySelector('.stage .count');
-  var unit = count ? count.getAttribute('data-unit') : null, needle = document.querySelector('.ill .needle');
-  function featTL(st){
-    st.onUpdate = function(self){ var p = self.progress, i = p < .3 ? 0 : (p < .88 ? 1 : 2);
-      steps.forEach(function(li, k){ li.classList.toggle('on', k === i); });
-      if (count && unit){ var q = gsap.utils.clamp(0, 1, (p - .3) / .58);
-        count.textContent = unit === '%' ? Math.round(q * 100) + '% revisado' : Math.round(q * sts.length) + ' / ' + sts.length + ' ' + unit; } };
-    var tl = gsap.timeline({ scrollTrigger: st });
-    tl.to('.ill .guide', { strokeDashoffset: 0, duration: .28, ease: 'none' })
-      .to(sts, { strokeDashoffset: 0, duration: .02, ease: 'none', stagger: { each: .55 / Math.max(sts.length, 1) } }, .3);
-    if (needle) tl.fromTo(needle, { rotation: -10, svgOrigin: '260 255' }, { rotation: 140, svgOrigin: '260 255', duration: .58, ease: 'power1.inOut' }, .3);
-    if (document.querySelector('.ill .pop')) tl.from('.ill .pop', { autoAlpha: 0, scale: .4, transformOrigin: '50% 50%', duration: .06, stagger: .01 }, .3);
-    tl.to('.ill .guide:not(.keep)', { opacity: 0, duration: .12 }, .9).to({}, { duration: .1 });
-    return tl; }
-  steps[0] && steps[0].classList.add('on');
   var mm = gsap.matchMedia();
-  mm.add('(min-width: 900px)', function(){ featTL({ trigger: '.feat', start: 'top top', end: '+=180%', pin: true, scrub: .6 }); });
-  mm.add('(max-width: 899px)', function(){ featTL({ trigger: '.stage', start: 'top 75%', end: 'bottom 25%', scrub: .6 }); });
   gsap.utils.toArray('.card').forEach(function(c, i){
     var tl = gsap.timeline({ scrollTrigger: { trigger: c, start: 'top 85%', once: true } });
     tl.from(c, { y: 50, autoAlpha: 0, duration: .9, ease: 'power3.out', delay: (i % 3) * .08 })
@@ -263,6 +268,52 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
     b.addEventListener('pointerleave', function(){ xTo(0); yTo(0); }); });
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 })();
+</script>
+<script type="module">
+const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "navaja-hoja.bin", "color": "#e8ecef", "metal": 1, "rough": 0.12}, {"bin": "navaja-mango.bin", "color": "#1c1916", "rough": 0.3, "clear": 1}], "scale": 1.35, "base": [0, 0, -0.15], "rim": "#d9a066", "env": 1.0};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+if (gsap && ST && hasGL && !reduce) setup();
+function setup() {
+  const root = document.documentElement; root.classList.add('m3d');
+  const canvas = document.querySelector('.s3d-canvas canvas'), poster = document.querySelector('.s3d-canvas .poster'), shadow = document.querySelector('.s3d-canvas .shadow');
+  const st = { y: -3.2, ry: -.6, rx: .18, s: .7, x: 0 }; let api = null;
+  function draw() {
+    if (api) api.draw(st);
+    else poster.style.transform = 'translate(' + (st.x * 32) + '%,' + (-(st.y - .05) * 32) + '%) scale(' + (st.s / 1.05) + ')';
+    const lift = Math.max(0, Math.min(1, 1 - Math.abs(st.y + .1) / 2.6));
+    shadow.style.opacity = lift.toFixed(3); shadow.style.transform = 'translateX(' + (st.x * 18) + '%) scaleX(' + (.6 + .4 * st.s) + ')';
+  }
+  const chs = gsap.utils.toArray('.ch'), bars = gsap.utils.toArray('.s3d-progress span');
+  const tl = gsap.timeline({ defaults: { ease: 'none' }, onUpdate: draw,
+    scrollTrigger: { trigger: '.s3d', start: 'top top', end: '+=420%', pin: '.s3d-pin', scrub: .8, anticipatePin: 1, refreshPriority: 1,
+      onUpdate(self) { const p = self.progress; bars.forEach((b, i) => b.style.setProperty('--p', Math.max(0, Math.min(1, (p - .3 - i * .233) / .233)))); } } });
+  tl.to(st, { y: -.12, ry: .25, duration: .14, ease: 'power2.out' }, 0)
+    .to('.swap .spark-l', { opacity: 0, scale: .2, rotate: 90, duration: .03 }, .1)
+    .fromTo('.swap .real', { opacity: 0, yPercent: 40 }, { opacity: 1, yPercent: 0, duration: .04, ease: 'back.out(3)' }, .11)
+    .to('.fly', { opacity: 0, scale: 2.2, duration: .04 }, .11)
+    .to('.s3d-intro', { yPercent: -60, opacity: 0, filter: 'blur(10px)', duration: .1 }, .2)
+    .to('.s3d-cta', { opacity: 0, y: 30, duration: .06 }, .2)
+    .to(st, { y: .05, s: 1.05, rx: .32, duration: .12, ease: 'power1.inOut' }, .2)
+    .to('.s3d-specs', { autoAlpha: 1, duration: .05 }, .3);
+  chs.forEach((c, i) => { const t0 = .3 + i * .233;
+    tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
+    if (i < chs.length - 1) tl.to(c, { autoAlpha: 0, x: 30, filter: 'blur(8px)', duration: .05 }, t0 + .19); });
+  tl.to(st, { ry: .25 + Math.PI * 2, duration: .7 }, .3)
+    .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
+    .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
+  gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
+  gsap.to('.swap .spark-l', { rotate: 45, scale: 1.12, duration: 1.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  gsap.utils.toArray('.fly').forEach((f, i) => gsap.fromTo(f, { opacity: 0, y: 10 }, { opacity: 1, y: -10, rotate: 90, duration: 1.6 + i * .3, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: i * .25 }));
+  gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
+  gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
+  draw(); ST.sort(); ST.refresh();
+  // El 3D (motor compartido) se carga cuando la página ya se ve y responde
+  const go = () => import('../lib3d/scene.js').then(m => m.mount(canvas, CFG)).then(a => {
+    api = a; addEventListener('resize', () => { a.size(); draw(); }); draw(); requestAnimationFrame(() => root.classList.add('ready3d')); }).catch(() => {});
+  const idle = () => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300));
+  document.readyState === 'complete' ? idle() : addEventListener('load', idle, { once: true });
+}
 </script>
 </body>
 </html>

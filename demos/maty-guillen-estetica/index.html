@@ -8,7 +8,7 @@
 <meta name="description" content="Maty Guillen Estética - Salón, estética en Arcos de Guadalupe, Zapopan. Maquillaje de novia, maquillaje para eventos y peinado. Agenda por WhatsApp.">
 <meta name="theme-color" content="#f8f2f3">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&family=Inter:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f8f2f3;--paper:#fffafb;--sand:#efe2e5;--ink:#2a1d24;--muted:#685660;--line:#e6d5da;--acc:#8a3a6b;--acc-text:#8a3a6b;--on-acc:#ffffff;--acc-hover:#712f58;--feat:#2a1a26;--feat2:#382331;--feat-text:#f7eaf0;--feat-acc:#e3a9c6;--feat-muted:#c9aebb;--head:"Cormorant Garamond",Georgia,serif;--body:"Manrope",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--pill:999px;--ease:cubic-bezier(.2,.7,.1,1)}
 *{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
@@ -111,6 +111,47 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 .loc{grid-template-columns:1.2fr .8fr;align-items:start}.final{padding:110px 40px}.gal-viewport{overflow:visible;padding-bottom:110px}
 .gal-track{padding-left:max(20px,calc((100vw - 1160px)/2))}.gal-track figure{width:440px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
+.s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
+.s3d-intro{text-align:center;position:relative;z-index:3}
+.s3d .word{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;letter-spacing:-.06em;line-height:.86;margin:14px 0 0;text-transform:none}
+.s3d .word .pre{display:block;font-family:var(--head);font-weight:400;font-style:italic;letter-spacing:-.01em;font-size:clamp(22px,3.2vw,40px);color:var(--muted);margin-bottom:6px}
+.s3d .word .big{display:inline-block;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)));color:var(--ink)}
+.swap{position:relative;display:inline-block}
+.swap .spark-l{position:absolute;left:50%;bottom:.08em;width:.62em;height:.62em;transform:translateX(-50%);color:var(--acc);opacity:0}
+.swap .spark-l svg{width:100%;height:100%;fill:currentColor}
+.fly{position:absolute;width:26px;height:26px;color:#7fd1d9;opacity:0}.fly svg{width:100%;height:100%;fill:currentColor}
+.fly.f1{left:62%;top:18%}.fly.f2{left:70%;top:6%;width:18px;height:18px;color:#a99be8}.fly.f3{left:30%;top:24%;width:16px;height:16px}
+.s3d-canvas{position:relative;width:min(520px,86vw);aspect-ratio:1;margin:-10px auto 0;z-index:2}
+.s3d-canvas canvas{position:absolute;inset:0;width:100%;height:100%;display:none}
+.s3d-canvas .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.s3d-canvas .shadow{display:none;position:absolute;left:18%;right:18%;bottom:4%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(15,35,41,.28),rgba(15,35,41,0));filter:blur(4px)}
+.s3d-chapters{display:grid;gap:22px;max-width:520px;margin:24px auto 0;position:relative;z-index:3}
+.ch .num{font:600 15px var(--body);color:var(--acc);letter-spacing:.06em}
+.ch h2{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(30px,4.4vw,52px);line-height:.95;margin:4px 0 10px;color:var(--ink)}
+.ch p{color:var(--muted);max-width:34ch}
+.s3d-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin:26px auto 0;border-top:1px solid var(--line);padding-top:16px;position:relative;z-index:3}
+.s3d-specs dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.s3d-specs dd{font:600 16px var(--body);color:var(--ink);margin-top:2px}
+.s3d-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;position:relative;z-index:3}
+.s3d-cta .hint{font-size:13px;color:var(--muted)}
+.s3d-progress{display:none}
+/* con animación: todo se superpone en una sola escena fija */
+.m3d .s3d-pin{height:100vh;min-height:560px;display:block;padding:0}
+.m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
+.m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
+.m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
+.m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
+.m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs div{border-top:1px solid var(--line);padding-top:10px}
+.m3d .s3d-cta{position:absolute;left:0;right:0;bottom:58px;margin:0}
+.m3d .s3d-progress{display:flex;gap:6px;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:min(320px,70vw)}
+.m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
+@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
+.s3d .word .big{white-space:nowrap}.fly{color:var(--feat-acc)}.fly.f2{color:var(--acc)}.swap .spark-l{color:var(--acc)}
 </style>
 </head>
 <body>
@@ -119,30 +160,22 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
 <header class="bar"><div class="wrap"><a class="brand" href="./"><b>Maty Guillen</b><small>Estética · Arcos de Guadalupe</small></a>
 <nav class="nav" aria-label="Secciones"><a href="./#maquillaje">Maquillaje</a><a href="./#servicios">Servicios</a><a href="./#agenda">Agenda</a><a href="./#visita">Ubicación</a></nav><a class="btn sm" href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n.">WhatsApp</a></div></header>
 <main id="main">
-<section class="hero"><div class="wrap grid">
-<div>
-<p class="kicker">Arcos de Guadalupe · Zapopan</p>
-<h1>Maquillaje para tu <em>gran día</em></h1>
-<p class="lede">Estética en Arcos de Guadalupe. Escríbenos con la fecha de tu evento y te apartamos el lugar.</p>
-<div class="actions"><a class="btn" href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n." data-magnet><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Agendar mi cita</a><a class="btn ghost" href="#maquillaje">Cómo trabajamos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<section class="s3d" id="maquillaje" aria-label="Maty Guillen Estética - Salón">
+<div class="s3d-pin">
+  <div class="s3d-intro">
+    <p class="kicker">Arcos de Guadalupe · Zapopan</p>
+    <h1 class="word" aria-label="maquillaje de novia"><span class="pre">maquillaje de</span><span class="big" style="--len:5">novi<span class="swap"><span class="spark-l" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="real">a</span></span></span></h1>
+    <span class="fly f1" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f2" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span><span class="fly f3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg></span>
+  </div>
+  <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
+    <img class="poster" src="img/labial-3d.webp" width="900" height="900" alt="Ilustración 3D: labial" fetchpriority="high"></div>
+  <div class="s3d-chapters"><article class="ch" data-i="0"><p class="num">.01</p><h2>Platicamos el look</h2><p>Nos cuentas del evento, el vestido y el estilo que buscas.</p></article><article class="ch" data-i="1"><p class="num">.02</p><h2>Preparamos la piel</h2><p>Elegimos tonos y base según tu piel.</p></article><article class="ch" data-i="2"><p class="num">.03</p><h2>Maquillaje por capas</h2><p>Lo construimos poco a poco para que se vea natural de cerca y en fotos.</p></article></div>
+  <dl class="s3d-specs"><div><dt>Ubicación</dt><dd>Arcos de Guadalupe</dd></div><div><dt>Citas</dt><dd>WhatsApp</dd></div><div><dt>Servicios</dt><dd>Novia, eventos y peinado</dd></div></dl>
+  <div class="s3d-cta"><a class="btn" href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n." data-magnet>Agendar mi cita</a><span class="hint">Desliza para ver cómo trabajamos</span></div>
+  <div class="s3d-progress" aria-hidden="true"><span></span><span></span><span></span></div>
 </div>
-<div class="collage">
-<div class="main"><img src="img/7512332-1280.webp" srcset="img/7512332-720.webp 720w, img/7512332-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Manos sosteniendo una paleta de maquillaje" fetchpriority="high"></div>
-<div class="small"><img src="img/4657887-1280.webp" srcset="img/4657887-720.webp 720w, img/4657887-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="855" height="1280" alt="Peinado recogido visto desde atrás" loading="lazy" decoding="async"></div>
-<svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle class="o" cx="60" cy="60" r="58"/><text><textPath href="#c">Estética · Arcos de Guadalupe · </textPath></text><circle class="d" cx="60" cy="60" r="5"/></svg>
-</div>
-</div></section>
+</section>
 <div class="marquee" aria-hidden="true"><div class="track"><span>Maquillaje de novia <i>✦</i></span><span>Eventos <i>✦</i></span><span>Peinado <i>✦</i></span><span>Arcos de Guadalupe <i>✦</i></span></div></div>
-<section class="feat" id="maquillaje"><div class="wrap">
-<div>
-<p class="kicker">Maquillaje de novia y eventos</p>
-<h2 data-lines>Por capas, <em>a tu medida</em></h2>
-<p class="intro">Cada maquillaje empieza por platicar. Así lo construimos:</p>
-<ol class="steps-f"><li><span class="n">01</span><h3>Platicamos el look</h3><p>Nos cuentas del evento, el vestido y el estilo que buscas.</p></li><li><span class="n">02</span><h3>Preparamos la piel</h3><p>Elegimos tonos y base según tu piel.</p></li><li><span class="n">03</span><h3>Maquillaje por capas</h3><p>Lo construimos poco a poco para que se vea natural de cerca y en fotos.</p></li></ol>
-<div class="cta-f"><a class="btn" href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Agendar mi cita</a></div>
-</div>
-<div class="stage"><svg class="ill ill-makeup" viewBox="0 0 520 300" fill="none" aria-hidden="true"><rect class="guide keep" pathLength="1" x="70" y="30" width="380" height="90" rx="22"/><circle class="pop pan" cx="110" cy="75" r="22" fill="#e8b8a6"/><circle class="guide keep" pathLength="1" cx="110" cy="75" r="24"/><circle class="pop pan" cx="170" cy="75" r="22" fill="#c97b84"/><circle class="guide keep" pathLength="1" cx="170" cy="75" r="24"/><circle class="pop pan" cx="230" cy="75" r="22" fill="#9c4a6b"/><circle class="guide keep" pathLength="1" cx="230" cy="75" r="24"/><circle class="pop pan" cx="290" cy="75" r="22" fill="#b98a5e"/><circle class="guide keep" pathLength="1" cx="290" cy="75" r="24"/><circle class="pop pan" cx="350" cy="75" r="22" fill="#6e3a55"/><circle class="guide keep" pathLength="1" cx="350" cy="75" r="24"/><circle class="pop pan" cx="410" cy="75" r="22" fill="#d9b36c"/><circle class="guide keep" pathLength="1" cx="410" cy="75" r="24"/><g><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M89.2 149.2 C199.2 142.3 291.8 156.1 431.8 147.2"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M84.1 151.4 C194.1 142.9 280.9 159.9 420.9 149.4"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M85.1 153.6 C195.1 145.0 279.4 162.2 419.4 151.6"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M84.6 155.8 C194.6 148.3 284.6 163.3 424.6 153.8"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M90.3 158.0 C200.3 150.2 274.2 165.8 414.2 156.0"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M87.3 160.2 C197.3 154.6 292.7 165.8 432.7 158.2"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M96.9 162.4 C206.9 155.4 278.3 169.4 418.3 160.4"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M89.4 164.6 C199.4 156.5 273.6 172.7 413.6 162.6"/><path class="st sw" style="stroke:#e8b8a6" pathLength="1" d="M88.1 166.8 C198.1 161.4 275.8 172.2 415.8 164.8"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M89.9 183.2 C199.9 175.3 279.4 191.1 419.4 181.2"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M86.9 185.4 C196.9 179.3 273.6 191.5 413.6 183.4"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M86.8 187.6 C196.8 179.4 255.4 195.8 395.4 185.6"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M84.8 189.8 C194.8 181.3 270.6 198.3 410.6 187.8"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M84.3 192.0 C194.3 185.0 269.3 199.0 409.3 190.0"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M85.6 194.2 C195.6 185.6 264.1 202.8 404.1 192.2"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M92.1 196.4 C202.1 190.9 255.1 201.9 395.1 194.4"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M84.1 198.6 C194.1 192.8 279.5 204.4 419.5 196.6"/><path class="st sw" style="stroke:#c97b84" pathLength="1" d="M84.2 200.8 C194.2 193.6 279.5 208.0 419.5 198.8"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M96.9 217.2 C206.9 210.2 255.4 224.2 395.4 215.2"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M92.9 219.4 C202.9 212.8 265.2 226.0 405.2 217.4"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M86.4 221.6 C196.4 214.3 249.7 228.9 389.7 219.6"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M84.8 223.8 C194.8 215.0 251.3 232.6 391.3 221.8"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M86.1 226.0 C196.1 218.6 260.0 233.4 400.0 224.0"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M98.0 228.2 C208.0 219.2 264.4 237.2 404.4 226.2"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M97.3 230.4 C207.3 222.6 260.9 238.2 400.9 228.4"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M84.6 232.6 C194.6 225.2 257.0 240.0 397.0 230.6"/><path class="st sw" style="stroke:#9c4a6b" pathLength="1" d="M92.3 234.8 C202.3 227.1 244.8 242.5 384.8 232.8"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M88.9 251.2 C198.9 245.9 228.1 256.5 368.1 249.2"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M90.3 253.4 C200.3 246.1 241.9 260.7 381.9 251.4"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M92.0 255.6 C202.0 246.7 253.4 264.5 393.4 253.6"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M88.6 257.8 C198.6 249.6 241.0 266.0 381.0 255.8"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M90.2 260.0 C200.2 254.1 244.3 265.9 384.3 258.0"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M92.8 262.2 C202.8 256.8 250.9 267.6 390.9 260.2"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M84.4 264.4 C194.4 256.3 230.6 272.5 370.6 262.4"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M91.0 266.6 C201.0 258.4 232.7 274.8 372.7 264.6"/><path class="st sw" style="stroke:#b98a5e" pathLength="1" d="M94.3 268.8 C204.3 262.8 241.2 274.8 381.2 266.8"/></g></svg><span class="count" data-unit="pinceladas" aria-hidden="true"></span><span class="caption">Ilustración de pinceladas</span></div>
-</div></section>
 <section class="block" id="servicios"><div class="wrap">
 <div class="head"><div><p class="kicker">Servicios</p><h2 data-lines>Servicios</h2></div><p>Lo que hacemos. Pregúntanos por fechas y disponibilidad.</p></div>
 <div class="cards"><article class="card"><div class="ph"><img src="img/529607-1280.webp" srcset="img/529607-720.webp 720w, img/529607-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="852" alt="Manos de novia formando un corazón sobre el vestido" loading="lazy" decoding="async"></div><div class="tx"><h3>Maquillaje de novia</h3><p>Platicamos tu look y lo construimos por capas para tu boda.</p><span class="note">Precio por WhatsApp</span></div></article><article class="card"><div class="ph"><img src="img/9086984-1280.webp" srcset="img/9086984-720.webp 720w, img/9086984-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Paleta de rubores con brochas" loading="lazy" decoding="async"></div><div class="tx"><h3>Maquillaje para eventos</h3><p>XV años, graduaciones y fiestas.</p><span class="note">Precio por WhatsApp</span></div></article><article class="card"><div class="ph"><img src="img/4040677-1280.webp" srcset="img/4040677-720.webp 720w, img/4040677-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw" width="1280" height="853" alt="Recogido con flores blancas visto desde atrás" loading="lazy" decoding="async"></div><div class="tx"><h3>Peinado</h3><p>Recogidos, ondas y trenzas para acompañar el maquillaje.</p><span class="note">Precio por WhatsApp</span></div></article></div>
@@ -212,40 +245,12 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
       return gsap.from(self.lines, Object.assign({ yPercent: 110, duration: 1, ease: 'expo.out', stagger: .09 }, opts ? opts(el) : {})); }}); }); }
   lines('.hero h1');
   lines('[data-lines]', function(el){ return { scrollTrigger: { trigger: el, start: 'top 85%', once: true } }; });
-  var hero = gsap.timeline({ delay: .15 });
-  hero.from('.hero .kicker, .hero .lede, .hero .actions', { autoAlpha: 0, y: 20, duration: .8, ease: 'power3.out', stagger: .1 }, .25)
-      .from('.collage .main', { clipPath: 'inset(100% 0% 0% 0%)', duration: 1.3, ease: 'expo.inOut' }, 0)
-      .from('.collage .main img', { scale: 1.25, duration: 1.6, ease: 'expo.out' }, .2)
-      .from('.collage .small', { autoAlpha: 0, y: 40, duration: 1, ease: 'power3.out' }, .7)
-      .from('.collage .badge', { autoAlpha: 0, scale: .6, duration: .8, ease: 'back.out(1.6)' }, 1);
-  var hs = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
-  gsap.to('.collage .badge', { rotate: 360, ease: 'none', scrollTrigger: hs });
-  gsap.to('.collage .main img', { yPercent: -10, ease: 'none', scrollTrigger: Object.assign({}, hs) });
-  gsap.to('.collage .small', { yPercent: -28, ease: 'none', scrollTrigger: Object.assign({}, hs) });
   var track = document.querySelector('.marquee .track');
   if (track) { track.innerHTML += track.innerHTML;
     var loop = gsap.to(track, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
     ScrollTrigger.create({ onUpdate: function(self){ var v = gsap.utils.clamp(-6, 6, self.getVelocity() / 300);
       gsap.to(loop, { timeScale: (self.direction === -1 ? -1 : 1) * (1 + Math.abs(v)), duration: .3, overwrite: true }); } }); }
-  // Ilustración que se dibuja con el scroll
-  var sts = gsap.utils.toArray('.ill .st'), steps = gsap.utils.toArray('.steps-f li'), count = document.querySelector('.stage .count');
-  var unit = count ? count.getAttribute('data-unit') : null, needle = document.querySelector('.ill .needle');
-  function featTL(st){
-    st.onUpdate = function(self){ var p = self.progress, i = p < .3 ? 0 : (p < .88 ? 1 : 2);
-      steps.forEach(function(li, k){ li.classList.toggle('on', k === i); });
-      if (count && unit){ var q = gsap.utils.clamp(0, 1, (p - .3) / .58);
-        count.textContent = unit === '%' ? Math.round(q * 100) + '% revisado' : Math.round(q * sts.length) + ' / ' + sts.length + ' ' + unit; } };
-    var tl = gsap.timeline({ scrollTrigger: st });
-    tl.to('.ill .guide', { strokeDashoffset: 0, duration: .28, ease: 'none' })
-      .to(sts, { strokeDashoffset: 0, duration: .02, ease: 'none', stagger: { each: .55 / Math.max(sts.length, 1) } }, .3);
-    if (needle) tl.fromTo(needle, { rotation: -10, svgOrigin: '260 255' }, { rotation: 140, svgOrigin: '260 255', duration: .58, ease: 'power1.inOut' }, .3);
-    if (document.querySelector('.ill .pop')) tl.from('.ill .pop', { autoAlpha: 0, scale: .4, transformOrigin: '50% 50%', duration: .06, stagger: .01 }, .3);
-    tl.to('.ill .guide:not(.keep)', { opacity: 0, duration: .12 }, .9).to({}, { duration: .1 });
-    return tl; }
-  steps[0] && steps[0].classList.add('on');
   var mm = gsap.matchMedia();
-  mm.add('(min-width: 900px)', function(){ featTL({ trigger: '.feat', start: 'top top', end: '+=180%', pin: true, scrub: .6 }); });
-  mm.add('(max-width: 899px)', function(){ featTL({ trigger: '.stage', start: 'top 75%', end: 'bottom 25%', scrub: .6 }); });
   gsap.utils.toArray('.card').forEach(function(c, i){
     var tl = gsap.timeline({ scrollTrigger: { trigger: c, start: 'top 85%', once: true } });
     tl.from(c, { y: 50, autoAlpha: 0, duration: .9, ease: 'power3.out', delay: (i % 3) * .08 })
@@ -263,6 +268,52 @@ footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px soli
     b.addEventListener('pointerleave', function(){ xTo(0); yTo(0); }); });
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 })();
+</script>
+<script type="module">
+const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "labial-estuche.bin", "color": "#c9a24c", "metal": 1, "rough": 0.22}, {"bin": "labial-barra.bin", "color": "#8a3a6b", "rough": 0.35, "clear": 0.6}], "scale": 1.25, "base": [0, 0, -0.1], "rim": "#e3a9c6"};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+if (gsap && ST && hasGL && !reduce) setup();
+function setup() {
+  const root = document.documentElement; root.classList.add('m3d');
+  const canvas = document.querySelector('.s3d-canvas canvas'), poster = document.querySelector('.s3d-canvas .poster'), shadow = document.querySelector('.s3d-canvas .shadow');
+  const st = { y: -3.2, ry: -.6, rx: .18, s: .7, x: 0 }; let api = null;
+  function draw() {
+    if (api) api.draw(st);
+    else poster.style.transform = 'translate(' + (st.x * 32) + '%,' + (-(st.y - .05) * 32) + '%) scale(' + (st.s / 1.05) + ')';
+    const lift = Math.max(0, Math.min(1, 1 - Math.abs(st.y + .1) / 2.6));
+    shadow.style.opacity = lift.toFixed(3); shadow.style.transform = 'translateX(' + (st.x * 18) + '%) scaleX(' + (.6 + .4 * st.s) + ')';
+  }
+  const chs = gsap.utils.toArray('.ch'), bars = gsap.utils.toArray('.s3d-progress span');
+  const tl = gsap.timeline({ defaults: { ease: 'none' }, onUpdate: draw,
+    scrollTrigger: { trigger: '.s3d', start: 'top top', end: '+=420%', pin: '.s3d-pin', scrub: .8, anticipatePin: 1, refreshPriority: 1,
+      onUpdate(self) { const p = self.progress; bars.forEach((b, i) => b.style.setProperty('--p', Math.max(0, Math.min(1, (p - .3 - i * .233) / .233)))); } } });
+  tl.to(st, { y: -.12, ry: .25, duration: .14, ease: 'power2.out' }, 0)
+    .to('.swap .spark-l', { opacity: 0, scale: .2, rotate: 90, duration: .03 }, .1)
+    .fromTo('.swap .real', { opacity: 0, yPercent: 40 }, { opacity: 1, yPercent: 0, duration: .04, ease: 'back.out(3)' }, .11)
+    .to('.fly', { opacity: 0, scale: 2.2, duration: .04 }, .11)
+    .to('.s3d-intro', { yPercent: -60, opacity: 0, filter: 'blur(10px)', duration: .1 }, .2)
+    .to('.s3d-cta', { opacity: 0, y: 30, duration: .06 }, .2)
+    .to(st, { y: .05, s: 1.05, rx: .32, duration: .12, ease: 'power1.inOut' }, .2)
+    .to('.s3d-specs', { autoAlpha: 1, duration: .05 }, .3);
+  chs.forEach((c, i) => { const t0 = .3 + i * .233;
+    tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
+    if (i < chs.length - 1) tl.to(c, { autoAlpha: 0, x: 30, filter: 'blur(8px)', duration: .05 }, t0 + .19); });
+  tl.to(st, { ry: .25 + Math.PI * 2, duration: .7 }, .3)
+    .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
+    .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
+  gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
+  gsap.to('.swap .spark-l', { rotate: 45, scale: 1.12, duration: 1.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  gsap.utils.toArray('.fly').forEach((f, i) => gsap.fromTo(f, { opacity: 0, y: 10 }, { opacity: 1, y: -10, rotate: 90, duration: 1.6 + i * .3, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: i * .25 }));
+  gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
+  gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
+  draw(); ST.sort(); ST.refresh();
+  // El 3D (motor compartido) se carga cuando la página ya se ve y responde
+  const go = () => import('../lib3d/scene.js').then(m => m.mount(canvas, CFG)).then(a => {
+    api = a; addEventListener('resize', () => { a.size(); draw(); }); draw(); requestAnimationFrame(() => root.classList.add('ready3d')); }).catch(() => {});
+  const idle = () => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300));
+  document.readyState === 'complete' ? idle() : addEventListener('load', idle, { once: true });
+}
 </script>
 </body>
 </html>
