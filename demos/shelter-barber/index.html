@@ -98,5 +98,18 @@ footer p+p{margin-top:6px}
 <p>Shelter Barber, Calz. de los Ángeles 6945, local 4D, La Granja, 45010 Zapopan, Jal.</p>
 <p>Página de muestra preparada para Shelter Barber. Los datos vienen de su información pública y se pueden ajustar.</p>
 </div></footer>
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  if (!window.Lenis || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lenis = new Lenis({ duration: 1.1 });
+  function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (el){ e.preventDefault(); lenis.scrollTo(el, { offset: -8 }); } });
+  });
+})();
+</script>
 </body>
 </html>
