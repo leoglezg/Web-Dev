@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Musa Nails Studio | Salón de uñas en Plaza del Sol, Zapopan</title>
+<meta name="description" content="Musa Nails Studio, salón de uñas en Plaza del Sol, Zapopan. Manicura, Uñas de gel, Diseño de uñas. Escríbenos por WhatsApp.">
+<meta name="theme-color" content="#ecdfe7">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0d0e;--paper:#f6f6f3;--sky:#a9d9f1;--pink:#f4b6e6;--mint:#8fe0c6;--grey:#bcbfbf;--yellow:#f2ee3c;--teal:#0f6e78;--line:rgba(11,13,14,.18);
+ --bg:var(--sky);--muted:#33393c;--acc:#0b0d0e;--feat-acc:#0f6e78;--head:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--body:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--hdr:var(--sky);--hdr-ink:var(--ink)}
+*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}img,svg,iframe{display:block;max-width:100%}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--ink);color:#fff;padding:8px 12px;z-index:60}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header.bar{position:fixed;inset:0 0 auto 0;z-index:40;background:var(--hdr);color:var(--hdr-ink);transition:background-color .35s ease,color .35s ease}
+header.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:16px}
+.logo{font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:17px;white-space:nowrap}
+.logo i{display:inline-block;font-style:normal;transform:rotate(14deg) translateY(-1px)}.logo i.b{transform:rotate(-12deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;background:var(--ink);color:#fff;border:0;transition:transform .2s ease}
+.btn:hover{transform:translateY(-1px)}.btn.sm{min-height:44px;padding:8px 18px;font-size:15px}
+header .btn{background:var(--hdr-ink);color:var(--hdr)}
+.progress{position:fixed;inset:0 0 auto 0;height:3px;background:var(--ink);transform-origin:0 50%;transform:scaleX(0);z-index:50}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+/* bloques */
+.blk{position:relative;padding:110px 0 120px}
+.blk .ttl{font-weight:800;letter-spacing:-.055em;line-height:.86;font-size:clamp(64px,15vw,210px);overflow:hidden;padding-bottom:.06em}
+.blk .sub{font-size:clamp(18px,2vw,22px);margin-top:16px;max-width:30ch}
+.blk.dark{background:var(--ink);color:#fff}.blk.pink{background:var(--pink)}.blk.grey{background:var(--grey)}.blk.white{background:var(--paper)}
+/* lista activa (servicios y cita) */
+.alist{list-style:none;margin-top:44px}
+.alist li{font-size:clamp(26px,3.6vw,46px);font-weight:500;letter-spacing:-.025em;line-height:1.08;padding:6px 0 6px 0;color:rgba(255,255,255,.38);transition:color .3s ease,padding .3s ease;position:relative}
+.white .alist li,.pink .alist li{color:rgba(11,13,14,.32)}
+.alist li.on{color:#fff;padding-left:34px}.white .alist li.on,.pink .alist li.on{color:var(--ink)}
+.alist li::before{content:"";position:absolute;left:0;top:.42em;width:.42em;height:.42em;border-radius:50%;background:currentColor;transform:scale(0);transition:transform .3s ease}
+.alist li.on::before{transform:scale(1)}
+.split{display:grid;gap:36px}
+.media{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#222}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .5s ease,transform .8s ease}
+.media img.on{opacity:1;transform:none}
+.desc{margin-top:16px;font-size:18px;color:rgba(255,255,255,.75);min-height:3em}
+.pink .desc{color:var(--muted)}
+.bignum{font-weight:800;letter-spacing:-.06em;line-height:1;font-size:clamp(130px,30vw,380px);height:1em;overflow:hidden;display:flex;align-items:flex-start}
+.bignum .col{display:flex;flex-direction:column}.bignum .col span{height:1em;display:block}
+.notice{border:1px dashed currentColor;border-radius:10px;padding:10px 14px;font-size:14px;margin-top:22px;max-width:640px;opacity:.85}
+.revs{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:30px;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.revs::-webkit-scrollbar{display:none}
+.rev{flex:none;width:min(84vw,460px);scroll-snap-align:start;background:var(--paper);border-radius:14px;padding:12px}
+.rev .q{background:var(--yellow);border-radius:10px;padding:34px 26px;font-size:clamp(22px,2.4vw,28px);font-weight:600;letter-spacing:-.02em;line-height:1.2;min-height:210px;display:flex;align-items:flex-end}
+.rev .who{font-size:14px;padding:12px 6px 4px;color:var(--muted)}.rev .stars{letter-spacing:3px;font-size:14px;padding:0 6px}
+.dots{display:flex;gap:18px;font-weight:600;margin-top:18px}.dots span{opacity:.35;transition:opacity .3s}.dots span.on{opacity:1}
+.dots span.on::before{content:"● "}
+.rows{margin-top:40px;border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:1fr;gap:4px;padding:18px 0;border-bottom:1px solid var(--line)}
+.rows dt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.rows dd{font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-.02em;overflow-wrap:anywhere}
+.rows a{text-underline-offset:4px}
+.map{margin-top:30px;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:#ddd}.map iframe{width:100%;height:100%;border:0;filter:grayscale(.2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
+.mega{display:flex;flex-wrap:wrap;font-weight:800;letter-spacing:-.05em;line-height:.85;font-size:clamp(64px,13.5vw,200px)}
+.mega span{display:inline-block;will-change:transform}.mega .sp{width:.28em}
+.tag{font-weight:800;letter-spacing:.02em;text-transform:uppercase;font-size:14px;margin-top:72px;position:relative;z-index:1}
+.flinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;margin-top:28px;font-size:15px}
+.flinks a{text-decoration:none;opacity:.85}.flinks a:hover{opacity:1;text-decoration:underline}
+.fnote{margin-top:34px;font-size:13px;opacity:.6;max-width:70ch}
+@media (min-width:900px){.split{grid-template-columns:1.05fr .95fr;align-items:center}.rows div{grid-template-columns:220px 1fr;align-items:baseline}.flinks{grid-template-columns:repeat(4,max-content)}}
+/* escena 3D: fondo que cambia de color */
+.s3d{background:var(--sky)!important;transition:background-color .6s ease}
+.s3d .word .pre{font-family:var(--body);font-style:normal;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.pre .rot{display:inline-block}
+.s3d .kicker,.ch .num{color:var(--ink)}
+.m3d .s3d-progress span::after{background:var(--ink)}.m3d .s3d-progress span{background:rgba(11,13,14,.18)}
+.s3d-canvas .shadow{background:radial-gradient(closest-side,rgba(11,13,14,.25),rgba(11,13,14,0))}
+.motion .reveal-ttl .ch-l{display:inline-block}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
+.s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
+.s3d-intro{text-align:center;position:relative;z-index:3}
+.s3d .word{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;letter-spacing:-.06em;line-height:.86;margin:14px 0 0;text-transform:none}
+.s3d .word .pre{display:block;font-family:var(--head);font-weight:400;font-style:italic;letter-spacing:-.01em;font-size:clamp(22px,3.2vw,40px);color:var(--muted);margin-bottom:6px}
+.s3d .word .big{display:inline-block;font-size:clamp(84px,19vw,250px);color:var(--ink)}
+.swap{position:relative;display:inline-block}
+.swap .spark-l{position:absolute;left:50%;bottom:.08em;width:.62em;height:.62em;transform:translateX(-50%);color:var(--acc);opacity:0}
+.swap .spark-l svg{width:100%;height:100%;fill:currentColor}
+.fly{position:absolute;width:26px;height:26px;color:#7fd1d9;opacity:0}.fly svg{width:100%;height:100%;fill:currentColor}
+.fly.f1{left:62%;top:18%}.fly.f2{left:70%;top:6%;width:18px;height:18px;color:#a99be8}.fly.f3{left:30%;top:24%;width:16px;height:16px}
+.s3d-canvas{position:relative;width:min(520px,86vw);aspect-ratio:1;margin:-10px auto 0;z-index:2}
+.s3d-canvas canvas{position:absolute;inset:0;width:100%;height:100%;display:none}
+.s3d-canvas .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.s3d-canvas .shadow{display:none;position:absolute;left:18%;right:18%;bottom:4%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(15,35,41,.28),rgba(15,35,41,0));filter:blur(4px)}
+.s3d-chapters{display:grid;gap:22px;max-width:520px;margin:24px auto 0;position:relative;z-index:3}
+.ch .num{font:600 15px var(--body);color:var(--acc);letter-spacing:.06em}
+.ch h2{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(30px,4.4vw,52px);line-height:.95;margin:4px 0 10px;color:var(--ink)}
+.ch p{color:var(--muted);max-width:34ch}
+.s3d-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin:26px auto 0;border-top:1px solid var(--line);padding-top:16px;position:relative;z-index:3}
+.s3d-specs dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.s3d-specs dd{font:600 16px var(--body);color:var(--ink);margin-top:2px}
+.s3d-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;position:relative;z-index:3}
+.s3d-cta .hint{font-size:13px;color:var(--muted)}
+.s3d-progress{display:none}
+/* con animación: todo se superpone en una sola escena fija */
+.m3d .s3d-pin{height:100vh;min-height:560px;display:block;padding:0}
+.m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
+.m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
+.m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
+.m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
+.m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs div{border-top:1px solid var(--line);padding-top:10px}
+.m3d .s3d-cta{position:absolute;left:0;right:0;bottom:58px;margin:0}
+.m3d .s3d-progress{display:flex;gap:6px;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:min(320px,70vw)}
+.m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
+@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
+
+.s3d .word .big{white-space:nowrap;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)))}
+:root{--sky:#ecdfe7;--pink:#d7bccd;--mint:#c49cb5;--grey:#dad0d2;--yellow:#c49cb5;--paper:#f8f2f3;--teal:#8a3a6b;--feat-acc:#8a3a6b;--acc:#0b0d0e}.blk.dark,footer{background:#2a1a26}.fly,.swap .spark-l{color:#8a3a6b}.fly.f2{color:#c49cb5}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="bar"><div class="wrap"><a class="logo" href="./" aria-label="Musa, inicio">MUSA</a><a class="btn sm" href="https://wa.me/523313318985?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Musa%20Nails%20Studio.">WhatsApp</a></div></header>
+<main id="main">
+<section class="s3d" id="maquillaje" data-hdr="#ecdfe7" aria-label="Musa Nails Studio">
+<div class="s3d-pin">
+  <div class="s3d-intro">
+    <p class="kicker">Plaza del Sol · Zapopan</p>
+    <h1 class="word" aria-label="uñas con diseño"><span class="pre"><span class="rot">uñas con</span></span><span class="big" style="--len:6">diseño</span></h1>
+    
+  </div>
+  <div class="s3d-canvas"><div class="shadow" aria-hidden="true"></div><canvas aria-hidden="true"></canvas>
+    <img class="poster" src="img/labial-3d.webp" width="900" height="900" alt="Ilustración 3D: labial" fetchpriority="high"></div>
+  <div class="s3d-chapters"><article class="ch" data-i="0"><p class="num">.01</p><h2>Eliges el diseño</h2><p>Color liso, francés o con diseño: tú decides.</p></article><article class="ch" data-i="1"><p class="num">.02</p><h2>Preparamos la uña</h2><p>Limpieza, forma y cutícula antes de aplicar.</p></article><article class="ch" data-i="2"><p class="num">.03</p><h2>Acabado parejo</h2><p>Capas delgadas para que dure y no se levante.</p></article></div>
+  <dl class="s3d-specs"><div><dt>Ubicación</dt><dd>Plaza del Sol</dd></div><div><dt>Citas</dt><dd>WhatsApp</dd></div><div><dt>Servicios</dt><dd>Uñas</dd></div></dl>
+  <div class="s3d-cta"><a class="btn" href="https://wa.me/523313318985?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Musa%20Nails%20Studio." data-magnet>Agendar mi cita</a><span class="hint">Desliza para ver cómo trabajamos</span></div>
+  <div class="s3d-progress" aria-hidden="true"><span></span><span></span><span></span></div>
+</div>
+</section>
+<section class="blk dark" id="servicios" data-hdr="#2a1a26" data-hdr-ink="#ffffff">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Servicios</h2>
+  <p class="sub">Lo que hacemos en el salón.</p>
+  <div class="split pinlist" data-count="3">
+    <div><ul class="alist"><li data-i="0" class=on>Manicura</li><li data-i="1">Uñas de gel</li><li data-i="2">Diseño de uñas</li></ul><p class="desc" aria-live="polite">Limpieza, forma y esmaltado.</p></div>
+    <div class="media"><img class="on" src="img/5653459-1280.webp" srcset="img/5653459-720.webp 720w, img/5653459-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="920" alt="Uñas rojas con diseño de flores" loading="lazy" decoding="async"><img class="" src="img/635261-1280.webp" srcset="img/635261-720.webp 720w, img/635261-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="853" alt="Manicurista pintando uñas" loading="lazy" decoding="async"><img class="" src="img/870857-1280.webp" srcset="img/870857-720.webp 720w, img/870857-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 92vw" width="1280" height="853" alt="Frascos de esmalte de colores" loading="lazy" decoding="async"></div>
+  </div>
+</div>
+</section>
+<section class="blk pink" id="agenda" data-hdr="#d7bccd">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Tu cita</h2>
+  <p class="sub">Tres pasos, sin vueltas.</p>
+  <div class="split pinlist" data-count="3">
+    <div><ul class="alist"><li data-i="0" class=on>Escríbenos</li><li data-i="1">Te confirmamos</li><li data-i="2">Llegas a tu cita</li></ul><p class="desc" aria-live="polite">Dinos el servicio y la fecha de tu evento.</p></div>
+    <div class="bignum" aria-hidden="true"><div class="col"><span>0</span></div><div class="col roll"><span>1</span><span>2</span><span>3</span></div></div>
+  </div>
+</div>
+</section>
+<section class="blk grey" id="resenas" data-hdr="#dad0d2">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Reseñas</h2>
+  <p class="notice">Reseñas de ejemplo para esta demostración. En la página final se muestran sus reseñas reales de Google.</p>
+  <div class="revs"><figure class="rev"><blockquote class="q">Me quedaron perfectas y duraron casi tres semanas.</blockquote><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><figcaption class="who">Clienta de ejemplo</figcaption></figure><figure class="rev"><blockquote class="q">Muy cuidadosas con la cutícula.</blockquote><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><figcaption class="who">Clienta de ejemplo</figcaption></figure><figure class="rev"><blockquote class="q">Lugar bonito y agendar fue fácil.</blockquote><div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div><figcaption class="who">Clienta de ejemplo</figcaption></figure></div>
+  <div class="dots" aria-hidden="true"><span class="on">01</span><span>02</span><span>03</span></div>
+</div>
+</section>
+<section class="blk white" id="visita" data-hdr="#f8f2f3">
+<div class="wrap">
+  <h2 class="ttl" data-ttl>Visítanos</h2>
+  <dl class="rows"><div><dt>Dirección</dt><dd>Av. Adolfo López Mateos Sur 2375, local 20 Z, Plaza del Sol, 45050 Zapopan, Jal.</dd></div><div><dt>Horario</dt><dd>Pregúntanos por WhatsApp</dd></div><div><dt>Teléfono y WhatsApp</dt><dd><a href="tel:+523313318985">33 1331 8985</a></dd></div></dl>
+  <div class="map"><iframe src="https://www.google.com/maps?q=Musa%20Nails%20Studio%2C%20Av.%20Adolfo%20L%C3%B3pez%20Mateos%20Sur%202375%2C%20local%2020%20Z%2C%20Plaza%20del%20Sol%2C%2045050%20Zapopan%2C%20Jal.&output=embed" title="Mapa de Musa Nails Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="cta-row"><a class="btn" href="https://wa.me/523313318985?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Musa%20Nails%20Studio." data-magnet>Escribir por WhatsApp</a><a class="btn" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)" href="https://www.google.com/maps/search/?api=1&amp;query=Musa%20Nails%20Studio%2C%20Av.%20Adolfo%20L%C3%B3pez%20Mateos%20Sur%202375%2C%20local%2020%20Z%2C%20Plaza%20del%20Sol%2C%2045050%20Zapopan%2C%20Jal.">Abrir en Google Maps</a></div>
+</div>
+</section>
+</main>
+<footer data-hdr="#2a1a26" data-hdr-ink="#ffffff">
+<div class="wrap">
+  <div class="mega" aria-label="Musa"><span>M</span><span>U</span><span>S</span><span>A</span></div>
+  <p class="tag">Uñas en Plaza del Sol.</p>
+  <nav class="flinks" aria-label="Pie de página"><a href="#servicios">Servicios</a><a href="#agenda">Tu cita</a><a href="#visita">Ubicación</a><a href="https://wa.me/523313318985?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Musa%20Nails%20Studio.">WhatsApp</a><a href="terminos/">Términos y condiciones</a><a href="privacidad/">Aviso de privacidad</a></nav>
+  <p class="fnote">Musa Nails Studio, Av. Adolfo López Mateos Sur 2375, local 20 Z, Plaza del Sol, 45050 Zapopan, Jal. Tel. 33 1331 8985. Página de muestra preparada para Musa Nails Studio. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script>
+(function(){
+  var root = document.documentElement, hdr = document.querySelector('header.bar');
+  // encabezado del color de la sección visible (también sin animaciones)
+  var secs = [].slice.call(document.querySelectorAll('[data-hdr]'));
+  function paint(){ var y = 70, cur = secs[0];
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= y) cur = s; });
+    if (cur.classList.contains('s3d') && root.classList.contains('m3d')) return;
+    hdr.style.setProperty('--hdr', cur.getAttribute('data-hdr')); hdr.style.setProperty('--hdr-ink', cur.getAttribute('data-hdr-ink') || '#0b0d0e'); }
+  addEventListener('scroll', paint, {passive:true}); paint();
+  // carrusel de reseñas: 01 02 03
+  var revs = document.querySelector('.revs'), dots = [].slice.call(document.querySelectorAll('.dots span'));
+  revs && revs.addEventListener('scroll', function(){ var i = Math.round(revs.scrollLeft / (revs.firstElementChild.offsetWidth + 16));
+    dots.forEach(function(d, k){ d.classList.toggle('on', k === i); }); }, {passive:true});
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
+  root.classList.add('motion');
+  var lenis = null;
+  if (window.Lenis) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(ev){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (!el) return;
+    ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -60 }) : el.scrollIntoView({behavior:'smooth'}); }); });
+  gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: .3 } });
+  // títulos gigantes que suben por letra
+  if (window.SplitText) gsap.utils.toArray('[data-ttl]').forEach(function(t){
+    SplitText.create(t, { type: 'chars', mask: 'chars', autoSplit: true, onSplit: function(s){
+      return gsap.from(s.chars, { yPercent: 105, duration: .9, ease: 'expo.out', stagger: .035, scrollTrigger: { trigger: t, start: 'top 85%', once: true } }); } }); });
+  // listas activas con pin: servicios (imagen) y cita (número que sube)
+  var mm = gsap.matchMedia();
+  gsap.utils.toArray('.pinlist').forEach(function(box){
+    var items = [].slice.call(box.querySelectorAll('.alist li')), n = items.length, desc = box.querySelector('.desc');
+    var imgs = [].slice.call(box.querySelectorAll('.media img')), roll = box.querySelector('.roll');
+    var texts = box.closest('#servicios') ? ["Limpieza, forma y esmaltado.", "Brillo que dura semanas.", "Francés, flores o lo que traigas en mente."] : ["Dinos el servicio y la fecha de tu evento.", "Te damos horario y lo que necesitas saber antes de llegar.", "Si se te complica, avísanos y la movemos."], cur = 0;
+    function set(i){ if (i === cur) return; cur = i;
+      items.forEach(function(li, k){ li.classList.toggle('on', k === i); }); imgs.forEach(function(im, k){ im.classList.toggle('on', k === i); });
+      if (desc) gsap.fromTo(desc, { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: .35, onStart: function(){ desc.textContent = texts[i]; } });
+      if (roll) gsap.to(roll, { yPercent: -100 * i / n, duration: .45, ease: 'power3.out', overwrite: true }); }
+    ScrollTrigger.create({ trigger: box, start: 'center 58%', end: '+=' + (n * 55) + '%', pin: box.closest('.blk'), pinSpacing: true,
+      onUpdate: function(self){ set(Math.min(n - 1, Math.floor(self.progress * n))); } });
+  });
+  // cierre: letras gigantes que se dispersan
+  var L = gsap.utils.toArray('.mega span:not(.sp)');
+  var sm = innerWidth < 760 ? .45 : 1;
+  gsap.to(L, { y: function(){ return gsap.utils.random(10, 70) * sm; }, x: function(){ return gsap.utils.random(-18, 18) * sm; }, rotate: function(){ return gsap.utils.random(-32, 32); },
+    ease: 'none', stagger: { each: .02, from: 'random' }, scrollTrigger: { trigger: 'footer', start: 'top 70%', end: 'bottom bottom', scrub: .6 } });
+  // logotipo: letras giradas que se mueven un poco con el scroll
+  gsap.to('.logo i', { rotate: function(i){ return i ? 12 : -14; }, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: true } });
+  if (window.matchMedia('(pointer: fine)').matches) document.querySelectorAll('[data-magnet]').forEach(function(b){
+    var xTo = gsap.quickTo(b, 'x', { duration: .4, ease: 'power3' }), yTo = gsap.quickTo(b, 'y', { duration: .4, ease: 'power3' });
+    b.addEventListener('pointermove', function(ev){ var r = b.getBoundingClientRect(); xTo((ev.clientX - r.left - r.width / 2) * .3); yTo((ev.clientY - r.top - r.height / 2) * .4); });
+    b.addEventListener('pointerleave', function(){ xTo(0); yTo(0); }); });
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+<script type="module">
+const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "labial-estuche.bin", "color": "#c9a24c", "metal": 1, "rough": 0.22}, {"bin": "labial-barra.bin", "color": "#8e24aa", "rough": 0.35, "clear": 0.6}], "scale": 1.25, "base": [0, 0, -0.1], "rim": "#e3a9c6"};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+if (gsap && ST && hasGL && !reduce) setup();
+function setup() {
+  const root = document.documentElement; root.classList.add('m3d');
+  const canvas = document.querySelector('.s3d-canvas canvas'), poster = document.querySelector('.s3d-canvas .poster'), shadow = document.querySelector('.s3d-canvas .shadow');
+  const st = { y: -3.2, ry: -.6, rx: .18, s: .7, x: 0 }; let api = null;
+  function draw() {
+    if (api) api.draw(st);
+    else poster.style.transform = 'translate(' + (st.x * 32) + '%,' + (-(st.y - .05) * 32) + '%) scale(' + (st.s / 1.05) + ')';
+    const lift = Math.max(0, Math.min(1, 1 - Math.abs(st.y + .1) / 2.6));
+    shadow.style.opacity = lift.toFixed(3); shadow.style.transform = 'translateX(' + (st.x * 18) + '%) scaleX(' + (.6 + .4 * st.s) + ')';
+  }
+  const chs = gsap.utils.toArray('.ch'), bars = gsap.utils.toArray('.s3d-progress span');
+  const tl = gsap.timeline({ defaults: { ease: 'none' }, onUpdate: draw,
+    scrollTrigger: { trigger: '.s3d', start: 'top top', end: '+=420%', pin: '.s3d-pin', scrub: .8, anticipatePin: 1, refreshPriority: 1,
+      onUpdate(self) { const p = self.progress; bars.forEach((b, i) => b.style.setProperty('--p', Math.max(0, Math.min(1, (p - .3 - i * .233) / .233)))); } } });
+  tl.to(st, { y: -.12, ry: .25, duration: .14, ease: 'power2.out' }, 0)
+    .to('.s3d-intro', { yPercent: -60, opacity: 0, filter: 'blur(10px)', duration: .1 }, .2)
+    .to('.s3d-cta', { opacity: 0, y: 30, duration: .06 }, .2)
+    .to(st, { y: .05, s: 1.05, rx: .32, duration: .12, ease: 'power1.inOut' }, .2)
+    .to('.s3d-specs', { autoAlpha: 1, duration: .05 }, .3);
+  const SP = !!document.querySelector('.swap');
+  if (SP) tl.to('.swap .spark-l', { opacity: 0, scale: .2, rotate: 90, duration: .03 }, .1)
+    .fromTo('.swap .real', { opacity: 0, yPercent: 40 }, { opacity: 1, yPercent: 0, duration: .04, ease: 'back.out(3)' }, .11)
+    .to('.fly', { opacity: 0, scale: 2.2, duration: .04 }, .11);
+  chs.forEach((c, i) => { const t0 = .3 + i * .233;
+    tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
+    if (i < chs.length - 1) tl.to(c, { autoAlpha: 0, x: 30, filter: 'blur(8px)', duration: .05 }, t0 + .19); });
+  tl.to(st, { ry: .25 + Math.PI * 2, duration: .7 }, .3)
+    .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
+    .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
+  if (SP) {
+  gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
+  gsap.to('.swap .spark-l', { rotate: 45, scale: 1.12, duration: 1.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  gsap.utils.toArray('.fly').forEach((f, i) => gsap.fromTo(f, { opacity: 0, y: 10 }, { opacity: 1, y: -10, rotate: 90, duration: 1.6 + i * .3, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: i * .25 }));
+  }
+  gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
+  gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
+  const s3d = document.querySelector('.s3d'), COL = ["#ecdfe7", "#d7bccd", "#c49cb5"], hb = document.querySelector('header.bar');
+  const rot = document.querySelector('.pre .rot'), W = ["uñas con", "manicura de", "gel con"]; let rotI = 0;
+  const tick = setInterval(() => { if (scrollY > 30) return; rotI = (rotI + 1) % W.length;
+    gsap.to(rot, { yPercent: -60, autoAlpha: 0, duration: .25, ease: 'power2.in', onComplete: () => { rot.textContent = W[rotI];
+      gsap.fromTo(rot, { yPercent: 60, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: .35, ease: 'power2.out' }); } });
+    s3d.style.setProperty('background-color', COL[rotI], 'important'); hb.style.setProperty('--hdr', COL[rotI]); }, 2600);
+  ST.create({ trigger: '.s3d', start: 'top top', end: '+=420%', onUpdate(self) { const p = self.progress, i = p < .53 ? 0 : (p < .76 ? 1 : 2);
+    const c = p < .3 ? COL[rotI] : COL[i]; s3d.style.setProperty('background-color', c, 'important'); hb.style.setProperty('--hdr', c); } });
+  draw(); ST.sort(); ST.refresh();
+  // El 3D (motor compartido) se carga cuando la página ya se ve y responde
+  const go = () => import('../lib3d/scene.js').then(m => m.mount(canvas, CFG)).then(a => {
+    api = a; addEventListener('resize', () => { a.size(); draw(); }); draw(); requestAnimationFrame(() => root.classList.add('ready3d')); }).catch(() => {});
+  const idle = () => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300));
+  document.readyState === 'complete' ? idle() : addEventListener('load', idle, { once: true });
+}
+</script>
+</body>
+</html>
