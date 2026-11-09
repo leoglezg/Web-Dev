@@ -10,7 +10,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0b0d0e;--paper:#f6f6f3;--sky:#a9d9f1;--pink:#f4b6e6;--mint:#8fe0c6;--grey:#bcbfbf;--yellow:#f2ee3c;--teal:#0f6e78;--line:rgba(11,13,14,.18);
+:root{--ink:#0b0d0e;--paper:#f6f6f3;--sky:#8ec5ef;--pink:#95e0c8;--mint:#f3e39a;--grey:#bcbfbf;--yellow:#f2ee3c;--teal:#0f6e78;--line:rgba(11,13,14,.18);
  --bg:var(--sky);--muted:#33393c;--acc:#0b0d0e;--feat-acc:#0f6e78;--head:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--body:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--hdr:var(--sky);--hdr-ink:var(--ink)}
 *{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
@@ -78,7 +78,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 .m3d .s3d-progress span::after{background:var(--ink)}.m3d .s3d-progress span{background:rgba(11,13,14,.18)}
 .s3d-canvas .shadow{background:radial-gradient(closest-side,rgba(11,13,14,.25),rgba(11,13,14,0))}
 .motion .reveal-ttl .ch-l{display:inline-block}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
 
 .s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
 .s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
@@ -110,15 +110,15 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 .m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
 .m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
 .m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
-.m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
+.m3d .s3d-chapters{position:absolute;left:20px;top:18vh;margin:0;width:min(380px,44vw);display:block}
 .m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
-.m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs{position:absolute;right:20px;top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
 .m3d .s3d-specs div{border-top:1px solid var(--line);padding-top:10px}
 .m3d .s3d-cta{position:absolute;left:0;right:0;bottom:58px;margin:0}
 .m3d .s3d-progress{display:flex;gap:6px;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:min(320px,70vw)}
 .m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
 .m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
-@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
+@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}@media (min-width:761px){.m3d .s3d-chapters{left:50%;right:auto;width:min(640px,80vw);top:13vh;transform:translateX(-50%);text-align:center}.m3d .ch{left:0;right:0}.m3d .ch p{margin-left:auto;margin-right:auto}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{top:calc(13vh + 10.5rem);bottom:auto;transform:translateX(-50%);width:min(540px,calc(87vh - 10.5rem - 80px))}}
 
 .s3d .word .big{white-space:nowrap;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)))}
 :root{--sky:#8ec5ef;--pink:#95e0c8;--mint:#f3e39a;--grey:#d1d8da;--yellow:#8eafc4;--paper:#f3f7f8;--teal:#1d5f8a;--feat-acc:#1d5f8a;--acc:#0b0d0e}.blk.dark,footer{background:#0d2f36}.fly,.swap .spark-l{color:#1d5f8a}.fly.f2{color:#f3e39a}
@@ -190,10 +190,10 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="../lib3d/vendor/lenis-1.3.4.min.js"></script>
+<script src="../lib3d/vendor/gsap-3.13.0.min.js"></script>
+<script src="../lib3d/vendor/ScrollTrigger-3.13.0.min.js"></script>
+<script src="../lib3d/vendor/SplitText-3.13.0.min.js"></script>
 <script>
 (function(){
   var root = document.documentElement, hdr = document.querySelector('header.bar');
@@ -208,11 +208,11 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
   var revs = document.querySelector('.revs'), dots = [].slice.call(document.querySelectorAll('.dots span'));
   revs && revs.addEventListener('scroll', function(){ var i = Math.round(revs.scrollLeft / (revs.firstElementChild.offsetWidth + 16));
     dots.forEach(function(d, k){ d.classList.toggle('on', k === i); }); }, {passive:true});
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap || !window.ScrollTrigger) return;
+  if (!window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
   root.classList.add('motion');
   var lenis = null;
-  if (window.Lenis) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
+  if (window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
   document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(ev){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (!el) return;
     ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -60 }) : el.scrollIntoView({behavior:'smooth'}); }); });
   gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: .3 } });
@@ -249,7 +249,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 </script>
 <script type="module">
 const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "diente.bin", "color": "#f2ece0", "rough": 0.28, "clear": 0.9, "sheen": 0.5, "sheenColor": "#fff6e8"}], "rim": "#7fd1d9"};
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false;
 let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
 if (gsap && ST && hasGL && !reduce) setup();
 function setup() {
@@ -279,7 +279,7 @@ function setup() {
     tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
     if (i < chs.length - 1) tl.to(c, { autoAlpha: 0, x: 30, filter: 'blur(8px)', duration: .05 }, t0 + .19); });
   tl.to(st, { ry: .25 + Math.PI * 2, duration: .7 }, .3)
-    .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
+    .to(st, { x: 0, duration: .2, ease: 'power1.inOut' }, .3)
     .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
   if (SP) {
   gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
