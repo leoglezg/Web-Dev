@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Maty Guillen Estética - Salón | Estética en Arcos de Guadalupe, Zapopan</title>
 <meta name="description" content="Maty Guillen Estética - Salón, estética en Arcos de Guadalupe, Zapopan. Maquillaje de novia, maquillaje para eventos y peinado. Agenda por WhatsApp.">
-<meta name="theme-color" content="#ecdfe7">
+<meta name="theme-color" content="#f2a7cf">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
@@ -64,7 +64,7 @@ header .btn{background:var(--hdr-ink);color:var(--hdr)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 .mega{display:flex;flex-wrap:wrap;font-weight:800;letter-spacing:-.05em;line-height:.85;font-size:clamp(64px,13.5vw,200px)}
-.mega span{display:inline-block;will-change:transform}.mega .sp{width:.28em}.mega .w{display:inline-flex;white-space:nowrap;font-weight:inherit}
+.mega span{display:inline-block;will-change:transform}.mega .sp{width:.28em}
 .tag{font-weight:800;letter-spacing:.02em;text-transform:uppercase;font-size:14px;margin-top:72px;position:relative;z-index:1}
 .flinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;margin-top:28px;font-size:15px}
 .flinks a{text-decoration:none;opacity:.85}.flinks a:hover{opacity:1;text-decoration:underline}
@@ -78,7 +78,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 .m3d .s3d-progress span::after{background:var(--ink)}.m3d .s3d-progress span{background:rgba(11,13,14,.18)}
 .s3d-canvas .shadow{background:radial-gradient(closest-side,rgba(11,13,14,.25),rgba(11,13,14,0))}
 .motion .reveal-ttl .ch-l{display:inline-block}
-
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
 .s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
@@ -110,18 +110,18 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 .m3d .s3d-intro{position:absolute;left:0;right:0;top:12vh}
 .m3d .s3d-canvas{position:absolute;left:50%;top:50%;width:min(620px,92vw,78vh);margin:0;transform:translate(-50%,-38%)}
 .m3d .s3d-canvas canvas{display:block;opacity:0;transition:opacity .5s ease}.m3d .s3d-canvas .shadow{display:block}.m3d .s3d-canvas .poster{transform-origin:50% 50%;transition:opacity .5s ease;will-change:transform}.ready3d .s3d-canvas canvas{opacity:1}.ready3d .s3d-canvas .poster{opacity:0}
-.m3d .s3d-chapters{position:absolute;left:20px;top:18vh;margin:0;width:min(380px,44vw);display:block}
+.m3d .s3d-chapters{position:absolute;left:max(20px,calc((100vw - 1200px)/2));top:18vh;margin:0;width:min(380px,44vw);display:block}
 .m3d .ch{position:absolute;left:0;top:0;opacity:0;visibility:hidden}
-.m3d .s3d-specs{position:absolute;right:20px;top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
+.m3d .s3d-specs{position:absolute;right:max(20px,calc((100vw - 1200px)/2));top:20vh;margin:0;width:200px;grid-template-columns:1fr;border-top:0;padding:0;opacity:0;visibility:hidden}
 .m3d .s3d-specs div{border-top:1px solid var(--line);padding-top:10px}
 .m3d .s3d-cta{position:absolute;left:0;right:0;bottom:58px;margin:0}
 .m3d .s3d-progress{display:flex;gap:6px;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:min(320px,70vw)}
 .m3d .s3d-progress span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
 .m3d .s3d-progress span::after{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleX(var(--p,0));transform-origin:0 50%}
-@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}@media (min-width:761px){.m3d .s3d-chapters{left:50%;right:auto;width:min(640px,80vw);top:13vh;transform:translateX(-50%);text-align:center}.m3d .ch{left:0;right:0}.m3d .ch p{margin-left:auto;margin-right:auto}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{top:calc(13vh + 10.5rem);bottom:auto;transform:translateX(-50%);width:min(540px,calc(87vh - 10.5rem - 80px))}}
+@media (max-width:760px){.m3d .s3d-chapters{left:20px;right:20px;width:auto;top:auto;bottom:calc(64px + 8.5em)}.m3d .s3d-specs{display:none}.m3d .s3d-canvas{transform:translate(-50%,-62%);width:min(440px,96vw)}.m3d .s3d-intro{top:11vh}}
 
 .s3d .word .big{white-space:nowrap;font-size:clamp(56px,calc(104vw / var(--len)),calc(1250px / var(--len)))}
-:root{--sky:#ecdfe7;--pink:#d7bccd;--mint:#c49cb5;--grey:#dad0d2;--yellow:#c49cb5;--paper:#f8f2f3;--teal:#8a3a6b;--feat-acc:#8a3a6b;--acc:#0b0d0e}.blk.dark,footer{background:#2a1a26}.fly,.swap .spark-l{color:#8a3a6b}.fly.f2{color:#c49cb5}
+:root{--sky:#f2a7cf;--pink:#f7c39f;--mint:#c9b3ef;--grey:#dad0d2;--yellow:#c49cb5;--paper:#f8f2f3;--teal:#8a3a6b;--feat-acc:#8a3a6b;--acc:#0b0d0e}.blk.dark,footer{background:#2a1a26}.fly,.swap .spark-l{color:#8a3a6b}.fly.f2{color:#c9b3ef}
 </style>
 </head>
 <body>
@@ -129,7 +129,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="bar"><div class="wrap"><a class="logo" href="./" aria-label="Maty Guillen, inicio">M<i class="">A</i>TY GUILL<i class="b">E</i>N</a><a class="btn sm" href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n.">WhatsApp</a></div></header>
 <main id="main">
-<section class="s3d" id="maquillaje" data-hdr="#ecdfe7" aria-label="Maty Guillen Estética - Salón">
+<section class="s3d" id="maquillaje" data-hdr="#f2a7cf" aria-label="Maty Guillen Estética - Salón">
 <div class="s3d-pin">
   <div class="s3d-intro">
     <p class="kicker">Arcos de Guadalupe · Zapopan</p>
@@ -154,7 +154,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
   </div>
 </div>
 </section>
-<section class="blk pink" id="agenda" data-hdr="#d7bccd">
+<section class="blk pink" id="agenda" data-hdr="#f7c39f">
 <div class="wrap">
   <h2 class="ttl" data-ttl>Tu cita</h2>
   <p class="sub">Tres pasos, sin vueltas.</p>
@@ -183,17 +183,17 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 </main>
 <footer data-hdr="#2a1a26" data-hdr-ink="#ffffff">
 <div class="wrap">
-  <div class="mega" aria-label="Maty Guillen"><b class="w"><span>M</span><span>A</span><span>T</span><span>Y</span></b><span class="sp"> </span><b class="w"><span>G</span><span>U</span><span>I</span><span>L</span><span>L</span><span>E</span><span>N</span></b></div>
+  <div class="mega" aria-label="Maty Guillen"><span>M</span><span>A</span><span>T</span><span>Y</span><span class="sp"> </span><span>G</span><span>U</span><span>I</span><span>L</span><span>L</span><span>E</span><span>N</span></div>
   <p class="tag">Tu look, a tu medida.</p>
   <nav class="flinks" aria-label="Pie de página"><a href="#servicios">Servicios</a><a href="#agenda">Tu cita</a><a href="#visita">Ubicación</a><a href="https://wa.me/523331900336?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Maty%20Guillen%20Est%C3%A9tica%20-%20Sal%C3%B3n.">WhatsApp</a><a href="terminos/">Términos y condiciones</a><a href="privacidad/">Aviso de privacidad</a></nav>
   <p class="fnote">Maty Guillen Estética - Salón, Av. Guadalupe 5347, int. local 15, Arcos de Guadalupe, 45030 Zapopan, Jal. Tel. 33 3190 0336. Página de muestra preparada para Maty Guillen Estética - Salón. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
 </div>
 </footer>
 
-<script src="../lib3d/vendor/lenis-1.3.4.min.js"></script>
-<script src="../lib3d/vendor/gsap-3.13.0.min.js"></script>
-<script src="../lib3d/vendor/ScrollTrigger-3.13.0.min.js"></script>
-<script src="../lib3d/vendor/SplitText-3.13.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script>
 (function(){
   var root = document.documentElement, hdr = document.querySelector('header.bar');
@@ -208,11 +208,11 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
   var revs = document.querySelector('.revs'), dots = [].slice.call(document.querySelectorAll('.dots span'));
   revs && revs.addEventListener('scroll', function(){ var i = Math.round(revs.scrollLeft / (revs.firstElementChild.offsetWidth + 16));
     dots.forEach(function(d, k){ d.classList.toggle('on', k === i); }); }, {passive:true});
-  if (!window.gsap || !window.ScrollTrigger) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
   root.classList.add('motion');
   var lenis = null;
-  if (window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
+  if (window.Lenis) { lenis = new Lenis({ duration: 1.1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(function(t){ lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0); }
   document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(ev){ var id = a.getAttribute('href'); if (id.length < 2) return; var el = document.querySelector(id); if (!el) return;
     ev.preventDefault(); lenis ? lenis.scrollTo(el, { offset: -60 }) : el.scrollIntoView({behavior:'smooth'}); }); });
   gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: .3 } });
@@ -249,7 +249,7 @@ footer{background:var(--ink);color:#fff;padding:90px 0 40px;overflow:hidden}
 </script>
 <script type="module">
 const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "labial-estuche.bin", "color": "#c9a24c", "metal": 1, "rough": 0.22}, {"bin": "labial-barra.bin", "color": "#8a3a6b", "rough": 0.35, "clear": 0.6}], "scale": 1.25, "base": [0, 0, -0.1], "rim": "#e3a9c6"};
-const reduce = false;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
 if (gsap && ST && hasGL && !reduce) setup();
 function setup() {
@@ -279,7 +279,7 @@ function setup() {
     tl.fromTo(c, { autoAlpha: 0, x: -40, filter: 'blur(12px)' }, { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: .06 }, t0);
     if (i < chs.length - 1) tl.to(c, { autoAlpha: 0, x: 30, filter: 'blur(8px)', duration: .05 }, t0 + .19); });
   tl.to(st, { ry: .25 + Math.PI * 2, duration: .7 }, .3)
-    .to(st, { x: 0, duration: .2, ease: 'power1.inOut' }, .3)
+    .to(st, { x: innerWidth < 760 ? 0 : .5, duration: .2, ease: 'power1.inOut' }, .3)
     .to(st, { rx: .05, duration: .35, ease: 'sine.inOut' }, .3).to(st, { rx: .3, duration: .35, ease: 'sine.inOut' }, .65);
   if (SP) {
   gsap.set('.swap .real', { opacity: 0 }); gsap.set('.swap .spark-l', { opacity: 1 });
@@ -288,7 +288,7 @@ function setup() {
   }
   gsap.from('.s3d .word .big', { yPercent: 30, opacity: 0, duration: 1, ease: 'expo.out', delay: .1 });
   gsap.to(st, { y: -1.85, duration: 1.4, ease: 'expo.out', delay: .25, onUpdate: draw, onComplete: () => tl.invalidate() });
-  const s3d = document.querySelector('.s3d'), COL = ["#ecdfe7", "#d7bccd", "#c49cb5"], hb = document.querySelector('header.bar');
+  const s3d = document.querySelector('.s3d'), COL = ["#f2a7cf", "#f7c39f", "#c9b3ef"], hb = document.querySelector('header.bar');
   const rot = document.querySelector('.pre .rot'), W = ["maquillaje de", "peinado de", "look de"]; let rotI = 0;
   const tick = setInterval(() => { if (scrollY > 30) return; rotI = (rotI + 1) % W.length;
     gsap.to(rot, { yPercent: -60, autoAlpha: 0, duration: .25, ease: 'power2.in', onComplete: () => { rot.textContent = W[rotI];
