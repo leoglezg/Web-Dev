@@ -154,7 +154,7 @@ footer p+p{margin-top:6px}
  .gal-track{padding-left:max(20px,calc((100vw - 1160px)/2))}
  .gal-track figure{width:440px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
 :root{--acc:#9a3b52;--feat-acc:#c9a58c}
 .s3d{position:relative;background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,var(--bg) 60%,#e6eef0 100%);overflow:hidden}
 .s3d-pin{position:relative;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:96px 20px 28px;max-width:1240px;margin:0 auto}
@@ -285,10 +285,10 @@ footer p+p{margin-top:6px}
 <p>Página de muestra preparada para Erika Salón y Microblading. Los datos vienen de su información pública y se pueden ajustar. Fotos ilustrativas de Pixabay.</p>
 </div></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="../lib3d/vendor/lenis-1.3.4.min.js"></script>
+<script src="../lib3d/vendor/gsap-3.13.0.min.js"></script>
+<script src="../lib3d/vendor/ScrollTrigger-3.13.0.min.js"></script>
+<script src="../lib3d/vendor/SplitText-3.13.0.min.js"></script>
 <script>
 (function(){
   var root = document.documentElement;
@@ -296,13 +296,13 @@ footer p+p{margin-top:6px}
   function solid(){ bar.classList.toggle('solid', window.scrollY > 20); }
   window.addEventListener('scroll', solid, {passive:true}); solid();
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  if (!window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger, window.SplitText ? SplitText : null);
   root.classList.add('motion');
 
   // Scroll suave + enlaces internos
   var lenis = null;
-  if (window.Lenis) {
+  if (window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     lenis = new Lenis({ duration: 1.15, smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
@@ -418,7 +418,7 @@ footer p+p{margin-top:6px}
 </script>
 <script type="module">
 const gsap = window.gsap, ST = window.ScrollTrigger, CFG = {"parts": [{"bin": "pluma-mango.bin", "color": "#a3445a", "metal": 0.7, "rough": 0.25, "clear": 1}, {"bin": "pluma-agarre.bin", "color": "#d8dadd", "metal": 1, "rough": 0.3}, {"bin": "pluma-cuchilla.bin", "color": "#eef0f2", "metal": 1, "rough": 0.15}], "scale": 1.25, "base": [0, 0, 0], "rim": "#c9a58c", "env": 0.8};
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false;
 let hasGL = false; try { const c = document.createElement('canvas'); hasGL = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
 if (gsap && ST && hasGL && !reduce) setup();
 function setup() {
